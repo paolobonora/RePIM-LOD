@@ -1,0 +1,268 @@
+@prefix map: <#> .
+@prefix db: <> .
+@prefix vocab: <vocab/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix jdbc: <http://d2rq.org/terms/jdbc/> .
+@prefix corago: <http://corago.unibo.it/sm/> .
+@prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix d2r: <http://sites.wiwiss.fu-berlin.de/suhl/bizer/d2r-server/config.rdf#> .
+
+<> a d2r:Server;
+  d2r:sparqlTimeout 0;
+  d2r:pageTimeout 5;
+ .
+
+map:database a d2rq:Database;
+	d2rq:jdbcDriver "sun.jdbc.odbc.JdbcOdbcDriver";
+	d2rq:jdbcDSN "jdbc:odbc:CORAGO";
+	.
+
+
+
+# Gestione Responsabile (RESPONS)
+# Classe E39_Actor 
+map:Responsabile a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "RESPONS/@@RESPONS.COD_RESP@@";
+	d2rq:class crm:E39_Actor;
+.	
+
+# Classe E82_Actor_Appellation (ex RESPONS)
+map:ActorAppellation a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "RESPONS/@@RESPONS.COGNOME_R|urlify@@-@@RESPONS.NOME_R|urlify@@&@@RESPONS.COD_RESP@@";
+	d2rq:class crm:E82_Actor_Appellation;
+.
+
+
+
+# Classe E55_Type_Title
+map:PersonTypeTitle a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "RESPONS/TITLE&@@RESPONS.COD_RESP@@";
+	d2rq:condition "RESPONS.QUALIFICA <> ''";
+	d2rq:class crm:E55_Type;
+.
+
+# Classe E55_Type_Gender
+map:PersonTypeGender a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "RESPONS/GENDER&@@RESPONS.COD_RESP@@";
+	d2rq:condition "RESPONS.SESSO <> ''";
+	d2rq:class crm:E55_Type;
+.
+
+# Classe C2_Actor_Role (E55_Type)
+map:PersonTypeRole a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "TADE/RES&@@TADE.ID_TADE@@";
+	d2rq:condition "TADE.TADETIP = 'RES'";
+	d2rq:class corago:C2_Actor_Role;
+.
+
+map:GenderTable a d2rq:TranslationTable;
+    d2rq:translation [ d2rq:databaseValue "M"; d2rq:rdfValue "male"; ];
+    d2rq:translation [ d2rq:databaseValue "F"; d2rq:rdfValue "female"; ];
+    .
+
+map:PersonTypeGender_label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonTypeGender;
+	d2rq:property foaf:gender;
+	d2rq:datatype xsd:string;
+	d2rq:condition "RESPONS.SESSO <> ''";
+	d2rq:column "RESPONS.SESSO";
+	d2rq:translateWith map:GenderTable;
+.
+
+map:PersonTypeTitle_label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonTypeTitle;
+	d2rq:property rdfs:label;
+	d2rq:datatype xsd:string;
+	d2rq:condition "RESPONS.QUALIFICA <> ''";
+	d2rq:column "RESPONS.QUALIFICA";
+.
+
+map:PersonTypeRole_label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonTypeRole;
+	d2rq:property rdf:value;
+	d2rq:datatype xsd:string;
+	d2rq:condition "TADE.TADETIP = 'RES'";
+	d2rq:column "TADE.TADEDA1";
+.
+
+map:PersonBirthDate_label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonDateBR;
+	d2rq:property rdfs:label;
+	d2rq:condition "RESPONS.DATA_NAS_R <> ''";
+	d2rq:column "RESPONS.DATA_NAS_R";
+.
+
+
+# Classe E52 Time-Span (per E39_Actor)
+map:PersonBirthDateTS a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "RESPONS/NAS/TS/@@RESPONS.COD_RESP@@";
+	d2rq:condition "RESPONS.DATA_NAS_R <> ''";
+	d2rq:class crm:E52_Time-Span;
+.
+map:PersonDeathDateTS a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "RESPONS/MOR/TS/@@RESPONS.COD_RESP@@";
+	d2rq:condition "RESPONS.DATA_MOR_R <> ''";
+	d2rq:class crm:E52_Time-Span;
+.
+# Classe E67 Birth (per E39_Actor)
+map:PersonBirthDate a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "RESPONS/NAS/@@RESPONS.COD_RESP@@";
+	d2rq:condition "RESPONS.DATA_NAS_R <> ''";
+	d2rq:class crm:E67_Birth;
+.
+# Classe E69 Death (per E39_Actor)
+map:PersonDeathDate a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "RESPONS/MOR/@@RESPONS.COD_RESP@@";
+	d2rq:condition "RESPONS.DATA_MOR_R <> ''";
+	d2rq:class crm:E69_Death;
+.
+
+# Classe E50 Date (per E39_Actor)
+map:PersonDateBR a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "RESPONS/DATA/NAS/@@RESPONS.COD_RESP@@";
+	d2rq:condition "RESPONS.DATA_NAS_R <> ''";
+	d2rq:class crm:E50_Date;
+.
+map:PersonDateBRTA a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "DATA/@@RESPONS.DATA_NAS_R|urlify@@";
+	d2rq:condition "RESPONS.DATA_NAS_R <> ''";
+	d2rq:class crm:E49_Time_Appellation;
+.
+map:PersonDateBRTALabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonDateBRTA;
+	d2rq:property rdfs:label;
+	d2rq:datatype xsd:string;
+	d2rq:column "RESPONS.DATA_NAS_R";
+.
+map:LegamePersonDateBRTA a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonDateBR;
+	d2rq:property crm:P78_is_identified_by;
+	d2rq:refersToClassMap map:PersonDateBRTA;
+.
+map:LegamePersonDateBRTS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonBirthDateTS;
+	d2rq:property crm:P78_is_identified_by;
+	d2rq:refersToClassMap map:PersonDateBR;
+.
+
+map:PersonDateDT a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "RESPONS/DATA/MOR/@@RESPONS.COD_RESP@@";
+	d2rq:condition "RESPONS.DATA_MOR_R <> ''";
+	d2rq:class crm:E50_Date;
+.
+map:PersonDateDTTA a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "DATA/@@RESPONS.DATA_MOR_R|urlify@@";
+	d2rq:condition "RESPONS.DATA_MOR_R <> ''";
+	d2rq:class crm:E49_Time_Appellation;
+.
+map:PersonDateDTTALabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonDateDTTA;
+	d2rq:property rdfs:label;
+	d2rq:datatype xsd:string;
+	d2rq:column "RESPONS.DATA_MOR_R";
+.
+map:LegamePersonDateDTTA a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonDateDT;
+	d2rq:property crm:P78_is_identified_by;
+	d2rq:refersToClassMap map:PersonDateDTTA;
+.
+map:LegamePersonDateDTTS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonDeathDateTS;
+	d2rq:property crm:P78_is_identified_by;
+	d2rq:refersToClassMap map:PersonDateDT;
+.
+
+# Proprietà di E39_Actor (e classi collegate)
+
+map:ActorAppellation_label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ActorAppellation;
+	d2rq:property rdfs:label;
+	d2rq:pattern "@@RESPONS.NOME_R@@ @@RESPONS.COGNOME_R@@";
+.
+
+map:PersonTypeTitleP2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Responsabile;
+	d2rq:property crm:P2_has_type;
+	d2rq:uriPattern "RESPONS/TITLE-@@RESPONS.COD_RESP@@";
+	d2rq:condition "RESPONS.QUALIFICA <> ''";
+.
+
+map:PersonTypeGenderP2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Responsabile;
+	d2rq:property crm:P2_has_type;
+	d2rq:uriPattern "RESPONS/GENDER-@@RESPONS.COD_RESP@@";
+	d2rq:condition "RESPONS.SESSO <> ''";
+.
+
+map:Responsabile_Appellation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Responsabile;
+	d2rq:property crm:P131_is_identified_by;
+	d2rq:uriPattern "RESPONS/@@RESPONS.COGNOME_R|urlify@@-@@RESPONS.NOME_R|urlify@@-@@RESPONS.COD_RESP@@";
+.
+
+# Responsabile_PersonBirthDate
+map:Responsabile_PersonBirthDate a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Responsabile;
+	d2rq:property crm:P98_was_born;
+	d2rq:condition "RESPONS.DATA_NAS_R <> ''";
+	d2rq:refersToClassMap map:PersonBirthDate;
+.
+map:Responsabile_PersonBirthDateTS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonBirthDate;
+	d2rq:property crm:P4_has_time-span;
+	d2rq:condition "RESPONS.DATA_NAS_R <> ''";
+	d2rq:refersToClassMap map:PersonBirthDateTS;
+.
+
+# Responsabile_PersonDeathDate
+map:Responsabile_PersonDeathDate a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Responsabile;
+	d2rq:property crm:P100_died_in;
+	d2rq:condition "RESPONS.DATA_MOR_R <> ''";
+	d2rq:refersToClassMap map:PersonDeathDate;
+.
+
+map:Responsabile_PersonDeathDateTS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonDeathDate;
+	d2rq:property crm:P4_has_time-span;
+	d2rq:condition "RESPONS.DATA_MOR_R <> ''";
+	d2rq:refersToClassMap map:PersonDeathDateTS;
+.
+
+
+map:Responsabile_Cognome a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Responsabile;
+	d2rq:property rdfs:label;
+	d2rq:pattern "@@RESPONS.COGNOME_R@@, @@RESPONS.NOME_R@@";
+.
+
+# mapping provvisorio repsons->RES->tade
+map:PersonTypeRole_rel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Responsabile;
+	d2rq:property crm:P2_has_type;
+	d2rq:refersToClassMap map:PersonTypeRole;
+	d2rq:join "RESPONS.COD_TIPO_R = TADE.TADEPRO";
+	d2rq:condition "TADE.TADETIP = 'RES'";
+.
+
+

@@ -1,0 +1,1 @@
+generate-mapping --verbose -o mapping.ttl --tables BIBLIOGRAFIA -d sun.jdbc.odbc.JdbcOdbcDriver jdbc:odbc:"REPIM" 

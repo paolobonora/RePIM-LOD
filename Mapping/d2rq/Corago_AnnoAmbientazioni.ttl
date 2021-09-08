@@ -1,0 +1,77 @@
+@prefix map: <#> .
+@prefix db: <> .
+@prefix vocab: <vocab/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix jdbc: <http://d2rq.org/terms/jdbc/> .
+@prefix corago: <http://corago.unibo.it/sm/> .
+@prefix frbroo: <http://erlangen-crm.org/efrbroo/> .
+@prefix crm: <http://erlangen-crm.org/current/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix d2r: <http://sites.wiwiss.fu-berlin.de/suhl/bizer/d2r-server/config.rdf#> .
+
+# Realizzato da: Paolo Bonora
+# Versione del: 04/07/2018
+
+<> a d2r:Server;
+  d2r:sparqlTimeout 0;
+  d2r:pageTimeout 5;
+ .
+
+map:database a d2rq:Database;
+	d2rq:jdbcDriver "sun.jdbc.odbc.JdbcOdbcDriver";
+	d2rq:jdbcDSN "jdbc:odbc:CORAGO";
+	.
+
+
+
+#Gestione collocazione temporale
+map:AmbientazioneAnnoBrano a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "BRANI/AMBIENTAZIONE/ANNO/@@BRANI.COD_BRANO|urlify@@";
+	d2rq:condition "BRANI.ANNOAMB1 <> ''";
+.
+
+map:AmbientazioneAnnoBranoDesc a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "BRANI/AMBIENTAZIONE/ANNOAMBE/@@BRANI.COD_BRANO|urlify@@";
+	d2rq:condition "BRANI.ANNOAMBE <> '' OR BRANI.ANNOAMB1 <> ''";
+	d2rq:class crm:E49_Time_Appellation;
+.
+map:AmbientazioneAnnoBranoDescLabel1 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:AmbientazioneAnnoBranoDesc;
+	d2rq:property rdfs:label;
+	d2rq:column "BRANI.ANNOAMBE";
+	d2rq:condition "BRANI.ANNOAMBE <> ''";
+.
+map:AmbientazioneAnnoBranoDescLabel2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:AmbientazioneAnnoBranoDesc;
+	d2rq:property rdfs:label;
+	d2rq:column "BRANI.ANNOAMB1";
+	d2rq:condition "BRANI.ANNOAMB1 <> '' AND ISNULL(BRANI.ANNOAMBE)=-1";
+.
+map:AmbientazioneAnnoBranoDescValue1 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:AmbientazioneAnnoBranoDesc;
+	d2rq:property rdf:value;
+	d2rq:datatype xsd:dateTime;
+	d2rq:sqlExpression "Left(BRANI.ANNOAMB1,5)+'-01-01T00:00:00Z'";
+	d2rq:condition "LEN(BRANI.ANNOAMB1)>0 AND BRANI.ANNOAMB1 like('-%')";
+.
+map:AmbientazioneAnnoBranoDescValue2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:AmbientazioneAnnoBranoDesc;
+	d2rq:property rdf:value;
+	d2rq:datatype xsd:dateTime;
+	d2rq:sqlExpression "Left(BRANI.ANNOAMB1,4)+'-01-01T00:00:00Z'";
+	d2rq:condition "LEN(BRANI.ANNOAMB1)>0 AND BRANI.ANNOAMB1 NOT like('-%')";
+.
+
+map:LegameAmbientazioneAnnoDescBrano a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:AmbientazioneAnnoBrano;
+	d2rq:property crm:P78_is_identified_by;
+	d2rq:refersToClassMap map:AmbientazioneAnnoBranoDesc;
+.
+

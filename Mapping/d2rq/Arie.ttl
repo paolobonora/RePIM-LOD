@@ -1,0 +1,236 @@
+@prefix map: <#> .
+@prefix db: <> .
+@prefix vocab: <vocab/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix jdbc: <http://d2rq.org/terms/jdbc/> .
+@prefix corago: <http://corago.unibo.it/sm/> .
+@prefix frbroo: <http://erlangen-crm.org/efrbroo/> .
+@prefix crm: <http://erlangen-crm.org/current/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace/#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix d2r: <http://sites.wiwiss.fu-berlin.de/suhl/bizer/d2r-server/config.rdf#> .
+@prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
+@prefix ud: <http://universaldependencies.org/u/dep#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+
+# Realizzato da: Paolo Bonora
+# Versione del: 29/05/2020
+
+<> a d2r:Server;
+  d2r:sparqlTimeout 0;
+  d2r:pageTimeout 5;
+ .
+
+map:database a d2rq:Database;
+	d2rq:jdbcDriver "sun.jdbc.odbc.JdbcOdbcDriver";
+	d2rq:jdbcDSN "jdbc:odbc:ARIE";
+.
+map:Brano a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "BRANI/@@BRANI.COD_BRANO|urlify@@";
+.
+map:LabelBrano a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Brano;
+	d2rq:property rdfs:label;
+	d2rq:column "BRANI.TITOLO_STP";
+.
+map:Spettacolo a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "SPETTACOLI/@@SPETTACOLI.ID_SPET|urlify@@";
+.	
+map:Documento a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "DOCUMENTI/@@DOCUMENTI.ID_DOC|urlify@@";
+.
+map:Personaggio a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "PERSONAG/@@PERSONAG.COD_PER|urlify@@";
+.
+map:LabelPersonaggio a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Personaggio;
+	d2rq:property rdfs:label;
+	d2rq:column "PERSONAG.PERSONAG";
+.
+map:Responsabile a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "RESPONS/@@RESPONS.COD_RESP|urlify@@";
+	d2rq:class crm:E39_Actor;
+.
+
+#ARIE
+map:Aria a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "ARIA/@@ARIE.ID_ARIA|urlify@@";
+	d2rq:class corago:C29_Aria;
+	d2rq:containsDuplicates "false";
+.
+map:LabelAria a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Aria;
+	d2rq:property rdfs:label;
+	d2rq:column "ARIE.AR_INCIPIT";
+.
+map:TestoAria a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Aria;
+	d2rq:property rdfs:comment;
+	d2rq:column "ARIE.AR_TESTO";
+.
+map:PosizioneAria a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "ARIA/AS/@@SWT_ARIE_DOC.ID_ARIADOC|urlify@@";
+	d2rq:class corago:C5_Link;
+.
+map:LabelPosizioneAria a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PosizioneAria;
+	d2rq:property rdfs:label;
+	d2rq:column "SWT_ARIE_DOC.ADOC_ATTOSCENA";
+.
+map:LegamePosizioneAria1 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Aria;
+	d2rq:property crm:CP5_refers_with;
+	d2rq:refersToClassMap map:PosizioneAria;
+	d2rq:join "SWT_ARIE_DOC.ID_ARIA = ARIE.ID_ARIA";
+	d2rq:condition "SWT_ARIE_DOC.ADOC_ATTOSCENA <> ''";
+.
+map:LegamePosizioneAria2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PosizioneAria;
+	d2rq:property crm:CP6_refers_to;
+	d2rq:refersToClassMap map:Documento;
+	d2rq:join "SWT_ARIE_DOC.ID_DOC_BRA = SWT_DOC_BRA.ID_DOC_BRA";
+	d2rq:join "SWT_DOC_BRA.ID_DOC = DOCUMENTI.ID_DOC";
+.
+map:LegameAriaBrano a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Aria;
+	d2rq:property crm:P67_refers_to;
+	d2rq:refersToClassMap map:Brano;
+	d2rq:join "BRANI.COD_BRANO = SWT_DOC_BRA.COD_BRANO";
+	d2rq:join "SWT_DOC_BRA.ID_DOC_BRA = SWT_ARIE_DOC.ID_DOC_BRA";
+	d2rq:join "SWT_ARIE_DOC.ID_ARIA = ARIE.ID_ARIA";
+.
+map:LegameAriaSpettacolo a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Aria;
+	d2rq:property corago:CP19_expression_performed_in;
+	d2rq:refersToClassMap map:Spettacolo;
+	d2rq:join "SPETTACOLI.ID_SPET = SPET_BRA.ID_SPET";
+	d2rq:join "SPET_BRA.ID_SPET_BRA = SWT_DOC_BRA.ID_SPET_BRA";
+	d2rq:join "SWT_DOC_BRA.ID_DOC_BRA = SWT_ARIE_DOC.ID_DOC_BRA";
+	d2rq:join "SWT_ARIE_DOC.ID_ARIA = ARIE.ID_ARIA";
+.
+map:LegameAriaLibretto a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Documento;
+	d2rq:property frbroo:CLR6_should_carry;
+	d2rq:refersToClassMap map:Aria;
+	d2rq:join "DOCUMENTI.ID_DOC = SWT_DOC_BRA.ID_DOC";
+	d2rq:join "SWT_DOC_BRA.ID_DOC_BRA = SWT_ARIE_DOC.ID_DOC_BRA";
+	d2rq:join "SWT_ARIE_DOC.ID_ARIA = ARIE.ID_ARIA";
+.
+map:LegameAriaPersonaggio a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Aria;
+	d2rq:property crm:P129_is_about;
+	d2rq:refersToClassMap map:Personaggio;
+	d2rq:join "SWT_ARIE_PERS.ID_ARIA = ARIE.ID_ARIA";
+	d2rq:join "SWT_ARIE_PERS.COD_PER = PERSONAG.COD_PER";
+.
+map:CreazioneAria a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "SWT_ARIE_RESP/ARIA/EVE/@@SWT_ARIE_RESP.ID_ARIA|urlify@@";
+	d2rq:class frbroo:F28_Expression_Creation;
+.
+map:LegameCreazioneAria a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:CreazioneAria;
+	d2rq:refersToClassMap map:Aria;
+	d2rq:join "ARIE.ID_ARIA = SWT_ARIE_RESP.ID_ARIA";
+	d2rq:property frbroo:R17_created;
+.
+map:RuoloCreazioneCreazioneAria a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "SWT_ARIE_RESP/ARIA/EVE/RB/@@SWT_ARIE_RESP.ID_ARIARESP@@";
+	d2rq:class corago:C18_Author_Role;
+.
+map:RuoloCreazioneCreazioneAriaLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RuoloCreazioneCreazioneAria;
+	d2rq:property rdfs:label;
+	d2rq:datatype xsd:string;
+	d2rq:join "SWT_ARIE_RESP.ARES_RESP = TADE.ID_TADE";
+	d2rq:column "TADE.TADEDA1";
+.
+map:RuoloCreazioneCreazioneAriaP1 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:CreazioneAria;
+	d2rq:refersToClassMap map:RuoloCreazioneCreazioneAria;
+	d2rq:property corago:CP2_carried_out_role;
+.
+map:RRuoloCreazioneCreazioneAriaP2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RuoloCreazioneCreazioneAria;
+	d2rq:refersToClassMap map:Responsabile;
+	d2rq:property corago:CP3_carried_out_actor;
+	d2rq:join "SWT_ARIE_RESP.COD_RESP = RESPONS.COD_RESP";
+	d2rq:join "SWT_ARIE_RESP.ID_ARIA = ARIE.ID_ARIA";
+.
+map:PriorityRuoloCreazioneCreazioneAria a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "SWT_ARIE_RESP/ARIA/EVE/RB/NPRO/@@SWT_ARIE_RESP.ID_ARIARESP|urlify@@/@@SWT_ARIE_RESP.ARES_NPRO@@";
+	d2rq:class crm:E60_Number;
+.
+map:PriorityRuoloCreazioneCreazioneAriaLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PriorityRuoloCreazioneCreazioneAria;
+	d2rq:property rdfs:label;
+	d2rq:datatype xsd:integer;
+	d2rq:column "SWT_ARIE_RESP.ARES_NPRO";
+.
+map:LegamePriorityRuoloCreazioneCreazioneAria a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RuoloCreazioneCreazioneAria;
+	d2rq:refersToClassMap map:PriorityRuoloCreazioneCreazioneAria;
+	d2rq:property corago:CPAN1_priority;
+	d2rq:join "SWT_ARIE_RESP.ID_ARIARESP = SWT_ARIE_RESP.ID_ARIARESP";
+.
+
+map:Legame a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "LEGAMI/@@TADE.TADETIP@@/@@SWT_ARIE_LEGAMI.ID_ARIALEG|urlify@@";
+	d2rq:join "SWT_ARIE_LEGAMI.ALEG_REL = TADE.ID_TADE";
+	d2rq:condition "TADE.TADETIP = 'ARR'";
+	d2rq:class corago:C5_Link;
+.	
+
+map:BranoOrigine a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Aria;
+	d2rq:property corago:CP5_refers_with;
+	d2rq:refersToClassMap map:Legame;
+	d2rq:join "ARIE.ID_ARIA = SWT_ARIE_LEGAMI.ID_ARIA2";
+.
+
+map:BranoLegato a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Legame;
+	d2rq:property corago:CP6_refers_to;
+	d2rq:refersToClassMap map:Aria;
+	d2rq:join "ARIE.ID_ARIA = SWT_ARIE_LEGAMI.ID_ARIA1";
+.
+
+map:TipoLegame a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Legame;
+	d2rq:property rdfs:label;
+	d2rq:column "TADE.TADEDA1";
+	d2rq:join "SWT_ARIE_LEGAMI.ALEG_REL = TADE.ID_TADE";
+	d2rq:condition "TADE.TADETIP = 'ARR'";
+.	
+
+map:NoteLegame a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "LEGAMI/NOTE/@@SWT_ARIE_LEGAMI.ID_ARIALEG|urlify@@";
+	d2rq:condition "SWT_ARIE_LEGAMI.ALEG_NOTE <> ''";
+	d2rq:class crm:E62_String;
+.	
+map:LabelNoteLegame a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:NoteLegame;
+	d2rq:property rdfs:label;
+	d2rq:column "SWT_ARIE_LEGAMI.ALEG_NOTE";
+	d2rq:condition "SWT_ARIE_LEGAMI.ALEG_NOTE <> ''";
+.
+map:LegameNoteLegame a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Legame;
+	d2rq:property crm:P3_has_note;
+	d2rq:refersToClassMap map:NoteLegame;
+.
