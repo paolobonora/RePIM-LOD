@@ -130,7 +130,7 @@ map:Expression a d2rq:ClassMap;
 	d2rq:condition "OPERE.OPR_FRBR='FRBEX'";
 .
 
-map:WorkLabel a d2rq:PropertyBridge;
+map:ExpressionLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:Expression;
 	d2rq:property rdfs:label;
 	d2rq:column "TITOLI.TIT_NORM";
@@ -162,5 +162,53 @@ map:ExprBookRel a d2rq:PropertyBridge;
 	d2rq:condition "OPERE.OPR_FRBR='FRBEX'";
 .
 
+#EXPRESSIONS IN SOURCES (SWT_LIBRI_OPEREOPERE)
+map:ExpressionInSource a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "EXPR/@@SWT_LIBRI_OPERE.LOR_ID@@";
+	d2rq:class frbroo:F24_Publication_Expression;
+.
 
+map:ExpressionInSourceLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ExpressionInSource;
+	d2rq:property rdfs:label;
+	d2rq:column "TITOLI.TIT_NORM";
+	d2rq:join "SWT_LIBRI_OPERE.LOR_OPR_ID = TITOLI.ENT_ID";
+	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE'";
+.
 
+map:WorkExpressionInSourceRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ExpressionInSource;
+	d2rq:property frbroo:R3i_realises;
+	d2rq:uriPattern "WORK/@@SWT_LIBRI_OPERE.LOR_OPR_ID@@";
+.
+
+map:ExpressionInSourceBookRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ExpressionInSource;
+	d2rq:property frbroo:R4_carriers_provided_by;
+	d2rq:refersToClassMap map:Book;
+	d2rq:join "SWT_LIBRI_OPERE.LOR_LIB_ID = LIBRI.LIB_ID";
+.
+
+#ITEM
+map:Item a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "ITEM/@@SWT_LIBRI_BIBLIOTECHE.LRM_ID@@";
+	d2rq:class frbroo:F5_Item;
+.
+
+map:ItemLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Item;
+	d2rq:property rdfs:label;
+	d2rq:join "SWT_LIBRI_BIBLIOTECHE.BBT_ID = BIBLIOTECHE.BBT_ID";
+	d2rq:join "BIBLIOTECHE.BBT_ID = BIBLIOTECHE_SIGLE.BBT_ID";
+	#d2rq:column "DOCUMENTI.DOC_SIGLA";
+	d2rq:sqlExpression "BIBLIOTECHE_SIGLE.BSG_SIGLA &' - ' & IIF((IsNULL(SWT_LIBRI_BIBLIOTECHE.LRM_COLLOCAZIONE) OR len(SWT_LIBRI_BIBLIOTECHE.LRM_COLLOCAZIONE)<1),'N/A', SWT_LIBRI_BIBLIOTECHE.LRM_COLLOCAZIONE)"
+.
+
+map:ItemBookRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Item;
+	d2rq:property frbroo:R7_is_example_of;
+	d2rq:refersToClassMap map:Book;
+	d2rq:join "SWT_LIBRI_BIBLIOTECHE.LIB_ID = LIBRI.LIB_ID";
+.
