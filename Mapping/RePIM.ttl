@@ -16,6 +16,7 @@
 @prefix bf: <http://id.loc.gov/ontologies/bibframe/> .
 @prefix ud: <http://universaldependencies.org/u/dep#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix repim: <http://repim.unibo.it/sm/>.
 
 # Realizzato da: Paolo Bonora
 # Versione del: 03/09/2021
@@ -70,7 +71,6 @@ map:CompleteWorkLabel a d2rq:PropertyBridge;
 	d2rq:join "OPERE.OPR_ID = TITOLI.ENT_ID";
 	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE' AND TITOLI.TIT_TIPO='TITINC'";
 .
-
 map:PartWork a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "WORK/@@OPERE.OPR_ID@@";
@@ -84,7 +84,6 @@ map:PartWorkLabel a d2rq:PropertyBridge;
 	d2rq:join "OPERE.OPR_ID = TITOLI.ENT_ID";
 	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE'";
 .
-
 map:WorkRel a d2rq:PropertyBridge;
 	#d2rq:belongsToClassMap map:CompleteWork;
 	d2rq:uriPattern "WORK/@@OPERE.OPR_IDCOMP@@";
@@ -93,32 +92,69 @@ map:WorkRel a d2rq:PropertyBridge;
 	#d2rq:join "OPERE.OPR_IDCOMP = OPERE.OPR_ID";
 	d2rq:condition "OPERE.OPR_ID <> OPERE.OPR_IDCOMP";
 .
-
 map:WorkConception a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "WORK/CON/@@SWT_OPERE_RESPONS.ORS_ID@@";
 	d2rq:class frbroo:F27_Work_Conception;
 .
-
+map:WorkConceptionType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkConception;
+	d2rq:property crm:P2_has_type;
+	d2rq:refersToClassMap map:AuthRole;
+	d2rq:join "SWT_OPERE_RESPONS.ORS_RESPONSABILITA = TADE.TADE_ID";
+.
 map:WorkConceptionActRel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:WorkConception;
 	d2rq:property crm:P14_carried_out_by;
 	d2rq:refersToClassMap map:Actor;
 	d2rq:join "SWT_OPERE_RESPONS.COD_RESP = RESPONS.COD_RESP";
 .
-
 map:WorkConceptionWorkRel1 a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:WorkConception;
 	d2rq:property crm:P94_has_created;
 	d2rq:refersToClassMap map:CompleteWork;
 	d2rq:join "SWT_OPERE_RESPONS.OPR_ID = OPERE.OPR_ID";
 .
-
 map:WorkConceptionWorkRel2 a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:WorkConception;
 	d2rq:property crm:P94_has_created;
 	d2rq:refersToClassMap map:PartWork;
 	d2rq:join "SWT_OPERE_RESPONS.OPR_ID = OPERE.OPR_ID";
+.
+
+#TITLES (TITOLI)
+map:WorkTitle a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WORK/TITLE/@@OPERE.OPR_ID@@";
+	d2rq:class crm:E35_Title;
+	d2rq:join "OPERE.OPR_ID = TITOLI.ENT_ID";
+	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE'";
+.
+map:WorkTitleLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkTitle;
+	d2rq:property rdfs:label;
+	d2rq:column "TITOLI.TIT_NORM";
+.
+map:WorkLang a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkTitle;
+	d2rq:property crm:P102_has_title;
+	d2rq:refersToClassMap map:WorkTitle;
+	d2rq:join "OPERE.OPR_ID = TITOLI.ENT_ID";
+	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE' AND TITOLI.TIT_TIPO='TITINC'";
+.
+map:WorkTitleRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:CompleteWork;
+	d2rq:property crm:P102_has_title;
+	d2rq:refersToClassMap map:WorkTitle;
+	d2rq:join "OPERE.OPR_ID = TITOLI.ENT_ID";
+	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE' AND TITOLI.TIT_TIPO='TITINC'";
+.
+map:PartWorkTitleRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkTitle;
+	d2rq:property crm:P72_has_language;
+	d2rq:refersToClassMap map:Lang;
+	d2rq:join "TITOLI.TIT_LINGUA = TADE.TADE_ID";
+	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE'";
 .
 
 
@@ -196,7 +232,6 @@ map:Item a d2rq:ClassMap;
 	d2rq:uriPattern "ITEM/@@SWT_LIBRI_BIBLIOTECHE.LRM_ID@@";
 	d2rq:class frbroo:F5_Item;
 .
-
 map:ItemLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:Item;
 	d2rq:property rdfs:label;
@@ -205,10 +240,144 @@ map:ItemLabel a d2rq:PropertyBridge;
 	#d2rq:column "DOCUMENTI.DOC_SIGLA";
 	d2rq:sqlExpression "BIBLIOTECHE_SIGLE.BSG_SIGLA &' - ' & IIF((IsNULL(SWT_LIBRI_BIBLIOTECHE.LRM_COLLOCAZIONE) OR len(SWT_LIBRI_BIBLIOTECHE.LRM_COLLOCAZIONE)<1),'N/A', SWT_LIBRI_BIBLIOTECHE.LRM_COLLOCAZIONE)"
 .
-
 map:ItemBookRel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:Item;
 	d2rq:property frbroo:R7_is_example_of;
 	d2rq:refersToClassMap map:Book;
 	d2rq:join "SWT_LIBRI_BIBLIOTECHE.LIB_ID = LIBRI.LIB_ID";
+.
+
+map:ItemURL a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "ITEM/URL/@@SWT_LIBRI_BIBLIOTECHE.LRM_ID@@";
+	d2rq:condition "SWT_LIBRI_BIBLIOTECHE.LRM_URL <> ''";
+	d2rq:class crm:E42_Identifier;
+.
+map:ItemURLLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ItemURL;
+	d2rq:property rdfs:label;
+	d2rq:sqlExpression "IIF(IsNULL(BIBLIOTECHE.BBT_RURL1),'',BIBLIOTECHE.BBT_RURL1) & SWT_LIBRI_BIBLIOTECHE.LRM_URL & IIF(IsNULL(BIBLIOTECHE.BBT_RURL1),'',BIBLIOTECHE.BBT_RURL2)";
+	d2rq:join "SWT_LIBRI_BIBLIOTECHE.LIB_ID = LIBRI.LIB_ID";
+	d2rq:join "SWT_LIBRI_BIBLIOTECHE.BBT_ID = BIBLIOTECHE.BBT_ID";
+.
+map:ItemURLRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Item;
+	d2rq:property crm:P1_is_identified_by;
+	d2rq:refersToClassMap map:ItemURL;
+.
+
+map:ItemURLRelType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ItemURL;
+	d2rq:property crm:P2_has_type;
+	d2rq:refersToClassMap map:TipoDocURL;
+.
+
+#INCIPIT (INCIPIT)
+map:Incipit a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "INCIPIT/@@INCIPIT.INC_ID@@";
+	d2rq:class repim:RC1_Incipit;
+.
+map:IncipitV1 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Incipit;
+	d2rq:property repim:RD1_has_first_verse;
+	d2rq:column "INCIPIT.INC_VRS1";
+.
+map:IncipitV2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Incipit;
+	d2rq:property repim:RD2_has_second_verse;
+	d2rq:column "INCIPIT.INC_VRS2";
+.
+
+map:IncipitLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Incipit;
+	d2rq:property rdfs:label;
+	d2rq:sqlExpression "INCIPIT.INC_VRS1 &' ' &INCIPIT.INC_VRS2"; #TODO: define how to mark second line
+.
+
+map:IncipitTitleRel a d2rq:PropertyBridge; #TODO: check if to be asserted here on on the Work 
+	d2rq:belongsToClassMap map:WorkTitle;
+	d2rq:property crm:P1_is_identified_by;
+	d2rq:refersToClassMap map:Incipit;
+	d2rq:join "TITOLI.INC_ID = INCIPIT.INC_ID";
+.
+
+map:IncipitWorkRel1 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:CompleteWork;
+	d2rq:property crm:P1_is_identified_by;
+	d2rq:refersToClassMap map:Incipit;
+	d2rq:join "TITOLI.INC_ID = INCIPIT.INC_ID";
+	d2rq:join "OPERE.OPR_ID = TITOLI.ENT_ID";
+.
+
+map:IncipitWorkRel2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PartWork;
+	d2rq:property crm:P1_is_identified_by;
+	d2rq:refersToClassMap map:Incipit;
+	d2rq:join "TITOLI.INC_ID = INCIPIT.INC_ID";
+	d2rq:join "OPERE.OPR_ID = TITOLI.ENT_ID";
+.
+
+map:IncipitGroupRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Incipit;
+	d2rq:property repim:RP1_group_member_of;
+	d2rq:uriPattern "INCIPIT/@@INCIPIT.INC_IDGRUPPO@@";
+	d2rq:condition "INCIPIT.INC_IDGRUPPO <> '' AND INCIPIT.INC_IDGRUPPO <> INCIPIT.INC_ID";
+.
+
+map:IncipitArchetype a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Incipit;
+	d2rq:property repim:RD3_is_archetype;
+	d2rq:datatype xsd:boolean;
+	d2rq:column "INCIPIT.INC_ARCHE";
+.
+
+map:IncipitGroup a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Incipit;
+	d2rq:property repim:RD4_is_head_of_group;
+	d2rq:column "INCIPIT.INC_IDGRUPPO";
+	d2rq:condition "INCIPIT.INC_IDGRUPPO <> '' AND INCIPIT.INC_IDGRUPPO = INCIPIT.INC_ID";
+.
+
+
+
+#OTHER CLASSES (TADE, etc.)
+map:Lang a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "LANG/@@TADE.TADE_ID@@";
+	d2rq:class crm:E56_Language;
+	d2rq:condition "TADE.TADETIP='LNR'" 
+.
+map:LangLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Lang;
+	d2rq:property rdfs:label;
+	d2rq:column "TADE.TADEDA1";
+.
+map:LangValue a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Lang;
+	d2rq:property rdf:value;
+	d2rq:column "TADE.TADEPRO";
+.
+
+map:AuthRole a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "TYPE/RESP/@@TADE.TADE_ID@@";
+	d2rq:class crm:E55_Type;
+	d2rq:condition "TADE.TADETIP='RES'" 
+.
+map:AuthRoleLAbel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:AuthRole;
+	d2rq:property rdfs:label;
+	d2rq:column "TADE.TADEDA1";
+.
+
+map:TipoDocURL a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "TYPE/ID/URL";
+	d2rq:class corago:E55_Type;
+.
+map:TipoDocURLLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:TipoDocURL;
+	d2rq:property rdfs:label;
+	d2rq:constantValue ":URL";
 .
