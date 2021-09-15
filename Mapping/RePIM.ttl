@@ -106,13 +106,13 @@ map:LinkActor_AppellationOtherForm a d2rq:PropertyBridge;
 map:Actor_Role a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:Actor;
 	d2rq:property crm:P2_has_type;
-	d2rq:uriSqlExpression "'http://localhost:2020/resource/TYPE/ROLE/RES' & Left(RESPONS.COD_TIPO_R,3)";
+	d2rq:uriSqlExpression "'http://repim.unibo.it/resource/TYPE/ROLE/RES' & Left(RESPONS.COD_TIPO_R,3)";
 	d2rq:condition "IsNull(Left(RESPONS.COD_TIPO_R,3))=0"
 .
 map:Actor_Role2 a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:Actor;
 	d2rq:property crm:P2_has_type;
-	d2rq:uriSqlExpression "'http://localhost:2020/resource/TYPE/ROLE/RES' & Mid(RESPONS.COD_TIPO_R,4,6)";
+	d2rq:uriSqlExpression "'http://repim.unibo.it/resource/TYPE/ROLE/RES' & Mid(RESPONS.COD_TIPO_R,4,6)";
 	d2rq:condition "IsNull(Mid(RESPONS.COD_TIPO_R,4,6))=0"
 .
 
