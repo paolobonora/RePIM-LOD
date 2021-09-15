@@ -26,24 +26,268 @@
   d2r:pageTimeout 5;
  .
  
+map:database a d2rq:Database;
+	d2rq:jdbcDriver "sun.jdbc.odbc.JdbcOdbcDriver";
+	d2rq:jdbcDSN "jdbc:odbc:REPIM32";
+.
+ 
 #AUTHORS (RESPONS)
 map:Actor a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "AUTH/@@RESPONS.COD_RESP@@";
 	d2rq:class crm:E39_Actor;
 .
-
 map:ActorLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:Actor;
 	d2rq:property rdfs:label;
 	d2rq:column "RESPONS.ORDINA_R";
 .
+map:ActorAppellation a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "AUTH/APPL/@@RESPONS.COD_RESP|urlify@@";
+	d2rq:class crm:E82_Actor_Appellation;
+.
+map:ActorAppellation_label1 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ActorAppellation;
+	d2rq:property rdfs:label;
+	d2rq:pattern "@@RESPONS.NOME_R@@ @@RESPONS.PREFISSO@@ @@RESPONS.COGNOME_R@@";
+	d2rq:condition "RESPONS.COGNOME_R <> '' AND RESPONS.NOME_R <>'' AND RESPONS.PREFISSO <>''";
+.
+map:ActorAppellation_label2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ActorAppellation;
+	d2rq:property rdfs:label;
+	d2rq:pattern "@@RESPONS.NOME_R@@ @@RESPONS.COGNOME_R@@";
+	d2rq:condition "RESPONS.COGNOME_R <> '' AND RESPONS.NOME_R <>'' AND (ISNULL(RESPONS.PREFISSO) OR RESPONS.PREFISSO='')";
+.
+map:ActorAppellation_label3 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ActorAppellation;
+	d2rq:property rdfs:label;
+	d2rq:pattern "@@RESPONS.COGNOME_R@@";
+	d2rq:condition "RESPONS.COGNOME_R <> '' AND (ISNULL(RESPONS.NOME_R) OR RESPONS.NOME_R='') AND (ISNULL(RESPONS.PREFISSO) OR RESPONS.PREFISSO='')";
+.
+map:ActorAppellation_label4 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ActorAppellation;
+	d2rq:property rdfs:label;
+	d2rq:pattern "@@RESPONS.PREFISSO@@ @@RESPONS.COGNOME_R@@";
+	d2rq:condition "RESPONS.COGNOME_R <> '' AND (ISNULL(RESPONS.NOME_R) OR RESPONS.NOME_R='') AND RESPONS.PREFISSO <> ''";
+.
+#Main name form
+map:Actor_Appellation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Actor;
+	d2rq:property crm:P131_is_identified_by;
+	d2rq:refersToClassMap map:ActorAppellation;
+	d2rq:join "RESPONS.COD_RESP = RESPONS.COD_RESP";
+.
+#Other name forms
+map:Actor_AppellationOtherForm a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Actor;
+	d2rq:property crm:P48_has_preferred_identifier;
+	d2rq:uriPattern "AUTH/APPL/@@RESPONS.COD_RESP_PADRE|urlify@@";
+	d2rq:condition "RESPONS.COD_RESP <> RESPONS.COD_RESP_PADRE";
+.
+map:Actor_AppellationOtherFormTipo a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "TYPE/NAME/PARENT_FORM";
+	d2rq:class crm:E55_Type;
+.
+map:Actor_AppellationOtherFormTipoLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Actor_AppellationOtherFormTipo;
+	d2rq:property rdfs:label;
+	d2rq:constantValue "forma principale del nome";
+.
+map:LinkActor_AppellationOtherForm a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ActorAppellation;
+	d2rq:condition "IsNull(RESPONS.COD_RESP_PADRE)";
+	d2rq:property crm:P2_has_type;
+	d2rq:refersToClassMap map:Actor_AppellationOtherFormTipo;
+.
+
+#Author main roles
+map:Actor_Role a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Actor;
+	d2rq:property crm:P2_has_type;
+	d2rq:uriSqlExpression "'http://localhost:2020/resource/TYPE/ROLE/RES' & Left(RESPONS.COD_TIPO_R,3)";
+	d2rq:condition "IsNull(Left(RESPONS.COD_TIPO_R,3))=0"
+.
+map:Actor_Role2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Actor;
+	d2rq:property crm:P2_has_type;
+	d2rq:uriSqlExpression "'http://localhost:2020/resource/TYPE/ROLE/RES' & Mid(RESPONS.COD_TIPO_R,4,6)";
+	d2rq:condition "IsNull(Mid(RESPONS.COD_TIPO_R,4,6))=0"
+.
+
+# Actor's Birth and Death
+map:PersonBirthDateTS a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "AUTH/BIRTH/TS/@@RESPONS.COD_RESP|urlify@@";
+	d2rq:condition "RESPONS.DATA_NAS_R <> ''";
+	d2rq:class crm:E52_Time-Span;
+.
+map:PersonDeathDateTS a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "AUTH/DEATH/TS/@@RESPONS.COD_RESP|urlify@@";
+	d2rq:condition "RESPONS.DATA_MOR_R <> ''";
+	d2rq:class crm:E52_Time-Span;
+.
+map:PersonBirthDate a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "AUTH/BIRTH/@@RESPONS.COD_RESP|urlify@@";
+	d2rq:condition "RESPONS.DATA_NAS_R <> ''";
+	d2rq:class crm:E67_Birth;
+.
+map:PersonDeathDate a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "AUTH/DEATH/@@RESPONS.COD_RESP|urlify@@";
+	d2rq:condition "RESPONS.DATA_MOR_R <> ''";
+	d2rq:class crm:E69_Death;
+.
+map:PersonDateBR a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "DATE/@@RESPONS.DATA_NAS_R|urlify@@";
+	d2rq:condition "RESPONS.DATA_NAS_R <> ''";
+	d2rq:class crm:E50_Date;
+.
+map:PersonDateBRTALabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonDateBR;
+	d2rq:property rdfs:label;
+	#d2rq:datatype corago:reverseDateFormat;
+	d2rq:column "RESPONS.DATA_NAS_R";
+.
+map:PersonDateBRTAValue a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonDateBR;
+	d2rq:property rdf:value;
+	d2rq:datatype xsd:dateTime;
+	d2rq:sqlExpression "Mid(RESPONS.DATA_NAS_R,1,4) & '-' & IIF(Len(Mid(RESPONS.DATA_NAS_R,6,2))<2,'01',Mid(RESPONS.DATA_NAS_R,6,2)) & '-' & IIF(Len(Mid(RESPONS.DATA_NAS_R,9,2))<2,'01',Mid(RESPONS.DATA_NAS_R,9,2)) & 'T00:00:00Z'";
+	d2rq:condition "LEN(RESPONS.DATA_NAS_R)>0";
+.
+map:LegamePersonDateBRTS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonBirthDateTS;
+	d2rq:property crm:P78_is_identified_by;
+	d2rq:refersToClassMap map:PersonDateBR;
+.
+map:PersonDateDT a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "DATE/@@RESPONS.DATA_MOR_R|urlify@@";
+	d2rq:condition "RESPONS.DATA_MOR_R <> ''";
+	d2rq:class crm:E50_Date;
+.
+map:PersonDateDTTALabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonDateDT;
+	d2rq:property rdfs:label;
+	#d2rq:datatype corago:reverseDateFormat;
+	d2rq:column "RESPONS.DATA_MOR_R";
+.
+map:PersonDateDTTAValue a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonDateDT;
+	d2rq:property rdf:value;
+	d2rq:datatype xsd:dateTime;
+	d2rq:sqlExpression "Mid(RESPONS.DATA_MOR_R,1,4) & '-' & IIF(Len(Mid(RESPONS.DATA_MOR_R,6,2))<2,'01',Mid(RESPONS.DATA_MOR_R,6,2)) & '-' & IIF(Len(Mid(RESPONS.DATA_MOR_R,9,2))<2,'01',Mid(RESPONS.DATA_MOR_R,9,2)) & 'T00:00:00Z'";
+	d2rq:condition "LEN(RESPONS.DATA_MOR_R)>0";
+.
+map:LinkPersonDateDTTS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonDeathDateTS;
+	d2rq:property crm:P78_is_identified_by;
+	d2rq:refersToClassMap map:PersonDateDT;
+.
+map:Actor_PersonBirthDate a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Actor;
+	d2rq:property crm:P98i_was_born;
+	d2rq:condition "RESPONS.DATA_NAS_R <> ''";
+	d2rq:refersToClassMap map:PersonBirthDate;
+.
+map:Actor_PersonBirthDateTS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonBirthDate;
+	d2rq:property crm:P4_has_time-span;
+	d2rq:condition "RESPONS.DATA_NAS_R <> ''";
+	d2rq:refersToClassMap map:PersonBirthDateTS;
+.
+map:Actor_PersonDeathDate a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Actor;
+	d2rq:property crm:P100i_died_in;
+	d2rq:condition "RESPONS.DATA_MOR_R <> ''";
+	d2rq:refersToClassMap map:PersonDeathDate;
+.
+map:Actor_PersonDeathDateTS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonDeathDate;
+	d2rq:property crm:P4_has_time-span;
+	d2rq:condition "RESPONS.DATA_MOR_R <> ''";
+	d2rq:refersToClassMap map:PersonDeathDateTS;
+.
+
+# Actor birth and death place
+map:AuthBirthPlace a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "AUTH/BIRTH/PLACE/@@RESPONS.COD_RESP|urlify@@";
+	d2rq:condition "RESPONS.LOC_NAS_R <> ''";
+	d2rq:class frbroo:F9_Place;
+.
+map:AuthBirthPlaceLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:AuthBirthPlace;
+	d2rq:property rdfs:label;
+	d2rq:datatype xsd:string;
+	d2rq:column "RESPONS.LOC_NAS_R";
+.
+map:LinkAuthBirthPlace a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonBirthDate;
+	d2rq:property crm:P7_took_place_at;
+	d2rq:refersToClassMap map:AuthBirthPlace;
+.
+
+map:AuthBirthPlacePA a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "PLACE_APP/@@RESPONS.LOC_NAS_R|urlify@@";
+	d2rq:condition "RESPONS.LOC_NAS_R  <> ''";
+	d2rq:class crm:E44_Place_Appellation;
+.
+map:AuthBirthPlacePALabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:AuthBirthPlacePA;
+	d2rq:property rdfs:label;
+	d2rq:datatype xsd:string;
+	d2rq:column "RESPONS.LOC_NAS_R";
+.
+map:LinkAuthBirthPlacePA a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:AuthBirthPlace;
+	d2rq:property crm:P1_is_identified_by;
+	d2rq:refersToClassMap map:AuthBirthPlacePA;
+.
+
+map:AuthDeathPlace a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "AUTH/DEATH/PLACE/@@RESPONS.COD_RESP|urlify@@";
+	d2rq:condition "RESPONS.LOC_MOR_R <> ''";
+	d2rq:class frbroo:F9_Place;
+.
+map:AuthDeathPlaceLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:AuthDeathPlace;
+	d2rq:property rdfs:label;
+	d2rq:datatype xsd:string;
+	d2rq:column "RESPONS.LOC_MOR_R";
+.
+map:LinkAuthDeathPlace a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PersonDeathDate;
+	d2rq:property crm:P7_took_place_at;
+	d2rq:refersToClassMap map:AuthDeathPlace;
+.
+
+map:AuthDeathPlacePA a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "PLACE_APP/@@RESPONS.LOC_MOR_R|urlify@@";
+	d2rq:condition "RESPONS.LOC_MOR_R  <> ''";
+	d2rq:class crm:E44_Place_Appellation;
+.
+map:AuthDeathPlacePALabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:AuthDeathPlacePA;
+	d2rq:property rdfs:label;
+	d2rq:datatype xsd:string;
+	d2rq:column "RESPONS.LOC_MOR_R";
+.
+map:LinkAuthDeathPlacePA a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:AuthDeathPlace;
+	d2rq:property crm:P1_is_identified_by;
+	d2rq:refersToClassMap map:AuthDeathPlacePA;
+.
 
 #BOOKS (LIBRI)
-map:database a d2rq:Database;
-	d2rq:jdbcDriver "sun.jdbc.odbc.JdbcOdbcDriver";
-	d2rq:jdbcDSN "jdbc:odbc:REPIM32";
-.
 map:Book a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "BOOK/@@LIBRI.LIB_ID|urlify@@";
@@ -361,11 +605,11 @@ map:LangValue a d2rq:PropertyBridge;
 
 map:AuthRole a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
-	d2rq:uriPattern "TYPE/RESP/@@TADE.TADE_ID@@";
+	d2rq:uriPattern "TYPE/ROLE/@@TADE.TADE_ID@@";
 	d2rq:class crm:E55_Type;
 	d2rq:condition "TADE.TADETIP='RES'" 
 .
-map:AuthRoleLAbel a d2rq:PropertyBridge;
+map:AuthRoleLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:AuthRole;
 	d2rq:property rdfs:label;
 	d2rq:column "TADE.TADEDA1";
