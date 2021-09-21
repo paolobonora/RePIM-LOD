@@ -18,6 +18,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix repim: <http://repim.unibo.it/sm/>.
 @prefix doco: <http://purl.org/spar/doco/>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix deo: <http://purl.org/spar/deo/>.
 
 # Realizzato da: Paolo Bonora
 # Versione del: 20/09/2021
@@ -492,6 +494,34 @@ map:ExpressionInSourceBookRel a d2rq:PropertyBridge;
 	d2rq:refersToClassMap map:Book;
 	d2rq:join "SWT_LIBRI_OPERE.LOR_LIB_ID = LIBRI.LIB_ID";
 .
+map:ExpressionInSourceConception a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "EXPR/CON/@@SWT_LIBRI_OPERE_RESPONS.LORS_ID@@";
+	d2rq:class frbroo:F28_Expression_Creation;
+.
+map:ExpressionInSourceConceptionLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ExpressionInSourceConception;
+	d2rq:property rdfs:label;
+	d2rq:column "SWT_LIBRI_OPERE_RESPONS.LORS_NOME_ORIGINALE";
+.
+map:ExpressionInSourceConceptionType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ExpressionInSourceConception;
+	d2rq:property crm:P2_has_type;
+	d2rq:refersToClassMap map:AuthRole;
+	d2rq:join "SWT_LIBRI_OPERE_RESPONS.LORS_RESPONSABILITA = TADE.TADE_ID";
+.
+map:ExpressionInSourceConceptionActorRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ExpressionInSourceConception;
+	d2rq:property crm:P14_carried_out_by;
+	d2rq:refersToClassMap map:Actor;
+	d2rq:join "SWT_LIBRI_OPERE_RESPONS.COD_RESP = RESPONS.COD_RESP";
+.
+map:ExpressionInSourceConceptionRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ExpressionInSourceConception;
+	d2rq:property crm:P94_has_created;
+	d2rq:refersToClassMap map:ExpressionInSource;
+	d2rq:join "SWT_LIBRI_OPERE_RESPONS.LOR_ID = SWT_LIBRI_OPERE.LOR_ID";
+.
 
 
 #BOOKS (LIBRI)
@@ -536,7 +566,6 @@ map:BookPresentationRel a d2rq:PropertyBridge;
 	d2rq:refersToClassMap map:BookPresentation;
 	d2rq:join "LIBRI.LIB_PRESENTAZIONE = TADE.TADE_ID";
 .
-
 map:BookExpression a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "BOOK/EXPR/@@LIBRI.LIB_ID@@";
@@ -565,6 +594,34 @@ map:BookExpressionMembers a d2rq:PropertyBridge;
 	d2rq:property frbroo:R10_has_member;
 	d2rq:refersToClassMap map:ExpressionInSource;
 	d2rq:join "SWT_LIBRI_OPERE.LOR_LIB_ID = LIBRI.LIB_ID";
+.
+map:BookExpressionConception a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "BOOK/EXPR/CON/@@SWT_LIBRI_RESPONS.LRS_ID@@";
+	d2rq:class frbroo:F28_Expression_Creation;
+.
+map:BookExpressionConceptionLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookExpressionConception;
+	d2rq:property rdfs:label;
+	d2rq:column "SWT_LIBRI_RESPONS.LRS_NOME_ORIGINALE";
+.
+map:BookExpressionConceptionType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookExpressionConception;
+	d2rq:property crm:P2_has_type;
+	d2rq:refersToClassMap map:AuthRole;
+	d2rq:join "SWT_LIBRI_RESPONS.LRS_RESPONSABILITA = TADE.TADE_ID";
+.
+map:BookExpressionConceptionActorRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookExpressionConception;
+	d2rq:property crm:P14_carried_out_by;
+	d2rq:refersToClassMap map:Actor;
+	d2rq:join "SWT_LIBRI_RESPONS.COD_RESP = RESPONS.COD_RESP";
+.
+map:BookExpressionConceptionRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookExpressionConception;
+	d2rq:property crm:P94_has_created;
+	d2rq:refersToClassMap map:BookExpression;
+	d2rq:join "SWT_LIBRI_RESPONS.LIB_ID = LIBRI.LIB_ID";
 .
 map:BookPublication a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
@@ -645,7 +702,6 @@ map:BookPublicationPlacePARel a d2rq:PropertyBridge;
 	d2rq:property crm:P1_is_identified_by;
 	d2rq:refersToClassMap map:BookPublicationPlacePA;
 .
-
 map:BookPublicationPlacePublisher a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "PUBLISHER/@@LIBRI.LIB_EDITORE|urlify@@";
@@ -681,8 +737,185 @@ map:BookColophonRel a d2rq:PropertyBridge;
 	d2rq:refersToClassMap map:BookColophon;
 .
 
+#BOOK PARTS (LIBRI_PARTI)
+map:BookPart a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "BOOK/@@LIBRI.LIB_ID|urlify@@/PART/@@LIBRI_PARTI.LPT_ID|urlify@@";
+	d2rq:class frbroo:F3_Manifestation_Product_Type;
+	d2rq:join "LIBRI.LIB_ID = LIBRI_PARTI.LIB_ID";
+.
+map:BookPartLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPart;
+	d2rq:property rdfs:label;
+	d2rq:column "LIBRI_PARTI.LPT_NPRO";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
+.
 
-#ITEM
+#BOOK PART STRUCTURE (LIBRI_PARTI_STRUTTURA)
+map:BookPartStructure a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "BOOK/@@LIBRI.LIB_ID|urlify@@/PART/@@LIBRI_PARTI.LPT_ID|urlify@@/@@LIBRI_PARTI_STRUTTURA.LPS_ID|urlify@@";
+	d2rq:class doco:Section;
+	d2rq:join "LIBRI.LIB_ID = LIBRI_PARTI.LIB_ID";
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPT_ID = LIBRI_PARTI.LPT_ID";
+.
+map:BookPartStructureType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartStructure;
+	d2rq:property rdf:type;
+	d2rq:constantValue frbroo:F23_Expression_Fragment;
+.
+map:BookPartStructureLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartStructure;
+	d2rq:property rdfs:label;
+	d2rq:column "TITOLI.TIT_NORM";
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPS_ID = TITOLI.ENT_ID";
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPT_ID = LIBRI_PARTI.LPT_ID";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
+	d2rq:condition "TITOLI.ENT_CLASSE = 'LIBRI_PARTI_STRUTTURA'";
+.
+map:BookPartStructureNoLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartStructure;
+	d2rq:property rdfs:label;
+	d2rq:column "LIBRI_PARTI_STRUTTURA.LPS_NPRO";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
+	d2rq:condition "ISNULL(LIBRI_PARTI_STRUTTURA.LPS_EXPLICIT) OR LEN(LIBRI_PARTI_STRUTTURA.LPS_EXPLICIT)<1";
+.
+map:BookPartStructureExpLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartStructure;
+	d2rq:property rdfs:label;
+	d2rq:sqlExpression "LIBRI_PARTI_STRUTTURA.LPS_NPRO & ' - ' & LIBRI_PARTI_STRUTTURA.LPS_EXPLICIT";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
+	d2rq:condition "LEN(LIBRI_PARTI_STRUTTURA.LPS_EXPLICIT)>1";
+.
+map:BookPartStructureTypeRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartStructure;
+	d2rq:property crm:P2_has_type;
+	d2rq:refersToClassMap map:BookPartType;
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPS_TIPO = TADE.TADE_ID";
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPT_ID = LIBRI_PARTI.LPT_ID";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
+.
+map:BookPartStructureRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPart;
+	d2rq:property dcterms:hasPart;
+	d2rq:refersToClassMap map:BookPartStructure;
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPS_TIPO = TADE.TADE_ID";
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPT_ID = LIBRI_PARTI.LPT_ID";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
+.
+map:BookPartStructureHead a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "BOOK/@@LIBRI.LIB_ID|urlify@@/PART/@@LIBRI_PARTI.LPT_ID|urlify@@/@@LIBRI_PARTI_STRUTTURA.LPS_ID|urlify@@/HEAD";
+	d2rq:class doco:FrontMatter;
+	d2rq:join "LIBRI.LIB_ID = LIBRI_PARTI.LIB_ID";
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPT_ID = LIBRI_PARTI.LPT_ID";
+	d2rq:condition "LEN(LIBRI_PARTI_STRUTTURA.LPS_INTESTAZIONE)>0";
+.
+map:BookPartStructureHeadLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartStructureHead;
+	d2rq:property rdfs:label;
+	d2rq:column "LIBRI_PARTI_STRUTTURA.LPS_INTESTAZIONE";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
+.
+map:BookPartStructureHeadRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartStructure;
+	d2rq:property dcterms:hasPart;
+	d2rq:refersToClassMap map:BookPartStructureHead;
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPS_TIPO = TADE.TADE_ID";
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPT_ID = LIBRI_PARTI.LPT_ID";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
+.
+map:BookPartStructureText a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "BOOK/@@LIBRI.LIB_ID|urlify@@/PART/@@LIBRI_PARTI.LPT_ID|urlify@@/@@LIBRI_PARTI_STRUTTURA.LPS_ID|urlify@@/TEXT";
+	d2rq:class doco:BodyMatter;
+	d2rq:join "LIBRI.LIB_ID = LIBRI_PARTI.LIB_ID";
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPT_ID = LIBRI_PARTI.LPT_ID";
+	d2rq:condition "LEN(LIBRI_PARTI_STRUTTURA.LPS_TESTO)>0";
+.
+map:BookPartStructureTextLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartStructureText;
+	d2rq:property rdfs:label;
+	d2rq:column "LIBRI_PARTI_STRUTTURA.LPS_TESTO";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
+.
+map:BookPartStructureTextRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartStructure;
+	d2rq:property dcterms:hasPart;
+	d2rq:refersToClassMap map:BookPartStructureText;
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPS_TIPO = TADE.TADE_ID";
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPT_ID = LIBRI_PARTI.LPT_ID";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
+.
+
+map:BookPartStructureConception a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "BOOK/@@LIBRI.LIB_ID|urlify@@/PART/@@LIBRI_PARTI.LPT_ID|urlify@@/@@LIBRI_PARTI_STRUTTURA.LPS_ID|urlify@@/CON/@@SWT_LIBRI_PARTI_STRUTTURA_RESPONS.LPSR_ID|urlify@@";
+	d2rq:class frbroo:F28_Expression_Creation;
+.
+map:BookPartStructureConceptionLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartStructureConception;
+	d2rq:property rdfs:label;
+	d2rq:sqlExpression "SWT_LIBRI_PARTI_STRUTTURA_RESPONS.LPSR_NPRO & ' - ' & SWT_LIBRI_PARTI_STRUTTURA_RESPONS.LPSR_NOME_ORIGINALE";
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPS_ID = SWT_LIBRI_PARTI_STRUTTURA_RESPONS.LPS_ID";
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPT_ID = LIBRI_PARTI.LPT_ID";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
+.
+map:BookPartStructureConceptionType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartStructureConception;
+	d2rq:property crm:P2_has_type;
+	d2rq:refersToClassMap map:AuthRole;
+	d2rq:join "SWT_LIBRI_PARTI_STRUTTURA_RESPONS.LPSR_RESPONSABILITA = TADE.TADE_ID";
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPS_ID = SWT_LIBRI_PARTI_STRUTTURA_RESPONS.LPS_ID";
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPT_ID = LIBRI_PARTI.LPT_ID";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
+.
+map:BookPartStructureConceptionActorRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartStructureConception;
+	d2rq:property crm:P14_carried_out_by;
+	d2rq:refersToClassMap map:Actor;
+	d2rq:join "SWT_LIBRI_PARTI_STRUTTURA_RESPONS.COD_RESP = RESPONS.COD_RESP";
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPS_ID = SWT_LIBRI_PARTI_STRUTTURA_RESPONS.LPS_ID";
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPT_ID = LIBRI_PARTI.LPT_ID";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
+.
+map:BookPartStructureConceptionRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartStructureConception;
+	d2rq:property crm:P94_has_created;
+	d2rq:refersToClassMap map:BookPartStructure;
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPS_ID = SWT_LIBRI_PARTI_STRUTTURA_RESPONS.LPS_ID";
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPT_ID = LIBRI_PARTI.LPT_ID";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
+.
+
+
+#BOOK LINKS (LIBRI_LEGAMI)
+map:BookLink a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "BOOK/LNK/@@LIBRI_LEGAMI.LIB_ID_PADRE@@_@@LIBRI_LEGAMI.LIB_ID_FIGLIO@@";
+	d2rq:class repim:RC3_Link;
+.
+map:BookLinkRel1 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Book;
+	d2rq:property crm:P67_refers_to;
+	d2rq:uriPattern "BOOK/LNK/@@LIBRI_LEGAMI.LIB_ID_PADRE@@_@@LIBRI_LEGAMI.LIB_ID_FIGLIO@@";
+	d2rq:join "LIBRI_LEGAMI.LIB_ID_PADRE = LIBRI.LIB_ID";
+.
+map:BookLinkRel2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Book;
+	d2rq:property crm:P67_refers_to;
+	d2rq:uriPattern "BOOK/LNK/@@LIBRI_LEGAMI.LIB_ID_PADRE@@_@@LIBRI_LEGAMI.LIB_ID_FIGLIO@@";
+	d2rq:join "LIBRI_LEGAMI.LIB_ID_FIGLIO = LIBRI.LIB_ID";
+.
+map:BookLinkTypeRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookLink;
+	d2rq:property crm:P2_has_type;
+	d2rq:refersToClassMap map:BookLinkType;
+	d2rq:join "LIBRI_LEGAMI.LLG_TIPO = TADE.TADE_ID";
+.
+
+
+#ITEM (SWT_LIBRI_BIBLIOTECHE)
 map:Item a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "ITEM/@@SWT_LIBRI_BIBLIOTECHE.LRM_ID@@";
@@ -759,19 +992,19 @@ map:BibliographicRecordTitleRel a d2rq:PropertyBridge;
 .
 map:BiblioConception a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
-	d2rq:uriPattern "BIBLIO/CON/@@SWT_BIBLIOGRAFIA_RESPONS.BRS_ID@@";
+	d2rq:uriPattern "BIBLIO/CON/@@BIBLIOGRAFIA.BIB_ID@@";
 	d2rq:class frbroo:F28_Expression_Creation;
 .
 map:BiblioConceptionRel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BiblioConception;
 	d2rq:property frbroo:R24_created;
 	d2rq:refersToClassMap map:BibliographicRecord;
-	d2rq:join "SWT_BIBLIOGRAFIA_RESPONS.BIB_ID = BIBLIOGRAFIA.BIB_ID";
 .
 map:BiblioConceptionActRel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BiblioConception;
 	d2rq:property crm:P14_carried_out_by;
 	d2rq:refersToClassMap map:Actor;
+	d2rq:join "SWT_BIBLIOGRAFIA_RESPONS.BIB_ID = BIBLIOGRAFIA.BIB_ID";
 	d2rq:join "SWT_BIBLIOGRAFIA_RESPONS.COD_RESP = RESPONS.COD_RESP";
 .
 map:BiblioPublication a d2rq:ClassMap;
@@ -853,7 +1086,6 @@ map:LinkBiblioPublicationPlacePA a d2rq:PropertyBridge;
 	d2rq:property crm:P1_is_identified_by;
 	d2rq:refersToClassMap map:BiblioPublicationPlacePA;
 .
-
 map:BiblioPublisher a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "PUBLISHER/@@BIBLIOGRAFIA.BIB_EDITORE|urlify@@";
@@ -871,6 +1103,29 @@ map:BiblioPublicationActRel a d2rq:PropertyBridge;
 	d2rq:property crm:P14_carried_out_by;
 	d2rq:refersToClassMap map:BiblioPublisher;
 .
+# REFERENCES (SWT_LIBRI_BIBLIOGRAFIA, SWT_OPERE_BIBLIOGRAFIA, SWT_RESPONS_BIB)
+map:BiblioBookRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BibliographicRecord;
+	d2rq:property crm:P129_is_about;
+	d2rq:refersToClassMap map:Book;
+	d2rq:join "SWT_LIBRI_BIBLIOGRAFIA.BIB_ID = BIBLIOGRAFIA.BIB_ID";
+	d2rq:join "SWT_LIBRI_BIBLIOGRAFIA.LIB_ID = LIBRI.LIB_ID";
+.
+map:BiblioWorkRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BibliographicRecord;
+	d2rq:property crm:P129_is_about;
+	d2rq:refersToClassMap map:CompleteWork;
+	d2rq:join "SWT_OPERE_BIBLIOGRAFIA.BIB_ID = BIBLIOGRAFIA.BIB_ID";
+	d2rq:join "SWT_OPERE_BIBLIOGRAFIA.OPR_ID = OPERE.OPR_ID";
+.
+map:BiblioActorRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BibliographicRecord;
+	d2rq:property crm:P129_is_about;
+	d2rq:refersToClassMap map:Actor;
+	d2rq:join "SWT_RESPONS_BIB.ID_BIB = BIBLIOGRAFIA.BIB_ID";
+	d2rq:join "SWT_RESPONS_BIB.COD_RESP = RESPONS.COD_RESP";
+.
+
 
 
 #INCIPIT (INCIPIT)
@@ -1023,6 +1278,7 @@ map:BookEditionLabel a d2rq:PropertyBridge;
 	d2rq:property rdfs:label;
 	d2rq:column "TADE.TADEDA1";
 .
+
 map:BookPresentation a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "TYPE/BOOK_PRS/@@TADE.TADE_ID@@";
@@ -1031,6 +1287,51 @@ map:BookPresentation a d2rq:ClassMap;
 .
 map:BookPresentationLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BookPresentation;
+	d2rq:property rdfs:label;
+	d2rq:column "TADE.TADEDA1";
+.
+
+map:BookPartType a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "TYPE/BOOK_PART/@@TADE.TADE_ID@@";
+	d2rq:condition "TADE.TADETIP='TPR'" 
+.
+map:BookPartTypeLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartType;
+	d2rq:property rdfs:label;
+	d2rq:column "TADE.TADEDA1";
+.
+map:BookPartTypeMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartType;
+	d2rq:property rdf:type;
+	d2rq:column "TADE.TADE_ID";
+	d2rq:translateWith map:BookPartTypeTable;
+.
+map:BookPartTypeTable a d2rq:TranslationTable;
+    d2rq:translation [ d2rq:databaseValue "TPRCLF"; d2rq:rdfValue doco:Colophon; ];
+    d2rq:translation [ d2rq:databaseValue "TPRD"; d2rq:rdfValue deo:Dedication; ];
+	d2rq:translation [ d2rq:databaseValue "TPRFRO"; d2rq:rdfValue doco:FrontMatter; ];
+	d2rq:translation [ d2rq:databaseValue "TPRP"; d2rq:rdfValue doco:Preface; ];
+	d2rq:translation [ d2rq:databaseValue "TPRT"; d2rq:rdfValue doco:Afterword; ];
+	d2rq:translation [ d2rq:databaseValue "TPRERR"; d2rq:rdfValue doco:Section; ];
+	d2rq:translation [ d2rq:databaseValue "TPRFROD"; d2rq:rdfValue doco:FrontMatter; ];
+	d2rq:translation [ d2rq:databaseValue "TPRSEZ"; d2rq:rdfValue doco:Section; ];
+	d2rq:translation [ d2rq:databaseValue "TPRTXT"; d2rq:rdfValue doco:BodyMatter; ];
+	d2rq:translation [ d2rq:databaseValue "TPRR"; d2rq:rdfValue doco:Figure; ];
+	d2rq:translation [ d2rq:databaseValue "TPROCC"; d2rq:rdfValue doco:SectionTitle; ];
+	d2rq:translation [ d2rq:databaseValue "TPRINC"; d2rq:rdfValue doco:Figure; ];
+	d2rq:translation [ d2rq:databaseValue "TPRIND"; d2rq:rdfValue doco:Index; ];
+	d2rq:translation [ d2rq:databaseValue "TPRL"; d2rq:rdfValue doco:Section; ];
+.
+
+map:BookLinkType a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "TYPE/BOOK_LNK/@@TADE.TADE_ID@@";
+	d2rq:class crm:E55_Type;
+	d2rq:condition "TADE.TADETIP='LLB'" 
+.
+map:BookLinkTypeLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookLinkType;
 	d2rq:property rdfs:label;
 	d2rq:column "TADE.TADEDA1";
 .
