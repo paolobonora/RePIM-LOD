@@ -864,8 +864,8 @@ map:BookPartStructureConceptionLabel a d2rq:PropertyBridge;
 map:BookPartStructureConceptionType a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BookPartStructureConception;
 	d2rq:property crm:P2_has_type;
-	d2rq:refersToClassMap map:AuthRole;
-	d2rq:join "SWT_LIBRI_PARTI_STRUTTURA_RESPONS.LPSR_RESPONSABILITA = TADE.TADE_ID";
+	d2rq:refersToClassMap map:DedicationRole;
+	d2rq:join "SWT_LIBRI_PARTI_STRUTTURA_RESPONS.LPSR_RUOLO = TADE.TADE_ID";
 	d2rq:join "LIBRI_PARTI_STRUTTURA.LPS_ID = SWT_LIBRI_PARTI_STRUTTURA_RESPONS.LPS_ID";
 	d2rq:join "LIBRI_PARTI_STRUTTURA.LPT_ID = LIBRI_PARTI.LPT_ID";
 	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
@@ -1216,6 +1216,18 @@ map:AuthRole a d2rq:ClassMap;
 .
 map:AuthRoleLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:AuthRole;
+	d2rq:property rdfs:label;
+	d2rq:column "TADE.TADEDA1";
+.
+
+map:DedicationRole a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "TYPE/ROLE_DED/@@TADE.TADE_ID@@";
+	d2rq:class crm:E55_Type;
+	d2rq:condition "TADE.TADETIP='RSS'" 
+.
+map:DedicationRoleLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:DedicationRole;
 	d2rq:property rdfs:label;
 	d2rq:column "TADE.TADEDA1";
 .
