@@ -25,8 +25,8 @@
 # Versione del: 20/09/2021
 
 <> a d2r:Server;
-  d2r:sparqlTimeout 0;
-  d2r:pageTimeout 5;
+  d2r:sparqlTimeout 30;
+  d2r:pageTimeout 30;
  .
  
 map:database a d2rq:Database;
@@ -106,17 +106,25 @@ map:LinkActor_AppellationOtherForm a d2rq:PropertyBridge;
 .
 
 #Author main roles
-map:Actor_Role a d2rq:PropertyBridge;
+#map:Actor_Role a d2rq:PropertyBridge;
+#	d2rq:belongsToClassMap map:Actor;
+#	d2rq:property crm:P2_has_type;
+#	d2rq:uriSqlExpression "'http://repim.unibo.it/resource/TYPE/ROLE/RES' & Left(RESPONS.COD_TIPO_R,3)";
+#	d2rq:condition "Len(Left(RESPONS.COD_TIPO_R,3))>0"
+#.
+#map:Actor_Role2 a d2rq:PropertyBridge;
+#	d2rq:belongsToClassMap map:Actor;
+#	d2rq:property crm:P2_has_type;
+#	d2rq:uriSqlExpression "'http://repim.unibo.it/resource/TYPE/ROLE/RES' & Mid(RESPONS.COD_TIPO_R,4,6)";
+#	d2rq:condition "Len(Mid(RESPONS.COD_TIPO_R,4,6))>0"
+#.
+
+map:Actor_RoleBase a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:Actor;
 	d2rq:property crm:P2_has_type;
-	d2rq:uriSqlExpression "'http://repim.unibo.it/resource/TYPE/ROLE/RES' & Left(RESPONS.COD_TIPO_R,3)";
-	d2rq:condition "Len(Left(RESPONS.COD_TIPO_R,3))>0"
-.
-map:Actor_Role2 a d2rq:PropertyBridge;
-	d2rq:belongsToClassMap map:Actor;
-	d2rq:property crm:P2_has_type;
-	d2rq:uriSqlExpression "'http://repim.unibo.it/resource/TYPE/ROLE/RES' & Mid(RESPONS.COD_TIPO_R,4,6)";
-	d2rq:condition "Len(Mid(RESPONS.COD_TIPO_R,4,6))>0"
+	d2rq:refersToClassMap map:AuthRole;
+	d2rq:join "SWT_RESPONS_TADE.RSCOD_TIPO = TADE.TADE_ID";
+	d2rq:join "RESPONS.COD_RESP = SWT_RESPONS_TADE.COD_RESP";
 .
 
 # Actor's Birth and Death
@@ -299,7 +307,7 @@ map:CompleteWorkLabel a d2rq:PropertyBridge;
 	d2rq:property rdfs:label;
 	d2rq:column "TITOLI.TIT_NORM";
 	d2rq:join "OPERE.OPR_ID = TITOLI.ENT_ID";
-	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE' AND TITOLI.TIT_TIPO='TITINC'";
+	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE'";
 .
 map:PartWork a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
@@ -391,6 +399,22 @@ map:LinkWorkConceptionDT a d2rq:PropertyBridge;
 	d2rq:condition "OPERE.OPR_DATACOMP <> ''";
 .
 
+#WORK LANG (OPERE_LINGUE)
+map:CompleteWorkLang a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:CompleteWork;
+	d2rq:property crm:P72_has_language;
+	d2rq:refersToClassMap map:Lang;
+	d2rq:join "OPERE_LINGUE.OPR_LINGUA = TADE.TADE_ID";
+	d2rq:join "OPERE.OPR_ID = OPERE_LINGUE.OPR_ID";
+.
+map:PartWorkLang a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PartWork;
+	d2rq:property crm:P72_has_language;
+	d2rq:refersToClassMap map:Lang;
+	d2rq:join "OPERE_LINGUE.OPR_LINGUA = TADE.TADE_ID";
+	d2rq:join "OPERE.OPR_ID = OPERE_LINGUE.OPR_ID";
+.
+
 #Work type
 map:CompleteWork_Type a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:CompleteWork;
@@ -403,6 +427,117 @@ map:PartWork_Type a d2rq:PropertyBridge;
 	d2rq:property crm:P2_has_type;
 	d2rq:refersToClassMap map:WorkType;
 	d2rq:join "OPERE.OPR_GENERE = TADE.TADE_ID";
+.
+map:CompleteWork_PType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:CompleteWork;
+	d2rq:property crm:P2_has_type;
+	d2rq:refersToClassMap map:WorkPoeticType;
+	d2rq:join "OPERE_DA.OPRDA_FORMAPOE = TADE.TADE_ID";
+	d2rq:join "OPERE.OPR_ID = OPERE_DA.OPR_ID";
+.
+map:PartWork_MType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PartWork;
+	d2rq:property crm:P2_has_type;
+	d2rq:refersToClassMap map:WorkPoeticType;
+	d2rq:join "OPERE_DA.OPRDA_FORMAPOE = TADE.TADE_ID";
+	d2rq:join "OPERE.OPR_ID = OPERE_DA.OPR_ID";
+.
+map:CompleteWork_MType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:CompleteWork;
+	d2rq:property crm:P2_has_type;
+	d2rq:refersToClassMap map:WorkMusicalType;
+	d2rq:join "OPERE_DA.OPRDA_FORMAMUS = TADE.TADE_ID";
+	d2rq:join "OPERE.OPR_ID = OPERE_DA.OPR_ID";
+.
+map:PartWork_PType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PartWork;
+	d2rq:property crm:P2_has_type;
+	d2rq:refersToClassMap map:WorkMusicalType;
+	d2rq:join "OPERE_DA.OPRDA_FORMAMUS = TADE.TADE_ID";
+	d2rq:join "OPERE.OPR_ID = OPERE_DA.OPR_ID";
+.
+
+##Work text
+map:WorkText a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WORK/@@OPERE.OPR_ID@@/TEXT/@@OPERE_DA.OPRDA_ID@@";
+	d2rq:class doco:BodyMatter;
+	d2rq:condition "NOT ISNULL(OPERE_DA.OPRDA_TESTOINT)";
+	d2rq:join "OPERE.OPR_ID = OPERE_DA.OPR_ID";
+.
+
+map:WorkTextLabelXml a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkText;
+	d2rq:property rdfs:label;
+	d2rq:datatype rdf:XMLLiteral;
+	d2rq:column "OPERE_DA.OPRDA_TESTOINT";
+	d2rq:condition "OPERE_DA.OPRDA_TESTOINT like'<?xml%'";
+.
+
+map:WorkTextLabelStr a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkText;
+	d2rq:property rdfs:label;
+	d2rq:datatype xsd:string;
+	d2rq:column "OPERE_DA.OPRDA_TESTOINT";
+	d2rq:condition "NOT OPERE_DA.OPRDA_TESTOINT like'<?xml%'";
+.
+
+map:WorkTextRel1 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:CompleteWork;
+	d2rq:property repim:RP2_has_matter;
+	d2rq:refersToClassMap map:WorkText;
+	d2rq:join "OPERE.OPR_ID = OPERE_DA.OPR_ID";
+.
+map:WorkTextRel2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PartWork;
+	d2rq:property repim:RP2_has_matter;
+	d2rq:refersToClassMap map:WorkText;
+	d2rq:join "OPERE.OPR_ID = OPERE_DA.OPR_ID";
+.
+map:WorkTextNo a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkText;
+	d2rq:property repim:RD5_verse_number;
+	d2rq:datatype xsd:integer;
+	d2rq:column "OPERE_DA.OPRDA_VERSO_NUM";
+	d2rq:condition "NOT ISNULL(OPERE_DA.OPRDA_VERSO_NUM)";
+.
+
+#WORK LINKS (OPERE_LEGAMI)
+map:WorkLink a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WORK/LNK/@@OPERE_LEGAMI.LLG_ID@@";
+	d2rq:class repim:RC3_Link;
+.
+map:WorkLinkSN a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkLink;
+	d2rq:property repim:RD6_sequential_number;
+	d2rq:datatype xsd:integer;
+	d2rq:column "OPERE_LEGAMI.LLG_NPRO";
+	d2rq:condition "NOT ISNULL(OPERE_LEGAMI.LLG_NPRO)";
+.
+map:WorkLink1a a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:CompleteWork;
+	d2rq:property crm:P67_refers_to;
+	d2rq:refersToClassMap map:WorkLink;
+	d2rq:join "OPERE_LEGAMI.OPR_ID_ORIGINE = OPERE.OPR_ID";
+.
+map:WorkLink1b a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PartWork;
+	d2rq:property crm:P67_refers_to;
+	d2rq:refersToClassMap map:WorkLink;
+	d2rq:join "OPERE_LEGAMI.OPR_ID_ORIGINE = OPERE.OPR_ID";
+.
+map:WorkLink2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkLink;
+	d2rq:property crm:P67_refers_to;
+	d2rq:uriPattern "WORK/@@OPERE.OPR_ID@@";
+	d2rq:join "OPERE_LEGAMI.OPR_ID_DESTINAZIONE = OPERE.OPR_ID";
+.
+map:WorkLinkTypeRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkLink;
+	d2rq:property crm:P2_has_type;
+	d2rq:refersToClassMap map:WorkLinkType;
+	d2rq:join "OPERE_LEGAMI.LLG_TIPO = TADE.TADE_ID";
 .
 
 #TITLES (TITOLI)
@@ -423,7 +558,7 @@ map:WorkTitleRel a d2rq:PropertyBridge;
 	d2rq:property crm:P102_has_title;
 	d2rq:refersToClassMap map:WorkTitle;
 	d2rq:join "OPERE.OPR_ID = TITOLI.ENT_ID";
-	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE' AND TITOLI.TIT_TIPO='TITINC'";
+	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE'";
 .
 map:WorkTitleLang a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:WorkTitle;
@@ -852,6 +987,9 @@ map:BookPartStructureConception a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "BOOK/@@LIBRI.LIB_ID|urlify@@/PART/@@LIBRI_PARTI.LPT_ID|urlify@@/@@LIBRI_PARTI_STRUTTURA.LPS_ID|urlify@@/CON/@@SWT_LIBRI_PARTI_STRUTTURA_RESPONS.LPSR_ID|urlify@@";
 	d2rq:class frbroo:F28_Expression_Creation;
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPS_ID = SWT_LIBRI_PARTI_STRUTTURA_RESPONS.LPS_ID";
+	d2rq:join "LIBRI_PARTI_STRUTTURA.LPT_ID = LIBRI_PARTI.LPT_ID";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
 .
 map:BookPartStructureConceptionLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BookPartStructureConception;
@@ -898,20 +1036,27 @@ map:BookLink a d2rq:ClassMap;
 map:BookLinkRel1 a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:Book;
 	d2rq:property crm:P67_refers_to;
-	d2rq:uriPattern "BOOK/LNK/@@LIBRI_LEGAMI.LIB_ID_PADRE@@_@@LIBRI_LEGAMI.LIB_ID_FIGLIO@@";
+	d2rq:refersToClassMap map:BookLink;
 	d2rq:join "LIBRI_LEGAMI.LIB_ID_PADRE = LIBRI.LIB_ID";
 .
 map:BookLinkRel2 a d2rq:PropertyBridge;
-	d2rq:belongsToClassMap map:Book;
+	d2rq:belongsToClassMap map:BookLink;
 	d2rq:property crm:P67_refers_to;
-	d2rq:uriPattern "BOOK/LNK/@@LIBRI_LEGAMI.LIB_ID_PADRE@@_@@LIBRI_LEGAMI.LIB_ID_FIGLIO@@";
+	d2rq:refersToClassMap map:Book;
 	d2rq:join "LIBRI_LEGAMI.LIB_ID_FIGLIO = LIBRI.LIB_ID";
 .
-map:BookLinkTypeRel a d2rq:PropertyBridge;
+map:LinkTypeRel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BookLink;
 	d2rq:property crm:P2_has_type;
 	d2rq:refersToClassMap map:BookLinkType;
 	d2rq:join "LIBRI_LEGAMI.LLG_TIPO = TADE.TADE_ID";
+.
+map:BookLinkSN a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookLink;
+	d2rq:property repim:RD6_sequential_number;
+	d2rq:datatype xsd:integer;
+	d2rq:column "LIBRI_LEGAMI.LLG_NPRO";
+	d2rq:condition "NOT ISNULL(LIBRI_LEGAMI.LLG_NPRO)";
 .
 
 
@@ -1344,6 +1489,42 @@ map:BookLinkType a d2rq:ClassMap;
 .
 map:BookLinkTypeLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BookLinkType;
+	d2rq:property rdfs:label;
+	d2rq:column "TADE.TADEDA1";
+.
+
+map:WorkLinkType a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "TYPE/WORK_LNK/@@TADE.TADE_ID@@";
+	d2rq:class crm:E55_Type;
+	d2rq:condition "TADE.TADETIP='LLO'" 
+.
+map:WorkLinkTypeLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkLinkType;
+	d2rq:property rdfs:label;
+	d2rq:column "TADE.TADEDA1";
+.
+
+map:WorkPoeticType a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "TYPE/WORK_PTYPE/@@TADE.TADE_ID@@";
+	d2rq:class crm:E55_Type;
+	d2rq:condition "TADE.TADETIP='FPP'" 
+.
+map:WorkPoeticTypeLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkPoeticType;
+	d2rq:property rdfs:label;
+	d2rq:column "TADE.TADEDA1";
+.
+
+map:WorkMusicalType a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "TYPE/WORK_MTYPE/@@TADE.TADE_ID@@";
+	d2rq:class crm:E55_Type;
+	d2rq:condition "TADE.TADETIP='FMM'" 
+.
+map:WorkMusicalTypeLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkMusicalType;
 	d2rq:property rdfs:label;
 	d2rq:column "TADE.TADEDA1";
 .
