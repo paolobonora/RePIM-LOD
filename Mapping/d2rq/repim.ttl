@@ -1,0 +1,2471 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:frbroo="http://erlangen-crm.org/efrbroo/"
+    xmlns:ud="http://universaldependencies.org/u/dep#"
+    xmlns:j.0="http://www.w3.org/XML/1998/namespace/#"
+    xmlns:vocab="http://repim.unibo.it/resource/vocab/"
+    xmlns:map="http://repim.unibo.it/resource/#"
+    xmlns:crm="http://erlangen-crm.org/current/"
+    xmlns:db="http://repim.unibo.it/resource/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:d2r="http://sites.wiwiss.fu-berlin.de/suhl/bizer/d2r-server/config.rdf#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:corago="http://corago.unibo.it/sm/"
+    xmlns:bf="http://id.loc.gov/ontologies/bibframe/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://repim.unibo.it/resource/" > 
+  <rdf:Description rdf:about="EXPR/H000046904">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV50730010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/248170000010101_000000146300C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Saziati Amor ch'a più doglioso amante</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000012587">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/002760010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/044240000201_PPPP00078100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>I vaghi fiori</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000043243">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV17510010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/229080002010101_000000204300"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Nel tempo poi che l'alte stell'erranti</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/186030000010101_000000003000C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Occhi quella pietà che mi mostrate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000011344">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/501750010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/038620000101_PPPP00207201C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Questo vago Narciso</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000024306">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV17900010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/128930001010101_000000211100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Io passo i giorni in sì penoso stato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/189440000010101_000000184401C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>O dell'anima mia parte più cara</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/214760000010101_000000235600C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Per ostentar sua fede</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000064357">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV07250020"/>
+    <frbroo:R3i_realises rdf:resource="WORK/128620000010101_000000087100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Io non trovo me stesso</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/LRMX00005043">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV19400010"/>
+    <rdfs:label>D-Kl - N/A</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/178790000010101_000000135500C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Non tenui Musae filo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000008660">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/500480020"/>
+    <frbroo:R3i_realises rdf:resource="WORK/031620000101_PPPP00286100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Ecco di vaghi fior cinta la fronte</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS68141">
+    <crm:P94_has_created rdf:resource="WORK/017120000101_PPPP00176900C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00176900"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS63991">
+    <crm:P94_has_created rdf:resource="WORK/049300000010101_000000010000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00374600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/158660000010101_000000163900C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Mentre lontan da' vostri chiari lumi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/319410000010101_000000010000C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Non fu sì crudo el dipartir de Enea</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000037066C">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV00150010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/196840001010101_000000001900C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>O Maria degna d'onore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000046905">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV50740010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/248170000010101_000000146300C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Saziati Amor ch'a più doglioso amante</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS51671">
+    <crm:P94_has_created rdf:resource="WORK/262230000010101_000000217600C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000217600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000018871">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV16390010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/100930000010101_000000189600C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Fece da voi partita</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS62158">
+    <crm:P94_has_created rdf:resource="WORK/270680006010101_PPPP00063500"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00063500"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000043244">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV17570010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/229090000010101_000000205100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Quando fra l'altre donne ad ora ad ora</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/022940004010101_000000253800">
+    <crm:R10i_is_member_of rdf:resource="WORK/022940001010101_000000253800C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Non credo che pascesse mai per selva</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000011343">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/004980010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/038620000101_PPPP00207201C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Questo vago Narciso</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/317120001010101_000000179200C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000064356">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV07250020"/>
+    <frbroo:R3i_realises rdf:resource="WORK/257050000010101_000000087100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Se mai fu crud'a mei dolci pensieri</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000024307">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV17900010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/128930002010101_000000211100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>L'empio amoroso stral che m'ha piagato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/179630000010101_000000150200C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Non vi mordete o donna</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS68140">
+    <crm:P94_has_created rdf:resource="WORK/017110000101_PPPP00176900C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00176900"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/LRMX00005044">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV21240010"/>
+    <rdfs:label>D-Kl - N/A</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/020470000010102_000000097700C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Ancor che col partir l'alma si mora</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/274470001010101_000000212000">
+    <crm:R10i_is_member_of rdf:resource="WORK/274470001010101_000000212000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Son questi quei begli occhi in cui mirando</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS63992">
+    <crm:P94_has_created rdf:resource="WORK/091700000010101_000000010000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00374600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/107300013010101_000000212000">
+    <crm:R10i_is_member_of rdf:resource="WORK/107300001010101_000000212000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Ma presupong'ancor ch'or or'arrivi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000018870">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV15840010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/100930000010101_000000181700C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Fece da voi partita</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS62157">
+    <crm:P94_has_created rdf:resource="WORK/270680005010101_PPPP00063500"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00063500"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000046906">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV06500010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/248170000010101_000000163900C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Saziati Amor ch'a più doglioso amante</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000012588">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/002760010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/044240000301_PPPP00078100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Sotto sue ciglia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS51672">
+    <crm:P94_has_created rdf:resource="WORK/262520000010101_000000217600C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000217600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000011342">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/501770010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/038600000101_PPPP00011700C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Io disleale ah cruda</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000018873">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV05350010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/100930000010101_000000066700C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Fece da voi partita</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000043241">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV51720010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/229070002010101_000000169200"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Sentomi aprirsi tutto il lato manco</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS04799">
+    <crm:P94_has_created rdf:resource="WORK/065030000010101_000000010001C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000010001"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000048588">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV16460010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/257420005010101_000000190500"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Sapete pur crudele</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000064359">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV07250020"/>
+    <frbroo:R3i_realises rdf:resource="WORK/234340000010101_000000087100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Quattro dee che 'l mondo onora et ama</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000024304">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV03760010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/128795003010101_000000045400"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Io part'o stelle o soli</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/104960002010101_000000230900">
+    <crm:R10i_is_member_of rdf:resource="WORK/104960001010101_000000230900C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Quest'è quel foco o mia smarrita Filli</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS42750">
+    <crm:P94_has_created rdf:resource="WORK/302220001010101_000000178700C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000178700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000046907">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV12450010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/248170000010101_000000149500C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Saziati Amor ch'a più doglioso amante</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="BOOK/NV09240010">
+    <rdfs:label>Il *Primo libro de madrigali italiani e canzon francese a 2 v</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS04798">
+    <crm:P94_has_created rdf:resource="WORK/062620000010101_000000010001C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000010001"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000012589">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/002760010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/044240000401_PPPP00078100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>In tal maniera</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/LRMX00005041">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV14550010"/>
+    <rdfs:label>D-Kl - N/A</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS06428">
+    <crm:P94_has_created rdf:resource="WORK/286680001010101_000000018700C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000018700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS62156">
+    <crm:P94_has_created rdf:resource="WORK/270680004010101_PPPP00063500"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00063500"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS03151">
+    <crm:P94_has_created rdf:resource="WORK/196730000010101_000000010000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000010000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS63993">
+    <crm:P94_has_created rdf:resource="WORK/092610000010101_000000010000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00374600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/031230000102_500480020C">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/500480020"/>
+    <frbroo:R3i_realises rdf:resource="WORK/031230000101_PPPP00066300C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F22_Self-Contained_Expression"/>
+    <rdfs:label>Donna qual mi fuss'io qual mi sentissi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/060570000010101_000000010000C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Così vincete in terra</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000011341">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/501750010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/038600000101_PPPP00011700C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Io disleale ah cruda</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000043242">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV17510010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/229080001010101_000000204300"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Quando fra gl'alti monti umid'e bruna</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/106350002010101_000000259200">
+    <crm:R10i_is_member_of rdf:resource="WORK/106350001010101_000000259200C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Allor ch'esangue il mesto volto in terra</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000018872">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV02820010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/100930000010101_000000031300C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Fece da voi partita</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/147590000010101_000000250300C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Lieta è madonna et io pur come soglio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000048589">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV16460010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/257420006010101_000000190500"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Or dunque per mercede</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000064358">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV07250020"/>
+    <frbroo:R3i_realises rdf:resource="WORK/029050000010101_000000087100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Basciami vita mia basciami ancora</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000024305">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV03770010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/128795003010101_000000045400"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Io part'o stelle o soli</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/040920000101_000000010000C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Se pensate ch'io v'ami</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/035520000101_PPPP00037202C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Lascian le fresche linfe</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/LRMX00005042">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV14580010"/>
+    <rdfs:label>D-Kl - N/A</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS51670">
+    <crm:P94_has_created rdf:resource="WORK/256350000010101_000000217600C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000217600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/281470001010101_000000211100">
+    <crm:R10i_is_member_of rdf:resource="WORK/281470001010101_000000211100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Su la sponda del Tebro umida erbosa</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS63994">
+    <crm:P94_has_created rdf:resource="WORK/092710000010101_000000010000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00374600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/037210000010101_000000254600C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Cantava al ciel sereno</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000046908">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV12490010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/248170000010101_000000149500C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Saziati Amor ch'a più doglioso amante</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/127200000010101_000000174600C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Io dormo e mentre tace</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/219700001010101_000000231100">
+    <crm:R10i_is_member_of rdf:resource="WORK/219700001010101_000000231100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Poi che mia speme è lunga a venir troppo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS06429">
+    <crm:P94_has_created rdf:resource="WORK/286680002010101_000000018700"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000018700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS62155">
+    <crm:P94_has_created rdf:resource="WORK/270680003010101_PPPP00063500"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00063500"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS03150">
+    <crm:P94_has_created rdf:resource="WORK/196600000010101_000000010000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000010000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/017810000010101_000000008800C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Amorosi pastori</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/076180000201_PPPP00018100">
+    <crm:R10i_is_member_of rdf:resource="WORK/076180000101_PPPP00018100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Oggi la speme degli eletti ingengi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000024302">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV07050010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/128910000010101_000000085400C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Io parto sì ma parte</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS16938">
+    <crm:P94_has_created rdf:resource="WORK/299410000010101_000000075100C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000075100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="BOOK/009570010">
+    <rdfs:label>Lamento di Caprarola et conforto d'Amaranto</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/141370000010101_000000138100C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Las ou vas tu sans moy</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS62154">
+    <crm:P94_has_created rdf:resource="WORK/270680002010101_PPPP00063500"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00063500"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000011348">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/001910010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/038650000101_PPPP00058900C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Angioletta d'amore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000046909">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV12510010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/248170000010101_000000149500C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Saziati Amor ch'a più doglioso amante</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS51675">
+    <crm:P94_has_created rdf:resource="WORK/269900002010101_000000217600"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000217600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS04796">
+    <crm:P94_has_created rdf:resource="WORK/047160000010101_000000010001C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000010001"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/055260000010101_000000217600C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Come sì m'accendete</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000008664">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/500480020"/>
+    <frbroo:R3i_realises rdf:resource="WORK/031620000201_PPPP00286100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Ecco che fresche rose o bella dea</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/176140000020102_000000175500C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Non più lacci d'Amore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000052540">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV04390010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/279190004010101_000000055600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Chiara fontana in quel medesmo bosco</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS41578">
+    <crm:P94_has_created rdf:resource="WORK/282980001010101_000000173400C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000173400"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000003726">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV04190010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/019270000010202_000000050600C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Amor se vuoi ch'io porti</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS68145">
+    <crm:P94_has_created rdf:resource="WORK/017140000201_PPPP00176900"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00176900"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000024303">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV19230010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/128910000010101_000000219900C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Io parto sì ma parte</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/0000086189">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV14120010"/>
+    <rdfs:label>BO0310 - T.182</rdfs:label>
+    <rdfs:label>I-Bc - T.182</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS16939">
+    <crm:P94_has_created rdf:resource="WORK/301880000010101_000000075100C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000075100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000043240">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV51720010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/229070001010101_000000169200"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Quando fra bianche perle al canto snoda</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/159980000010101_000000010000C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Mentr'in grazia di Dio felice io stava</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/034350000101_PPPP00148700">
+    <crm:R10i_is_member_of rdf:resource="WORK/034350000101_PPPP00148700C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Madonna udite come</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="BOOK/SC03130000">
+    <rdfs:label>Canzoni a 4 e 8 v libro primo op. II</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS62152">
+    <crm:P94_has_created rdf:resource="WORK/270680001010101_PPPP00063500"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00063500"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/226800000010101_000000171200C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Qual salamandra in mezzo al foco vivo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS62153">
+    <crm:P94_has_created rdf:resource="WORK/270680001010101_PPPP00063500C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00063500"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000011347">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/501750010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/038640000101_PPPP00193301C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Vaga e gentil mia rosa</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS51676">
+    <crm:P94_has_created rdf:resource="WORK/272450000010101_000000217600C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000217600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/LRMX00005040">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV14040010"/>
+    <rdfs:label>D-Kl - N/A</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS04797">
+    <crm:P94_has_created rdf:resource="WORK/053290000010101_000000010001C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000010001"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000032461C">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV13050010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/171980001010101_000000153200C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Non crediate mia vita</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000008663">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/500480010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/031620000201_PPPP00286100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Ecco che fresche rose o bella dea</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS41577">
+    <crm:P94_has_created rdf:resource="WORK/282980001010101_000000173400"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000173400"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000003727">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV07940010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/019280000010101_000000268900C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Amor se vuoi ch'io mora</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS68144">
+    <crm:P94_has_created rdf:resource="WORK/017140000101_PPPP00176900C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00176900"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/012790000010101_000000183800C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Amanti tacete</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS62151">
+    <crm:P94_has_created rdf:resource="WORK/269690000010101_PPPP00063500C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00063500"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS16936">
+    <crm:P94_has_created rdf:resource="WORK/271170000010101_000000075100C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000075100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000024300">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV16000010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/128910000010101_000000184401C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Io parto sì ma parte</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000005185C">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV06000010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/026300001010101_000000077000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>A te cui died'il cielo eterni fregi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS51673">
+    <crm:P94_has_created rdf:resource="WORK/269900001010101_000000217600"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000217600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS04794">
+    <crm:P94_has_created rdf:resource="WORK/041660000010101_000000010001C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000010001"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000011346">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/501750010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/038630000101_PPPP00023100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Taci taci cor mio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/306420000010101_000000198700C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Viva fiamm'e vivo foco</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/PPPP00146600">
+    <rdfs:label>Grotta Antonio 1554-</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000003728">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV13510010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/019271001010101_000000158700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Amor se vuoi ch'io porti</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000052542">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV11180010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/279190005010101_000000135500"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Una strania fenice ambedue l'ali</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS68143">
+    <crm:P94_has_created rdf:resource="WORK/017140000101_PPPP00176900"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00176900"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000008662">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/008400010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/031620000101_PPPP00286100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Ecco di vaghi fior cinta la fronte</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/088130000020101_000000175500C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Dove potrò mai gir tanto lontano</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/143920000010101_000000246300C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Laura gentil che debbo far omai</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000011843C">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/501850010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/040920000101_501850010C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Se pensate ch'io v'ami</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS62150">
+    <crm:P94_has_created rdf:resource="WORK/259370000010101_PPPP00063500C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00063500"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS16937">
+    <crm:P94_has_created rdf:resource="WORK/296380000010101_000000075100C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000075100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/144070000030101_000000254900C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Filli mentre ti bacio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000024301">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV12840010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/128910000010101_000000151300C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Io parto sì ma parte</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/285570001010101_000000203600C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS04795">
+    <crm:P94_has_created rdf:resource="WORK/044650000010101_000000010001C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000010001"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/332390000010101_000000155800C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Bella è la donna mia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS51674">
+    <crm:P94_has_created rdf:resource="WORK/269900001010101_000000217600C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000217600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/154330000010101_000000135500C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Maistre Robin et monsieur</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS63990">
+    <crm:P94_has_created rdf:resource="WORK/047170000010101_000000010000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00374600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000011345">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/501410010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/038630000101_PPPP00023100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Taci taci cor mio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000003729">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV13510010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/019271002010101_000000158700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Perché qualor rimiro</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000008661">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/500480030"/>
+    <frbroo:R3i_realises rdf:resource="WORK/031620000101_PPPP00286100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Ecco di vaghi fior cinta la fronte</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000052541">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV11170010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/279190005010101_000000135500"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Una strania fenice ambedue l'ali</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS41579">
+    <crm:P94_has_created rdf:resource="WORK/282980002010101_000000173400"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000173400"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000021613C">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV00050010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/114780001010101_000000001600C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Giusta vendetta d'impudico errore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS68142">
+    <crm:P94_has_created rdf:resource="WORK/017130000101_PPPP00176900C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00176900"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000007063">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/008400010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/027570000101_PPPP00286100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Ohimè dov'è 'l mio ben dov'è 'l mio core</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS42756">
+    <crm:P94_has_created rdf:resource="WORK/302220007010101_000000178700"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000178700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS41574">
+    <crm:P94_has_created rdf:resource="WORK/159510001010101_000000173400C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000173400"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS04792">
+    <crm:P94_has_created rdf:resource="WORK/039110002010101_000000010001"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000010001"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/193660003010101_000000097700">
+    <crm:R10i_is_member_of rdf:resource="WORK/193660001010101_000000097700C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Tu ergo quesumus</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="BOOK/SC06550000">
+    <rdfs:label>Missae ... sacrae laudes 3 v</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/170020000010101_000000114800C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Ninfa bellissima</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/295450002010101_000000071900">
+    <crm:R10i_is_member_of rdf:resource="WORK/295450001010101_000000071900C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Libertà da me partita</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/004420000201_PPPP00039900">
+    <crm:R10i_is_member_of rdf:resource="WORK/004420000101_PPPP00039900C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Vien dunque amor cagion d'ogni mio bene</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/028230000101_500310020">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/500310020"/>
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/500730010"/>
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/500310050"/>
+    <frbroo:R3i_realises rdf:resource="WORK/028230000101_PPPP00190801"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F22_Self-Contained_Expression"/>
+    <rdfs:label>Come cerva cui sete in su l'aurora</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS06421">
+    <crm:P94_has_created rdf:resource="WORK/285800000010101_000000018700C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000018700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS16934">
+    <crm:P94_has_created rdf:resource="WORK/265050000010101_000000075100C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000075100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/045220000010101_000000107500C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Chi chi li chi | cucurucu</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS07666">
+    <crm:P94_has_created rdf:resource="WORK/115270000010101_000000026000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000026000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/199290002010101_000000152600">
+    <crm:R10i_is_member_of rdf:resource="WORK/199290001010101_000000152600C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Quando 'l crin d'or fia argento e senza quella</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000024222C">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV19800010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/128490001010101_000000229100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Io non saprei mai dir perché mi doglia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000018879">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV22150010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/100960003010101_000000253800"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Perché 'n voi viv'e 'n me perir si sente</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS34364">
+    <crm:P94_has_created rdf:resource="WORK/200620002010101_000000152600"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000152600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000044465">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV00000001"/>
+    <frbroo:R3i_realises rdf:resource="WORK/234790000010101_000000010000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Quel che non so che di vago</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000013738">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV01210010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/072700000010101_000000013100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Desio perché mi meni</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000057148">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV22760010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/302880000010101_000000257800C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Vergine santa a voi piangendo vegno</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/110970001010101_000000171700">
+    <crm:R10i_is_member_of rdf:resource="WORK/110970001010101_000000171700C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Giaceami stanco e 'l fin de la mia vita</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000007064">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/500300030"/>
+    <frbroo:R3i_realises rdf:resource="WORK/027570000201_PPPP00286100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Dunque ha potuto sol desio d'onore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/049970000010101_000000114800C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Chi vuol gustar amore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/000000018800">
+    <rdfs:label>Banci Giovanni 1619-1619</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS41573">
+    <crm:P94_has_created rdf:resource="WORK/159510001010101_000000173400"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000173400"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS42755">
+    <crm:P94_has_created rdf:resource="WORK/302220006010101_000000178700"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000178700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000062364C">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV52080010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/310800001010101_000000163900C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Volsi or non voglio e del voler ch'io volsi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS04793">
+    <crm:P94_has_created rdf:resource="WORK/041320000010101_000000010001C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000010001"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/257920001010101_000000047800">
+    <crm:R10i_is_member_of rdf:resource="WORK/257920001010101_000000047800C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Semplicetto augellin che mentre canti</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/011140002010101_000000157500">
+    <crm:R10i_is_member_of rdf:resource="WORK/011140001010101_000000157500C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>E s'al corso ai pensier tu solo affreni</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS63750">
+    <crm:P94_has_created rdf:resource="WORK/079210000010101_000000114900C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00364200"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS06422">
+    <crm:P94_has_created rdf:resource="WORK/286110000010101_000000018700C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000018700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS16935">
+    <crm:P94_has_created rdf:resource="WORK/265085000010101_000000075100C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000075100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS07665">
+    <crm:P94_has_created rdf:resource="WORK/110630000010101_000000026000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000026000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS34363">
+    <crm:P94_has_created rdf:resource="WORK/200620001010101_000000152600C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000152600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000012580">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/002730010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/044230000701_002730010"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>È ciò ver qual più s'apprezza</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000018878">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV22150010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/100960002010101_000000253800"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Lumi de l'alma mia fidati specchi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000044466">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV04780010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/234800000010101_000000059400C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Quel che per ria fortuna oppresso geme</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/043290000010101_000000218000C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Che pietà sperar si può</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000013737">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV01200010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/072700000010101_000000013100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Desio perché mi meni</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000057147">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV00600010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/312890000010101_000000008700C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Vergine santa</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/LRMX00005049">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV52510010"/>
+    <rdfs:label>D-Mbs - 4 Mus.pr. 10#Beibd.2</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS04790">
+    <crm:P94_has_created rdf:resource="WORK/039110001010101_000000010001"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000010001"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000007065">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/500830010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/027570000201_PPPP00286100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Dunque ha potuto sol desio d'onore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/217250002010101_000000010000">
+    <crm:R10i_is_member_of rdf:resource="WORK/217250001010101_000000010000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Ben s'io non erro di pietat'un raggio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS41576">
+    <crm:P94_has_created rdf:resource="WORK/159510003010101_000000173400"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000173400"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000016023C">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV04250010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/085100001010101_000000051700C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Donna se quant'è in voi grazia e beltade</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS16931">
+    <crm:P94_has_created rdf:resource="WORK/205350000020101_000000075100C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000075100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS63751">
+    <crm:P94_has_created rdf:resource="WORK/083110000010101_000000114900C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00364200"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS34367">
+    <crm:P94_has_created rdf:resource="WORK/224490002010101_000000152600"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000152600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000019214C">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV14890010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/102520001010101_000000170000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Fermat'il corso vostro</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS42758">
+    <crm:P94_has_created rdf:resource="WORK/303410000010101_000000178700C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000178700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000012581">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/002560010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/044240000101_PPPP00078100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Apertamente</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000044463">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV17020010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/234770002010101_000000198700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>La milizia Giovanni pur ribomba</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS34366">
+    <crm:P94_has_created rdf:resource="WORK/224490001010101_000000152600C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000152600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/028170000201_PPPP00290400">
+    <crm:R10i_is_member_of rdf:resource="WORK/028170000101_PPPP00290400C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Voi gliel direte ella pastor più adorno</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS16932">
+    <crm:P94_has_created rdf:resource="WORK/206820000010101_000000075100C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000075100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000064351">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV07250020"/>
+    <frbroo:R3i_realises rdf:resource="WORK/218050000010101_000000087100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Più leggiadr'e più bella</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS07668">
+    <crm:P94_has_created rdf:resource="WORK/118810001010101_000000026000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000026000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/181990000010101_000000140400C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>O baci aventurosi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/311420003010101_000000133900">
+    <crm:R10i_is_member_of rdf:resource="WORK/311420001010101_000000133900C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>In ogni parte e loco</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000007066">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/500300030"/>
+    <frbroo:R3i_realises rdf:resource="WORK/027570000301_PPPP00286100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Dunque han potuto in me più che 'l mio amore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="BOOK/NV10140010">
+    <rdfs:label>Canzonette a 3 v ... Libro primo</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS41575">
+    <crm:P94_has_created rdf:resource="WORK/159510002010101_000000173400"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000173400"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/279190004010101_000000055600">
+    <crm:R10i_is_member_of rdf:resource="WORK/279190001010101_000000055600C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Chiara fontana in quel medesmo bosco</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS50079">
+    <crm:P94_has_created rdf:resource="WORK/182030004010101_000000213000"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000213000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS42757">
+    <crm:P94_has_created rdf:resource="WORK/302220008010101_000000178700"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000178700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS63752">
+    <crm:P94_has_created rdf:resource="WORK/089850000010101_000000114900C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00364200"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS04791">
+    <crm:P94_has_created rdf:resource="WORK/039110001010101_000000010001C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000010001"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS34365">
+    <crm:P94_has_created rdf:resource="WORK/224490001010101_000000152600"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000152600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000012582">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/002570010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/044240000101_PPPP00078100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Apertamente</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000044464">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV02200010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/234780000010101_000000171000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Quel che nel proprio sangue</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000064350">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV07250020"/>
+    <frbroo:R3i_realises rdf:resource="WORK/232970000010101_000000087100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Quanto debbe allegrarse la natura</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS06420">
+    <crm:P94_has_created rdf:resource="WORK/285780000010101_000000018700C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000018700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS16933">
+    <crm:P94_has_created rdf:resource="WORK/253250000010101_000000075100C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000075100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000057149">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV07470010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/302890000010101_000000088200C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Vergine santa che mai sempr'amasti</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS07667">
+    <crm:P94_has_created rdf:resource="WORK/118810001010101_000000026000"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000026000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="BOOK/NV06380010">
+    <rdfs:label>Il *Primo libro de madrigali a 6 v</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS15209">
+    <crm:P94_has_created rdf:resource="WORK/277180002010101_000000064300"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000064300"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/139970000010101_000000018700C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="BOOK/NV21370020">
+    <rdfs:label>Canzonette ... Libro primo a 4 v</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000013739">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV05670010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/072710000010101_000000072100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Desir che tanto sali</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="BOOK/NV52930010">
+    <rdfs:label>Symphonia angelica di diversi ... a 4-6 v ... madrigali</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS34369">
+    <crm:P94_has_created rdf:resource="WORK/248090000020101_000000152600C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000152600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS42752">
+    <crm:P94_has_created rdf:resource="WORK/302220003010101_000000178700"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000178700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000007067">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/500830010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/027570000301_PPPP00286100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Dunque han potuto in me più che 'l mio amore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/LRMX00005047">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV52030010"/>
+    <rdfs:label>D-Mbs - 4 Mus.pr. 44#Beibd.14</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS50078">
+    <crm:P94_has_created rdf:resource="WORK/182030003010101_000000213000"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000213000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000057144">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV51250010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/329640000010101_000000010000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Vergine santa gloriosa e degna</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/121020003010101_000000170500">
+    <crm:R10i_is_member_of rdf:resource="WORK/121020001010101_000000170500C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Il verde lauro al biondo Tebro in Roma</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/219900000010101_PPPP00063500C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Poi che per darl'a voi dal pett'Amore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000013734">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV04270010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/072680000010101_000000053200C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Desio furarti un bacio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000029249">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV53250010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/153920000010101_000000200100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Madre divina</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000044461">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV15540010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/234760002010101_000000177100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Quell'orna e lume accresce al suo soggetto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000064353">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV07250020"/>
+    <frbroo:R3i_realises rdf:resource="WORK/161650000010101_000000087100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Mill'anni sono che non t'aggio vista</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000018875">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV08250010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/100950001010101_000000098900"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Fede che nel mio cor t'hai fatto un tempio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000011340">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/000370010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/038600000101_PPPP00011700C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Io disleale ah cruda</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS06425">
+    <crm:P94_has_created rdf:resource="WORK/286160000010101_000000018700C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000018700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000012583">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/002570020"/>
+    <frbroo:R3i_realises rdf:resource="WORK/044240000101_PPPP00078100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Apertamente</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/229560000010101_000000085200C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Quand'io veggio dal ciel scender l'aurora</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS06427">
+    <crm:P94_has_created rdf:resource="WORK/286680001010101_000000018700"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000018700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS34368">
+    <crm:P94_has_created rdf:resource="WORK/225460000010101_000000152600C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000152600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="BOOK/SC18250000">
+    <rdfs:label>Musica nuova lamentazioni a 5 v... lib. I</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS16930">
+    <crm:P94_has_created rdf:resource="WORK/199850000010101_000000075100C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000075100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS42751">
+    <crm:P94_has_created rdf:resource="WORK/302220002010101_000000178700"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000178700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS50077">
+    <crm:P94_has_created rdf:resource="WORK/182030002010101_000000213000"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000213000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/039970000101_PPPP00129200C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Luce soave e chiara</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/016270000201_PPPP00224400">
+    <crm:R10i_is_member_of rdf:resource="WORK/016270000101_PPPP00224400C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>O che lieve è inganar chi s'assecura</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/LRMX00005048">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV53010010"/>
+    <rdfs:label>D-Mbs - 4 Mus.pr. 10#Beibd.1</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/OPR00000764">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000007068">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/500300030"/>
+    <frbroo:R3i_realises rdf:resource="WORK/027570000401_PPPP00286100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Ahi sciocco mondo e cieco ahi cruda sorte</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000057143">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV50460010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/316620000010101_000000010000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Vergine santa [...]</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/032370000101_PPPP00016300">
+    <crm:R10i_is_member_of rdf:resource="WORK/032370000101_PPPP00016300C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>A piè d'un odorifero ginebro</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000013733">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV15510010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/072680000010101_000000176800C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Desio furarti un bacio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/217020000010101_000000175200C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Picciola sì ma vaga</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS07669">
+    <crm:P94_has_created rdf:resource="WORK/118810002010101_000000026000"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000026000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000018874">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV10700010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/100940000010101_000000130800C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Fece l'eterna man vostra sembianza</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="BOOK/003810010">
+    <rdfs:label>Delle rime ... parte prima</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000064352">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV07250020"/>
+    <frbroo:R3i_realises rdf:resource="WORK/045740000010202_000000087100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Chi dirà mai che in donna sia fermezza</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/168970001010101_000000054100C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000012584">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/002570030"/>
+    <frbroo:R3i_realises rdf:resource="WORK/044240000101_PPPP00078100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Apertamente</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000044462">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV17020010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/234770001010101_000000198700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Quel che nel mezo de' nemic'armati</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS06426">
+    <crm:P94_has_created rdf:resource="WORK/286310000010101_000000018700C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000018700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/080600000010101_000000254200C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Dolcissimi colori</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/261080000010101_000000130000C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Se quel dolor che va innanz'al morire</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000007069">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/500830010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/027570000401_PPPP00286100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Ahi sciocco mondo e cieco ahi cruda sorte</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/015450000201_PPPP00224400">
+    <crm:R10i_is_member_of rdf:resource="WORK/015450000101_PPPP00224400C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Ch'i' ho cercate già vie più di mille</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS50076">
+    <crm:P94_has_created rdf:resource="WORK/182030001010101_000000213000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000213000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS42754">
+    <crm:P94_has_created rdf:resource="WORK/302220005010101_000000178700"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000178700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS41572">
+    <crm:P94_has_created rdf:resource="WORK/055830005010101_000000173400"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000173400"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/LRMX00005045">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV21460010"/>
+    <rdfs:label>DK-Kk - N/A</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/189240002010101_000000199600">
+    <crm:R10i_is_member_of rdf:resource="WORK/189240001010101_000000199600C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Ard'il mio cor di fiamm'aspra e spietata</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/OPR00000763">
+    <crm:R10i_is_member_of rdf:resource="WORK/073000000101_PPPP00032800C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>O disaventurosa acerba sorte!</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000057146">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV53250010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/301310000010101_000000010000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Venite alme devote al paradiso</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000064355">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV07250020"/>
+    <frbroo:R3i_realises rdf:resource="WORK/298350000010101_000000087100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Vaghi pensier che così passo passo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS41571">
+    <crm:P94_has_created rdf:resource="WORK/055830004010101_000000173400"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000173400"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/299600000020101_000000187800C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Vano è il desio che di mia morte avete</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000029247">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV17160010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/153910000010101_000000200100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Madre di te mi fece il padre eterno</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000013736">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV50800010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/072690000010101_000000113500C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Desio gentil che sopr'ogni desire</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/216310000010101_000000142300C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Piangete a' miei martiri</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000018877">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV22150010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/100960001010101_000000253800"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Fede fiamme sospir lagrime e doglie</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS06423">
+    <crm:P94_has_created rdf:resource="WORK/286130000010101_000000018700C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000018700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/070920000101_000000010000C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Se l'amaro mio pianto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000012585">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/002760010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/044240000101_PPPP00078100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Apertamente</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS62159">
+    <crm:P94_has_created rdf:resource="WORK/270680007010101_PPPP00063500"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00063500"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/077160000101_PPPP00380800C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Chi mi sente cantar per certo dice</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000000164C">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV14980010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/000890001010101_000000089300C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>A che ninfa gentil [...]</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/008630001010101_000000196800C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS42753">
+    <crm:P94_has_created rdf:resource="WORK/302220004010101_000000178700"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000178700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/LRMX00005046">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV53060010"/>
+    <rdfs:label>F-Pn - RES VMC-133</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="BOOK/NV07030010">
+    <rdfs:label>Il *Secondo libro de madrigali a 5 v</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS50075">
+    <crm:P94_has_created rdf:resource="WORK/182030001010101_000000213000"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000213000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/289280000010101_000000162600C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Tre pastorei noi siamo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/104590000010101_000000138700C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Filli nel tuo bel viso</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/OPR00000762">
+    <crm:R10i_is_member_of rdf:resource="WORK/073000000101_PPPP00032800C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Canzon qui vedi un tempio a canto al mare,</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/166880002010101_000000216200">
+    <crm:R10i_is_member_of rdf:resource="WORK/166880001010101_000000216200C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Poi con tutti i lor studi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000064354">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV07250020"/>
+    <frbroo:R3i_realises rdf:resource="WORK/292860000010101_000000087100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Tutta sarissi bella donna mia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/250420000010101_000000135500C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Se ben l'empia mia sorte</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000013735">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV13410010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/072680000020101_000000157800C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Desio furarti un bacio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000057145">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV16720010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/335750000010101_000000196800C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Vergine santa più ch'altri pietosa</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS50074">
+    <crm:P94_has_created rdf:resource="WORK/179860000010101_000000213000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000213000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000029248">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV52180010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/153920000010101_000000200100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Madre divina</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS41570">
+    <crm:P94_has_created rdf:resource="WORK/055830003010101_000000173400"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000173400"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000018876">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV08250010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/100950002010101_000000098900"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>In lui perché tu Dea l'aggia in governo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS06424">
+    <crm:P94_has_created rdf:resource="WORK/286140000010101_000000018700C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000018700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/041550000101_PPPP00058900C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Non t'inalzar se ben ne l'aureo crine</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="BOOK/NV12440040">
+    <rdfs:label>Il *Primo libro de madrigali a 6 v</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/024140000020101_000000137600C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Ardo Milla per voi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000012586">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/002560010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/044240000201_PPPP00078100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>I vaghi fiori</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000044460">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV15540010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/234760001010101_000000177100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Quel che move a lodar cosa mortale</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="BOOK/004450010">
+    <rdfs:label>Pietosi affetti</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000025904">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV22570010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/136460002010101_000000256900"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Almo pastor mentre la gregg'errando</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000031693">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV15870010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/167680000010101_000000182400C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Negra sei ma sei bella</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/PPPP00019503">
+    <rdfs:label>Amalfi duchessa d  1561-</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/046070000301_004320040">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/004320040"/>
+    <frbroo:R3i_realises rdf:resource="WORK/046070000301_PPPP00143300"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F22_Self-Contained_Expression"/>
+    <rdfs:label>E sospiri alternando e note e baci</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/LRMX00002199">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV51590010"/>
+    <rdfs:label>A-Wn - SA.76.E.39/I/1-3 MUS MAG</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/124325003010101_000000186100">
+    <crm:R10i_is_member_of rdf:resource="WORK/124325001010101_000000186100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Per divina bellezza indarno mira</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/0000087833">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV09670040"/>
+    <rdfs:label>I-Bsp - N/A</rdfs:label>
+    <rdfs:label>BO0515 - N/A</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS50072">
+    <crm:P94_has_created rdf:resource="WORK/173070000010101_000000213000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000213000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000029246">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV22920010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/153900000010101_000000260200C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Madre di chi sei figlia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS15214">
+    <crm:P94_has_created rdf:resource="WORK/028610000010101_000000065200C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000065200"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000057151">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV18600010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/302900000010101_000000215000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Vergene santa d'ogni grazia piena</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS63746">
+    <crm:P94_has_created rdf:resource="WORK/003090000010101_000000114900C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00364200"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS21643">
+    <crm:P94_has_created rdf:resource="WORK/171440002010101_000000095800"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000095800"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS55349">
+    <crm:P94_has_created rdf:resource="WORK/226620000010102_000000237000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000237000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/283160000010101_000000217600C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Taccio per compiacervi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/022460000101_PPPP00286400C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Felice primavera</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/PPPP00145002">
+    <rdfs:label>Lasca il 1577-</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000004962">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV14470010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/025050000010101_000000165000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Armato il cor d'adamantina fede</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000025905">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV10600010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/136460002010101_000000130500"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Almo pastor mentre la gregg'errando</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/106990002010101_000000221100">
+    <crm:R10i_is_member_of rdf:resource="WORK/106990001010101_000000069700C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Non è mai dicev'io già sonno questo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000031692">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV17130010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/167670002010101_000000199700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Così la notte e 'l giorno</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/0000087834">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV09670040"/>
+    <rdfs:label>I-Fc - N/A</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/PPPP00019502">
+    <rdfs:label>Davala Costanza </rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000013730">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV20290010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/072650000010101_000000233800C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Desideri che sperate</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/LRMX00002198">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/500205010"/>
+    <rdfs:label>A-Wn - 28617-A ALT MAG</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000022563C">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV07340010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/120130001010101_000000087400C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Il dì che costei nacque eran le stelle</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/337250002010101_000000140000">
+    <crm:R10i_is_member_of rdf:resource="WORK/337250001010101_000000140000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Questo della mia mente oscuro lume</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000029245">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV51250010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/153890000010101_000000010000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Madre de' peccatori vergine pura</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS50073">
+    <crm:P94_has_created rdf:resource="WORK/178820000010101_000000213000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000213000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS15216">
+    <crm:P94_has_created rdf:resource="WORK/052100000010101_000000065200C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000065200"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000057152">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV18630010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/302900000010101_000000215000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Vergene santa d'ogni grazia piena</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/188670000010101_000000254100C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>O cruda gelosia perché mi vieti</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS63745">
+    <crm:P94_has_created rdf:resource="WORK/239130001010101_000000096500C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00364000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/066310000010101_000000243600C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Da te part'io mio bene</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS15215">
+    <crm:P94_has_created rdf:resource="WORK/045630000010101_000000065200C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000065200"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/158440000010101_000000254200C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Mentre la notte al suo bel manto il lembo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/288560000010101_000000073500C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Tra l'usate fatighe</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/PPPP00251100">
+    <rdfs:label>Rossello Annibale 1594-</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/309580002010101_000000268900">
+    <crm:R10i_is_member_of rdf:resource="WORK/309580001010101_000000268900C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Anzi come saran lacrime [...]</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/034940001601_002030035">
+    <crm:R10i_is_member_of rdf:resource="WORK/034940000101_002030035C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Beata morte e cara</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS21642">
+    <crm:P94_has_created rdf:resource="WORK/171440001010101_000000095800C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000095800"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000062240C">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV51110010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/160110001010101_000000068100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Mentr'io tengo pur gl'occh'e 'l cor rivolto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/027855002010101_000000048500">
+    <crm:R10i_is_member_of rdf:resource="WORK/027855001010101_000000048500C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Prendendo tu quell'ave</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/PPPP00383500">
+    <rdfs:label>Bondumiero Olivier 1655-</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS55348">
+    <crm:P94_has_created rdf:resource="WORK/224170002010101_000000237000"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000237000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000004712C">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/006665010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/016270000101_PPPP00224400C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Quel rosignuol che sì soave piagne</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/089560000010101_000000008700C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Dunque con gl'occhi io veggio</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/PPPP00145003">
+    <rdfs:label>Lasca Antonio Francesco 1627-</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000025906">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV16220010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/136470000010101_000000187500C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>L'alba felice torna</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000004963">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV14390010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/025050000010101_000000165000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Armato il cor d'adamantina fede</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000013731">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV03500010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/072670000010101_000000041900C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Desideroso di veder mia diva</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/152420000060101_000000134300C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Dov'hai tu nido Amore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/148090000010101_000000254600C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Lieto mio cor già mai non fu</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000025902">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV22570010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/136460001010101_000000256900"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>L'alba cui dolci e pargoletti amori</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000031691">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV17130010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/167670001010101_000000199700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Negra e candida sposa</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/101770002010101_000000087400">
+    <crm:R10i_is_member_of rdf:resource="WORK/101770001010101_000000087400C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>E l'edra vaga e l'amoroso mirto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/019800000010101_000000175500C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Amor ti sfido in campo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000057153">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV18280010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/302900000010101_000000212000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Vergene santa d'ogni grazia piena</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/191500001010101_000000121300">
+    <crm:R10i_is_member_of rdf:resource="WORK/191500001010101_000000121300C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>O dolcissima morte del mio core</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS50070">
+    <crm:P94_has_created rdf:resource="WORK/168430000010101_000000213000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000213000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/0000087831">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV09660010"/>
+    <rdfs:label>US-Wc - N/A</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/256940001010101_000000184700">
+    <crm:R10i_is_member_of rdf:resource="WORK/256940001010101_000000184700C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Se 'l vostro volt'è d'un'aria gentile</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS21641">
+    <crm:P94_has_created rdf:resource="WORK/171440001010101_000000095800"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000095800"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000029244">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV53570010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/153880000010101_000000010000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Madre del Redentore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS63748">
+    <crm:P94_has_created rdf:resource="WORK/034860000010101_000000114900C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00364200"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/PPPP00145000">
+    <rdfs:label>Grazzini Anton Francesco detto il Lasca 1503/03/22-1584/02/18</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS15212">
+    <crm:P94_has_created rdf:resource="WORK/012350000010101_000000065200C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000065200"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/RP0000007100">
+    <rdfs:label>Galeato Bentivogli Antonio 1537-</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS55347">
+    <crm:P94_has_created rdf:resource="WORK/224170001010101_000000237000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000237000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000004960">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV04450010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/025040002010101_000000055600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Ninfa che scald'onori</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000031690">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV22220010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/167660000010101_000000254200C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Negli occhi avete il sole</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/063630000010101_000000101600C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Dal dì ch'io fei partita</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/289800000010101_000000029900C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Troppo ardisce occhi belli il mio pensiero</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS34370">
+    <crm:P94_has_created rdf:resource="WORK/255590000010101_000000152600C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000152600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000025903">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV10600010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/136460001010101_000000130500"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>L'alba cui dolci e pargoletti amori</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/000008361600">
+    <rdfs:label>Khiesel Giovanni Giacomo signore di Caltenprun e Gonobiz 1586-</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000057154">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV08290010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/302910000010101_000000101600C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Vergine santa e bella</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS07660">
+    <crm:P94_has_created rdf:resource="WORK/105980000010101_000000026000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000026000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS50071">
+    <crm:P94_has_created rdf:resource="WORK/169530000010101_000000213000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000213000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000013732">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV00060010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/072670000010101_000000001600C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Desideroso di veder mia diva</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/0000087832">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV09660010"/>
+    <rdfs:label>F-CC - N/A</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/067420000010101_000000150200C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Deh come in un momento</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS21640">
+    <crm:P94_has_created rdf:resource="WORK/169310000020101_000000095800C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000095800"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/000008370500">
+    <rdfs:label>Consorziali della Cattedrale Parma 1596-</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS15213">
+    <crm:P94_has_created rdf:resource="WORK/019110000010101_000000065200C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000065200"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/000000011200">
+    <rdfs:label>Antignano Agnello 1500-</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/0000086190">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV14090010"/>
+    <rdfs:label>BO0310 - T.183</rdfs:label>
+    <rdfs:label>I-Bc - T.183</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS63747">
+    <crm:P94_has_created rdf:resource="WORK/031278000020101_000000114900C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00364200"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000029243">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV03300010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/330750000010101_000000039700C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Madre del gran Signor sola fenice</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/PPPP00145001">
+    <rdfs:label>Grazini Anton Francesco 1557-</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000004961">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV12120010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/025050000010101_000000148200C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Armato il cor d'adamantina fede</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS55346">
+    <crm:P94_has_created rdf:resource="WORK/224170001010101_000000237000"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000237000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/016370000201_PPPP00224400">
+    <crm:R10i_is_member_of rdf:resource="WORK/016370000101_PPPP00224400C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Dormit'hai bella donna un breve sonno</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/275690000010101_000000049700C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Sospir figlio di fiamme</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000022333C">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV11080010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/118980001010101_000000135500C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>J'endure un tourment des tourmens le pire</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/000008361601">
+    <rdfs:label>Chiseli Giovanni Giacomo </rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS15219">
+    <crm:P94_has_created rdf:resource="WORK/078050000010101_000000065200C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000065200"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000031697">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV20660010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/167710000010101_000000239800C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Nei bei celesti campi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS07661">
+    <crm:P94_has_created rdf:resource="WORK/109890001010101_000000026000"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000026000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS34371">
+    <crm:P94_has_created rdf:resource="WORK/257280000010101_000000152600C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000152600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/008770000101_PPPP00285400C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Veduto il miser quanto differente</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/283270000010101_000000170800C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Taci bocca deh taci</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/050410000010101_000000158400C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Chi vuol veder quantunque può natura</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000039458">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV13740010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/209110000010101_000000160700C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Partomi donna e teco lascio il core</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS55345">
+    <crm:P94_has_created rdf:resource="WORK/208350000010101_000000237000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000237000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000025909">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV16940010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/136500000010101_000000198700C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>L'alba risona d'ogni intorno e sento</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS42747">
+    <crm:P94_has_created rdf:resource="WORK/300940000010101_000000178700C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000178700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS63742">
+    <crm:P94_has_created rdf:resource="WORK/178400001010101_000000268900C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00363800"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS21647">
+    <crm:P94_has_created rdf:resource="WORK/188760000010101_000000095800C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000095800"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000029242">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV51250010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/153870000010101_000000010000C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Madre del gran Signore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000048591">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV16610010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/257440000010101_000000195200C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Se me parto da voi collononia</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="ITEM/0000087830">
+    <frbroo:R7_is_example_of rdf:resource="BOOK/NV09660010"/>
+    <rdfs:label>GB-LI - N/A</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000044469">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV17590010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/234830000010101_000000205400C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Quel che viver desia libero e sciolto</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000031696">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV21600010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/167700000010101_000000249100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Nei begli occhi lucenti</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS55343">
+    <crm:P94_has_created rdf:resource="WORK/197930000010101_000000237000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000237000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS07662">
+    <crm:P94_has_created rdf:resource="WORK/109890001010101_000000026000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000026000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS34372">
+    <crm:P94_has_created rdf:resource="WORK/259620001010101_000000152600"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000152600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/163050000010101_000000171200C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Mirando a caso gli aurei tuoi capelli</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/RP0000085300">
+    <rdfs:label>Fanzino dalla Torre Sigismondo 1547-</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000039459">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV15630010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/209110000010101_000000179100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Partomi donna e teco lascio il core</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/304690001010101_000000231100C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS63741">
+    <crm:P94_has_created rdf:resource="WORK/178400001010101_000000268900"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00363800"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/025870000201_PPPP00260406">
+    <crm:R10i_is_member_of rdf:resource="WORK/025870000101_PPPP00260406C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Ché se le statue e i sassi il tempo frange</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/227850000020101_000000157100C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Quant'io dico tu sai donna s'io t'amo</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/209540003010101_000000062400">
+    <crm:R10i_is_member_of rdf:resource="WORK/209540001010101_000000062400C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Dunque i' vivrò tra memorandi essempi</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS42748">
+    <crm:P94_has_created rdf:resource="WORK/301720000010101_000000178700C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000178700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS55344">
+    <crm:P94_has_created rdf:resource="WORK/203570000010101_000000237000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000237000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000029241">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV05530010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/153860000010101_000000071100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Madre de' dolci amori</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS21646">
+    <crm:P94_has_created rdf:resource="WORK/175080000010101_000000095800C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000095800"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000048590">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV04510010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/257430000010101_000000056300C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Se mentr'in schern'e 'n gioco</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000031695">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV13360010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/167690002010101_000000157300"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Deh quando in giogo d'Alpe o d'Apennino</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000044468">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV20940010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/234820000010101_000000243200C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Quel che suol far amor quand'è sdegnato</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS15217">
+    <crm:P94_has_created rdf:resource="WORK/053340000010101_000000065200C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000065200"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/PPPP00019501">
+    <rdfs:label>Avalo Costanza d  1564-</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/238140001010101_000000233500">
+    <crm:R10i_is_member_of rdf:resource="WORK/238140001010101_000000233500C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Quest'a par dell'antica e casta e bella</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS34373">
+    <crm:P94_has_created rdf:resource="WORK/259620001010101_000000152600C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000152600"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="BOOK/SC19000000">
+    <rdfs:label>Motetorum 5-6, 8 v con. libro terzo</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS07663">
+    <crm:P94_has_created rdf:resource="WORK/109890002010101_000000026000"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000026000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS55342">
+    <crm:P94_has_created rdf:resource="WORK/187950000010101_000000237000C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000237000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000025907">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV17900010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/136480000010101_000000211100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>L'alba ne porta il desiato giorno</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS42749">
+    <crm:P94_has_created rdf:resource="WORK/302220001010101_000000178700"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000178700"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000039456">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV16800010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/209110000010101_000000197200C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Partomi donna e teco lascio il core</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS63744">
+    <crm:P94_has_created rdf:resource="WORK/239130001010101_000000096500"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/PPPP00364000"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000029240">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV00600010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/153850000010101_000000008700C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Madre bella</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000007062">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/500830010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/027570000101_PPPP00286100"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Ohimè dov'è 'l mio ben dov'è 'l mio core</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS21645">
+    <crm:P94_has_created rdf:resource="WORK/173470000010101_000000095800C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000095800"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/034940001202_501160010">
+    <crm:R10i_is_member_of rdf:resource="WORK/034940000101_501160010C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Al mattutino vento</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/H000044467">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/NV10180010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/234810000010101_000000124700C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Quel che stilla dal viso chiaro umore</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/211120000010101_000000023800C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+    <rdfs:label>Per aspro mar di nott'in picciol legno</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/276390001010101_000000213700C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/286550003010101_000000179100">
+    <crm:R10i_is_member_of rdf:resource="WORK/286550001010101_000000179100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Così moriro i fortunati amanti</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/CON/ORS15218">
+    <crm:P94_has_created rdf:resource="WORK/054410000010101_000000065200C"/>
+    <crm:P14_carried_out_by rdf:resource="AUTH/000000065200"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/083270001010101_000000073300C">
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F15_Complex_Work"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="BOOK/NV17430010">
+    <rdfs:label>Il *Primo libro di canzonette a 4 v</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="AUTH/PPPP00019500">
+    <rdfs:label>Avalos Costanza d  1520-1575</rdfs:label>
+    <rdf:type rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/221290001010101_000000033900">
+    <crm:R10i_is_member_of rdf:resource="WORK/221290001010101_000000033900C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F14_Individual_Work"/>
+    <rdfs:label>Poi che sicur'omai pon nott'e giorno</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="EXPR/P000007060">
+    <frbroo:R4_carriers_provided_by rdf:resource="BOOK/008400010"/>
+    <frbroo:R3i_realises rdf:resource="WORK/027560000101_PPPP00286100C"/>
+    <rdf:type rdf:resource="http://erlangen-crm.org/efrbroo/F24_Publication_Expression"/>
+    <rdfs:label>Vita de la mia vita egli è pur vero</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="WORK/120210001010101_000000144300">
+    <crm:R10i_is_member_of rdf:resource="WORK/120210001010101_000000144300C"/>
+    <

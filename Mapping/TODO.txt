@@ -1,0 +1,23 @@
+SWT_LIBRI_BIBLIOGRAFIA 					OK
+SWT_OPERE_BIBLIOGRAFIA 					OK
+SWT_LIBRI_OPERE_BIBLIOTECHE				NO RECORDS
+SWT_LIBRI_OPERE_RESPONS					OK
+SWT_LIBRI_RESPONS						OK
+SWT_RESPONS_BIB 						OK
+SWT_RESPONS_TADE						?
+SWT_LIBRI_PARTI_STRUTTURA_RESPONS		OK [verificare se è una ExpressionCreation]
+
+SWT_LIBRI_OPERE_BIBLIOTECHE				TODO [tabella vuota, in attesa di dati]
+
+LIBRI_PARTI								OK
+LIBRI_PARTI_STRUTTURA					OK (not mapped: LPS_LOUGO, LPS_DATA)
+LIBRI_LEGAMI							OK (not mapped: LLG_NPRO, LLG_CONTENUTO, LLG_NOTE)
+
+OPERE_DA								OK (mapped: OPRDA_TESTOINT, OPRDA_FORMAPOE, OPRDA_FORMAMUS)
+OPERE_LEGAMI							OK
+OPERE_LINGUE							OK
+OPERE_SEZIONI							NO MAP
+
+OPERE.PADRE_DT -> recupera il riferimento all'opera completa e associa quella. Esempio: 016260000101_PPPP00224400C
+
+OPERE_LEGAMI -> etichetta come: label->refers_to->has_type->refers_to->label

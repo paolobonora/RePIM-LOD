@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://repim.unibo.it/sm#"
-     xml:base="http://repim.unibo.it/sm"
+<rdf:RDF xmlns="http://repim.unibo.it/sm/"
+     xml:base="http://repim.unibo.it/sm/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -32,19 +32,19 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
-    <!-- http://repim.unibo.it/sm/#RP1_group_member_of -->
+    <!-- http://repim.unibo.it/sm/RP1_group_member_of -->
 
-    <owl:ObjectProperty rdf:about="http://repim.unibo.it/sm/#RP1_group_member_of">
-        <rdfs:domain rdf:resource="http://repim.unibo.it/sm/#RC1_Incipit"/>
-        <rdfs:range rdf:resource="http://repim.unibo.it/sm/#RC1_Incipit"/>
+    <owl:ObjectProperty rdf:about="http://repim.unibo.it/sm/RP1_group_member_of">
+        <rdfs:domain rdf:resource="http://repim.unibo.it/sm/RC1_Incipit"/>
+        <rdfs:range rdf:resource="http://repim.unibo.it/sm/RC1_Incipit"/>
         <rdfs:label xml:lang="it">RP1 membro del gruppo</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://repim.unibo.it/sm/#RP2_has_matter -->
+    <!-- http://repim.unibo.it/sm/RP2_has_matter -->
 
-    <owl:ObjectProperty rdf:about="http://repim.unibo.it/sm/#RP2_has_matter">
+    <owl:ObjectProperty rdf:about="http://repim.unibo.it/sm/RP2_has_matter">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:label xml:lang="it">contenuto</rdfs:label>
         <rdfs:label xml:lang="en">has matter</rdfs:label>
@@ -72,46 +72,46 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
-    <!-- http://repim.unibo.it/sm/#RD1_has_first_verse -->
+    <!-- http://repim.unibo.it/sm/RD1_has_first_verse -->
 
-    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/#RD1_has_first_verse">
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD1_has_first_verse">
         <rdfs:label xml:lang="en">first verse</rdfs:label>
         <rdfs:label xml:lang="it">primo verso</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://repim.unibo.it/sm/#RD2_has_second_verse -->
+    <!-- http://repim.unibo.it/sm/RD2_has_second_verse -->
 
-    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/#RD2_has_second_verse">
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD2_has_second_verse">
         <rdfs:label xml:lang="en">second verse</rdfs:label>
         <rdfs:label xml:lang="it">secondo verso</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://repim.unibo.it/sm/#RD3_is_archetype -->
+    <!-- http://repim.unibo.it/sm/RD3_is_archetype -->
 
-    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/#RD3_is_archetype">
-        <rdfs:domain rdf:resource="http://repim.unibo.it/sm/#RC1_Incipit"/>
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD3_is_archetype">
+        <rdfs:domain rdf:resource="http://repim.unibo.it/sm/RC1_Incipit"/>
         <rdfs:label xml:lang="it">archetipo</rdfs:label>
         <rdfs:label xml:lang="en">archetype</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://repim.unibo.it/sm/#RD4_is_head_of_group -->
+    <!-- http://repim.unibo.it/sm/RD4_is_head_of_group -->
 
-    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/#RD4_is_head_of_group">
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD4_is_head_of_group">
         <rdfs:label xml:lang="en">head of group</rdfs:label>
         <rdfs:label xml:lang="it">testa del gruppo</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://repim.unibo.it/sm/#RD5_verse_number -->
+    <!-- http://repim.unibo.it/sm/RD5_verse_number -->
 
-    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/#RD5_verse_number">
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD5_verse_number">
         <rdfs:label xml:lang="en">verse number</rdfs:label>
         <rdfs:label xml:lang="it">verso numero</rdfs:label>
     </owl:DatatypeProperty>
@@ -129,9 +129,9 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
-    <!-- http://repim.unibo.it/sm/#RC1_Incipit -->
+    <!-- http://repim.unibo.it/sm/RC1_Incipit -->
 
-    <owl:Class rdf:about="http://repim.unibo.it/sm/#RC1_Incipit">
+    <owl:Class rdf:about="http://repim.unibo.it/sm/RC1_Incipit">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E33_Linguistic_Object"/>
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E42_Identifier"/>
         <rdfs:comment xml:lang="it">Rappresenta la parte di testo, di norma rappresentata dai primi versi del componimento poetico, utilizzata per identificarne il contenuto.</rdfs:comment>
@@ -141,9 +141,9 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
-    <!-- http://repim.unibo.it/sm/#RC2_Verse -->
+    <!-- http://repim.unibo.it/sm/RC2_Verse -->
 
-    <owl:Class rdf:about="http://repim.unibo.it/sm/#RC2_Verse">
+    <owl:Class rdf:about="http://repim.unibo.it/sm/RC2_Verse">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E33_Linguistic_Object"/>
         <rdfs:comment xml:lang="it">Rappresenta il singolo verso di un componimento poetico. Concettualmente equivalente all&apos;elemento TEI:l.</rdfs:comment>
         <rdfs:comment xml:lang="en">Represents a line (single lyric) of a lyrics. Equivalent to a TEI:l element.</rdfs:comment>
@@ -153,9 +153,9 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
-    <!-- http://repim.unibo.it/sm/#RC3_Link -->
+    <!-- http://repim.unibo.it/sm/RC3_Link -->
 
-    <owl:Class rdf:about="http://repim.unibo.it/sm/#RC3_Link">
+    <owl:Class rdf:about="http://repim.unibo.it/sm/RC3_Link">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E89_Propositional_Object"/>
         <rdfs:comment xml:lang="it">Rappresenta un legame tra due entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">Represents a link between two entities.</rdfs:comment>

@@ -7,5 +7,5 @@ echo Display java version
 java -version
 c:
 cd C:\Università\Unifi\Tesi\Sviluppo\d2rq
-dump-rdf.bat -o repim.nt -b http://repim.unibo.it/resource/ --verbose --debug ../RePIM.ttl
+dump-rdf.bat -f N-TRIPLE -o repim.nt -b http://repim.unibo.it/resource/ --verbose --debug ../RePIM.ttl
 pause
