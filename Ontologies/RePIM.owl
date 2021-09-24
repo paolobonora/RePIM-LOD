@@ -63,15 +63,6 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
-    <!-- http://repim.unibo.it/sm/RD6_sequential_number -->
-
-    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD6_sequential_number">
-        <rdfs:label xml:lang="it">numero progressivo</rdfs:label>
-        <rdfs:label xml:lang="en">sequential number</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- http://repim.unibo.it/sm/RD1_has_first_verse -->
 
     <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD1_has_first_verse">
@@ -118,6 +109,15 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
+    <!-- http://repim.unibo.it/sm/RD6_sequential_number -->
+
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD6_sequential_number">
+        <rdfs:label xml:lang="it">numero progressivo</rdfs:label>
+        <rdfs:label xml:lang="en">sequential number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -136,7 +136,7 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E42_Identifier"/>
         <rdfs:comment xml:lang="it">Rappresenta la parte di testo, di norma rappresentata dai primi versi del componimento poetico, utilizzata per identificarne il contenuto.</rdfs:comment>
         <rdfs:comment xml:lang="en">Represents the portion of text, usually the first verses of a lyrics, used to identify a work.</rdfs:comment>
-        <rdfs:label>RPM01 Incipit</rdfs:label>
+        <rdfs:label>RC1 Incipit</rdfs:label>
     </owl:Class>
     
 
@@ -147,8 +147,8 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E33_Linguistic_Object"/>
         <rdfs:comment xml:lang="it">Rappresenta il singolo verso di un componimento poetico. Concettualmente equivalente all&apos;elemento TEI:l.</rdfs:comment>
         <rdfs:comment xml:lang="en">Represents a line (single lyric) of a lyrics. Equivalent to a TEI:l element.</rdfs:comment>
-        <rdfs:label xml:lang="en">RC02 Verse</rdfs:label>
-        <rdfs:label xml:lang="it">RC02 Verso</rdfs:label>
+        <rdfs:label xml:lang="en">RC2 Verse</rdfs:label>
+        <rdfs:label xml:lang="it">RC2 Verso</rdfs:label>
     </owl:Class>
     
 
@@ -159,8 +159,8 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E89_Propositional_Object"/>
         <rdfs:comment xml:lang="it">Rappresenta un legame tra due entità.</rdfs:comment>
         <rdfs:comment xml:lang="en">Represents a link between two entities.</rdfs:comment>
-        <rdfs:label xml:lang="it">Legame</rdfs:label>
-        <rdfs:label xml:lang="en">Link</rdfs:label>
+        <rdfs:label xml:lang="it">RC3 Legame</rdfs:label>
+        <rdfs:label xml:lang="en">RC3 Link</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
