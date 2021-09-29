@@ -1271,6 +1271,7 @@ map:BiblioActorRel a d2rq:PropertyBridge;
 	d2rq:join "SWT_RESPONS_BIB.COD_RESP = RESPONS.COD_RESP";
 .
 
+#TODO: map also LBL_RINVIO, LBL_RINVIOINSTAMPA e LBL_URL as an instance of "BIRO Reference"
 
 
 #INCIPIT (INCIPIT)
@@ -1380,7 +1381,7 @@ map:DedicationRoleLabel a d2rq:PropertyBridge;
 map:TipoDocURL a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "TYPE/ID/URL";
-	d2rq:class corago:E55_Type;
+	d2rq:class crm:E55_Type;
 .
 map:TipoDocURLLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:TipoDocURL;
