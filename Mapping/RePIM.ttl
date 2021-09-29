@@ -20,6 +20,7 @@
 @prefix doco: <http://purl.org/spar/doco/>.
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix deo: <http://purl.org/spar/deo/>.
+@prefix biro: <http://purl.org/spar/biro/>.
 
 # Realizzato da: Paolo Bonora
 # Versione del: 20/09/2021
@@ -1110,10 +1111,15 @@ map:BibliographicRecord a d2rq:ClassMap;
 	d2rq:uriPattern "BIBLIO/@@BIBLIOGRAFIA.BIB_ID@@";
 	d2rq:class crm:E31_Document;
 .
-map:BibliographicRecordType a d2rq:PropertyBridge;
+map:BibliographicRecordType1 a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BibliographicRecord;
 	d2rq:property rdf:type;
 	d2rq:constantValue "frbroo:F24_Publication_Expression";
+.
+map:BibliographicRecordType2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BibliographicRecord;
+	d2rq:property rdf:type;
+	d2rq:constantValue "biro:BibliographicRecord";
 .
 map:BibliographicRecordLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BibliographicRecord;
@@ -1249,10 +1255,43 @@ map:BiblioPublicationActRel a d2rq:PropertyBridge;
 	d2rq:refersToClassMap map:BiblioPublisher;
 .
 # REFERENCES (SWT_LIBRI_BIBLIOGRAFIA, SWT_OPERE_BIBLIOGRAFIA, SWT_RESPONS_BIB)
-map:BiblioBookRel a d2rq:PropertyBridge;
-	d2rq:belongsToClassMap map:BibliographicRecord;
-	d2rq:property crm:P129_is_about;
+map:BiblioBookReference a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "BOOK/@@LIBRI.LIB_ID|urlify@@/REF/@@SWT_LIBRI_BIBLIOGRAFIA.LBL_ID|urlify@@";
+	d2rq:class biro:BibliographicReference;
+	d2rq:join "LIBRI.LIB_ID = SWT_LIBRI_BIBLIOGRAFIA.LIB_ID";
+.
+map:BiblioBookReferenceLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BiblioBookReference;
+	d2rq:property rdfs:label;
+	d2rq:sqlExpression "SWT_LIBRI_BIBLIOGRAFIA.LBL_NPRO & IIF(Len(SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIO)>0,' - ' & SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIO ,'') & IIF(Len(SWT_LIBRI_BIBLIOGRAFIA.LBL_URL)>0,' - ' & SWT_LIBRI_BIBLIOGRAFIA.LBL_URL ,'')";
+	d2rq:join "LIBRI.LIB_ID = SWT_LIBRI_BIBLIOGRAFIA.LIB_ID";
+.
+map:BiblioBookReferenceValue1 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BiblioBookReference;
+	d2rq:property rdf:value;
+	d2rq:column "SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIO";
+	d2rq:join "LIBRI.LIB_ID = SWT_LIBRI_BIBLIOGRAFIA.LIB_ID";
+	d2rq:condition "LEN(SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIO)>0";
+.
+map:BiblioBookReferenceValue2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BiblioBookReference;
+	d2rq:property rdf:value;
+	d2rq:column "SWT_LIBRI_BIBLIOGRAFIA.LBL_URL";
+	d2rq:join "LIBRI.LIB_ID = SWT_LIBRI_BIBLIOGRAFIA.LIB_ID";
+	d2rq:condition "LEN(SWT_LIBRI_BIBLIOGRAFIA.LBL_URL)>0";
+.
+map:BiblioBookRel1 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BiblioBookReference;
+	d2rq:property crm:isReferencedBy;
 	d2rq:refersToClassMap map:Book;
+	d2rq:join "SWT_LIBRI_BIBLIOGRAFIA.BIB_ID = BIBLIOGRAFIA.BIB_ID";
+	d2rq:join "SWT_LIBRI_BIBLIOGRAFIA.LIB_ID = LIBRI.LIB_ID";
+.
+map:BiblioBookRel2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BiblioBookReference;
+	d2rq:property crm:references;
+	d2rq:refersToClassMap map:BibliographicRecord;
 	d2rq:join "SWT_LIBRI_BIBLIOGRAFIA.BIB_ID = BIBLIOGRAFIA.BIB_ID";
 	d2rq:join "SWT_LIBRI_BIBLIOGRAFIA.LIB_ID = LIBRI.LIB_ID";
 .
@@ -1271,7 +1310,6 @@ map:BiblioActorRel a d2rq:PropertyBridge;
 	d2rq:join "SWT_RESPONS_BIB.COD_RESP = RESPONS.COD_RESP";
 .
 
-#TODO: map also LBL_RINVIO, LBL_RINVIOINSTAMPA e LBL_URL as an instance of "BIRO Reference"
 
 
 #INCIPIT (INCIPIT)
