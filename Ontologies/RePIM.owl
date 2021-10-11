@@ -118,6 +118,24 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
+    <!-- http://repim.unibo.it/sm/RD7_part_number -->
+
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD7_part_number">
+        <rdfs:label xml:lang="it">numero parte</rdfs:label>
+        <rdfs:label xml:lang="en">part number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://repim.unibo.it/sm/RD8_work_level -->
+
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD8_work_level">
+        <rdfs:label xml:lang="it">livello opera</rdfs:label>
+        <rdfs:label xml:lang="en">work level</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -161,6 +179,36 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
         <rdfs:comment xml:lang="en">Represents a link between two entities.</rdfs:comment>
         <rdfs:label xml:lang="it">RC3 Legame</rdfs:label>
         <rdfs:label xml:lang="en">RC3 Link</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://repim.unibo.it/sm/RC4_Musical_Form -->
+
+    <owl:Class rdf:about="http://repim.unibo.it/sm/RC4_Musical_Form">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+        <rdfs:label xml:lang="it">Forma musicale</rdfs:label>
+        <rdfs:label xml:lang="en">Musical form</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://repim.unibo.it/sm/RC5_Poetic_Form -->
+
+    <owl:Class rdf:about="http://repim.unibo.it/sm/RC5_Poetic_Form">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+        <rdfs:label xml:lang="en">Forma poetica</rdfs:label>
+        <rdfs:label xml:lang="en">Poetic form</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://repim.unibo.it/sm/RC7_Genre -->
+
+    <owl:Class rdf:about="http://repim.unibo.it/sm/RC7_Genre">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+        <rdfs:label xml:lang="it">Genere</rdfs:label>
+        <rdfs:label xml:lang="en">Genre</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

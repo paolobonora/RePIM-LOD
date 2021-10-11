@@ -331,6 +331,26 @@ map:WorkRel a d2rq:PropertyBridge;
 	#d2rq:join "OPERE.OPR_IDCOMP = OPERE.OPR_ID";
 	d2rq:condition "OPERE.OPR_ID <> OPERE.OPR_IDCOMP";
 .
+map:WorkLevel1 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:CompleteWork;
+	d2rq:property repim:RD8_work_level;
+	d2rq:column "OPERE.OPR_LIV";
+.
+map:WorkLevel2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PartWork;
+	d2rq:property repim:RD8_work_level;
+	d2rq:column "OPERE.OPR_LIV";
+.
+map:WorkPart1 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:CompleteWork;
+	d2rq:property repim:RD7_part_number;
+	d2rq:column "OPERE.OPR_NPRO";
+.
+map:WorkPart1 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PartWork;
+	d2rq:property repim:RD7_part_number;
+	d2rq:column "OPERE.OPR_NPRO";
+.
 map:WorkConception a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "WORK/CON/@@SWT_OPERE_RESPONS.ORS_ID@@";
@@ -1283,14 +1303,14 @@ map:BiblioBookReferenceValue2 a d2rq:PropertyBridge;
 .
 map:BiblioBookRel1 a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BiblioBookReference;
-	d2rq:property crm:isReferencedBy;
+	d2rq:property biro:isReferencedBy;
 	d2rq:refersToClassMap map:Book;
 	d2rq:join "SWT_LIBRI_BIBLIOGRAFIA.BIB_ID = BIBLIOGRAFIA.BIB_ID";
 	d2rq:join "SWT_LIBRI_BIBLIOGRAFIA.LIB_ID = LIBRI.LIB_ID";
 .
 map:BiblioBookRel2 a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BiblioBookReference;
-	d2rq:property crm:references;
+	d2rq:property biro:references;
 	d2rq:refersToClassMap map:BibliographicRecord;
 	d2rq:join "SWT_LIBRI_BIBLIOGRAFIA.BIB_ID = BIBLIOGRAFIA.BIB_ID";
 	d2rq:join "SWT_LIBRI_BIBLIOGRAFIA.LIB_ID = LIBRI.LIB_ID";
@@ -1438,6 +1458,11 @@ map:WorkTypeLabel a d2rq:PropertyBridge;
 	d2rq:property rdfs:label;
 	d2rq:column "TADE.TADEDA1";
 .
+map:WorkTypeClass a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkType;
+	d2rq:property rdf:type;
+	d2rq:constantValue repim:RC7_Genre;
+.
 
 map:BookFormat a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
@@ -1555,7 +1580,11 @@ map:WorkPoeticTypeLabel a d2rq:PropertyBridge;
 	d2rq:property rdfs:label;
 	d2rq:column "TADE.TADEDA1";
 .
-
+map:WorkPoeticTypeClass a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkPoeticType;
+	d2rq:property rdf:type;
+	d2rq:constantValue repim:RC5_Poetic_Form;
+.
 map:WorkMusicalType a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "TYPE/WORK_MTYPE/@@TADE.TADE_ID@@";
@@ -1567,3 +1596,11 @@ map:WorkMusicalTypeLabel a d2rq:PropertyBridge;
 	d2rq:property rdfs:label;
 	d2rq:column "TADE.TADEDA1";
 .
+map:WorkMusicalTypeClass a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkMusicalType;
+	d2rq:property rdf:type;
+	d2rq:constantValue repim:RC4_Musical_Form;
+.
+
+
+
