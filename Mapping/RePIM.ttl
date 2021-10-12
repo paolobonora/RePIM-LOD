@@ -1134,13 +1134,15 @@ map:BibliographicRecord a d2rq:ClassMap;
 map:BibliographicRecordType1 a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BibliographicRecord;
 	d2rq:property rdf:type;
-	d2rq:constantValue "frbroo:F24_Publication_Expression";
+	d2rq:constantValue frbroo:F24_Publication_Expression;
 .
 map:BibliographicRecordType2 a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BibliographicRecord;
 	d2rq:property rdf:type;
-	d2rq:constantValue "biro:BibliographicRecord";
+	d2rq:constantValue biro:BibliographicRecord;
 .
+
+
 map:BibliographicRecordLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BibliographicRecord;
 	d2rq:property rdfs:label;
@@ -1601,6 +1603,8 @@ map:WorkMusicalTypeClass a d2rq:PropertyBridge;
 	d2rq:property rdf:type;
 	d2rq:constantValue repim:RC4_Musical_Form;
 .
+
+
 
 
 
