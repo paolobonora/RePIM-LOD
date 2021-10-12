@@ -865,7 +865,7 @@ map:BookPublicationPlacePublisher a d2rq:ClassMap;
 	d2rq:condition "LIBRI.LIB_EDITORE  <> ''";
 .
 map:BookPublicationPlacePublisherLabel a d2rq:PropertyBridge;
-	d2rq:belongsToClassMap map:BiblioPublisher;
+	d2rq:belongsToClassMap map:BookPublicationPlacePublisher;
 	d2rq:property rdfs:label;
 	d2rq:column "LIBRI.LIB_EDITORE";
 	d2rq:condition "LIBRI.LIB_EDITORE  <> ''";

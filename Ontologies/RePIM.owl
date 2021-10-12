@@ -210,6 +210,16 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
         <rdfs:label xml:lang="it">Genere</rdfs:label>
         <rdfs:label xml:lang="en">Genre</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://repim.unibo.it/sm/RC8_DedicationRole -->
+
+    <owl:Class rdf:about="http://repim.unibo.it/sm/RC8_DedicationRole">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+        <rdfs:label xml:lang="en">Dedication role</rdfs:label>
+        <rdfs:label xml:lang="it">Ruolo dedica</rdfs:label>
+    </owl:Class>
 </rdf:RDF>
 
 
