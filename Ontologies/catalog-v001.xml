@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1633955378635" name="NAMESPACE" uri="Orb-0_1.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1633955378635" name="http://erlangen-crm.org/current/" uri="ecrm_current.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1633955378635" name="http://erlangen-crm.org/efrbroo/" uri="efrbroo.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1633955378635" name="http://id.loc.gov/ontologies/bibframe/" uri="bibframe.rdf"/>
-        <uri id="Automatically generated entry, Timestamp=1633955378635" name="http://purl.org/spar/doco/" uri="doco.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1633955378635" name="http://repim.unibo.it/sm/" uri="RePIM.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1634053535298" name="NAMESPACE" uri="Orb-0_1.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1634053535298" name="http://erlangen-crm.org/current/" uri="ecrm_current.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1634053535298" name="http://erlangen-crm.org/efrbroo/" uri="efrbroo.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1634053535298" name="http://id.loc.gov/ontologies/bibframe/" uri="bibframe.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1634053535298" name="http://purl.org/spar/doco/" uri="doco.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1634053535298" name="http://repim.unibo.it/sm/" uri="RePIM.owl"/>
     </group>
 </catalog>

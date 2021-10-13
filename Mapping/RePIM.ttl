@@ -906,7 +906,12 @@ map:BookPartLabel a d2rq:PropertyBridge;
 	d2rq:column "LIBRI_PARTI.LPT_NPRO";
 	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
 .
-
+map:BookPartRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Book;
+	d2rq:property doco:contains;
+	d2rq:refersToClassMap map:BookPart;
+	d2rq:join "LIBRI.LIB_ID = LIBRI_PARTI.LIB_ID";
+.
 #BOOK PART STRUCTURE (LIBRI_PARTI_STRUTTURA)
 map:BookPartStructure a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
