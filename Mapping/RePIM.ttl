@@ -54,13 +54,13 @@ map:ActorAppellation a d2rq:ClassMap;
 map:ActorAppellation_label1 a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:ActorAppellation;
 	d2rq:property rdfs:label;
-	d2rq:pattern "@@RESPONS.NOME_R@@ @@RESPONS.PREFISSO@@ @@RESPONS.COGNOME_R@@";
+	d2rq:pattern "@@RESPONS.COGNOME_R@@ @@RESPONS.PREFISSO@@ @@RESPONS.NOME_R@@";
 	d2rq:condition "RESPONS.COGNOME_R <> '' AND RESPONS.NOME_R <>'' AND RESPONS.PREFISSO <>''";
 .
 map:ActorAppellation_label2 a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:ActorAppellation;
 	d2rq:property rdfs:label;
-	d2rq:pattern "@@RESPONS.NOME_R@@ @@RESPONS.COGNOME_R@@";
+	d2rq:pattern "@@RESPONS.COGNOME_R@@ @@RESPONS.NOME_R@@";
 	d2rq:condition "RESPONS.COGNOME_R <> '' AND RESPONS.NOME_R <>'' AND (ISNULL(RESPONS.PREFISSO) OR RESPONS.PREFISSO='')";
 .
 map:ActorAppellation_label3 a d2rq:PropertyBridge;
@@ -78,7 +78,7 @@ map:ActorAppellation_label4 a d2rq:PropertyBridge;
 #Main name form
 map:Actor_Appellation a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:Actor;
-	d2rq:property crm:P131_is_identified_by;
+	d2rq:property crm:P1_is_identified_by;
 	d2rq:refersToClassMap map:ActorAppellation;
 	d2rq:join "RESPONS.COD_RESP = RESPONS.COD_RESP";
 .
