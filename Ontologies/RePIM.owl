@@ -52,6 +52,15 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
+    <!-- http://repim.unibo.it/sm/RP3_has_literary_source -->
+
+    <owl:ObjectProperty rdf:about="http://repim.unibo.it/sm/RP3_has_literary_source">
+        <rdfs:label xml:lang="it">fonte letteraria</rdfs:label>
+        <rdfs:label xml:lang="en">has literary source</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -136,6 +145,15 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
+    <!-- http://repim.unibo.it/sm/RD9_page_number -->
+
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD9_page_number">
+        <rdfs:label xml:lang="it">numero pagina</rdfs:label>
+        <rdfs:label xml:lang="en">page number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -144,6 +162,26 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://repim.unibo.it/sm/RC10_Document_Format -->
+
+    <owl:Class rdf:about="http://repim.unibo.it/sm/RC10_Document_Format">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+        <rdfs:label xml:lang="en">Documet format</rdfs:label>
+        <rdfs:label xml:lang="it">Formato del documento</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://repim.unibo.it/sm/RC11_Edition_Type -->
+
+    <owl:Class rdf:about="http://repim.unibo.it/sm/RC11_Edition_Type">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+        <rdfs:label xml:lang="en">Edition type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di edizione</rdfs:label>
+    </owl:Class>
     
 
 
@@ -213,12 +251,22 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
-    <!-- http://repim.unibo.it/sm/RC8_DedicationRole -->
+    <!-- http://repim.unibo.it/sm/RC8_Dedication_Role -->
 
-    <owl:Class rdf:about="http://repim.unibo.it/sm/RC8_DedicationRole">
+    <owl:Class rdf:about="http://repim.unibo.it/sm/RC8_Dedication_Role">
         <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
         <rdfs:label xml:lang="en">Dedication role</rdfs:label>
         <rdfs:label xml:lang="it">Ruolo dedica</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://repim.unibo.it/sm/RC9_Document_Type -->
+
+    <owl:Class rdf:about="http://repim.unibo.it/sm/RC9_Document_Type">
+        <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+        <rdfs:label xml:lang="en">Document type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di documento</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
