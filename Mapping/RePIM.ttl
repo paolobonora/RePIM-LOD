@@ -630,7 +630,7 @@ map:ExprBookRel a d2rq:PropertyBridge;
 map:ExpressionInSource a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "EXPR/@@SWT_LIBRI_OPERE.LOR_ID@@";
-	d2rq:class frbroo:F24_Publication_Expression;
+	d2rq:class frbroo:F22_Self-Contained_Expression;
 .
 map:ExpressionInSourceLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:ExpressionInSource;
@@ -638,6 +638,17 @@ map:ExpressionInSourceLabel a d2rq:PropertyBridge;
 	d2rq:column "TITOLI.TIT_NORM";
 	d2rq:join "SWT_LIBRI_OPERE.LOR_OPR_ID = TITOLI.ENT_ID";
 	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE'";
+.
+map:ExpressionInSourceNumber a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ExpressionInSource;
+	d2rq:datatype xsd:integer;
+	d2rq:property repim:RD6_sequential_number;
+	d2rq:column "SWT_LIBRI_OPERE.LOR_NPRO";
+.
+map:ExpressionInSourcePage a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ExpressionInSource;
+	d2rq:property repim:RD9_page_number;
+	d2rq:column "SWT_LIBRI_OPERE.LOR_PAGINA";
 .
 map:WorkExpressionInSourceRel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:ExpressionInSource;
@@ -1085,6 +1096,18 @@ map:BookLinkSN a d2rq:PropertyBridge;
 	d2rq:condition "NOT ISNULL(LIBRI_LEGAMI.LLG_NPRO)";
 .
 
+#ITEM (BIBLIOTECHE)
+map:Lib a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "LIBRARY/@@BIBLIOTECHE.BBT_ID@@";
+	d2rq:class frbroo:F11_Corporate_Body;
+.
+
+map:LibLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Lib;
+	d2rq:property rdfs:label;
+	d2rq:sqlExpression "BIBLIOTECHE.BBT_ISTITUZIONE &', ' & BIBLIOTECHE.BBT_COMUNE &' (' & BIBLIOTECHE.BBT_STATO &')'";
+.
 
 #ITEM (SWT_LIBRI_BIBLIOTECHE)
 map:Item a d2rq:ClassMap;
@@ -1105,6 +1128,12 @@ map:ItemBookRel a d2rq:PropertyBridge;
 	d2rq:property frbroo:R7_is_example_of;
 	d2rq:refersToClassMap map:Book;
 	d2rq:join "SWT_LIBRI_BIBLIOTECHE.LIB_ID = LIBRI.LIB_ID";
+.
+map:ItemLibRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Lib;
+	d2rq:property crm:P52i_is_current_owner_of;
+	d2rq:refersToClassMap map:Item;
+	d2rq:join "SWT_LIBRI_BIBLIOTECHE.BBT_ID = BIBLIOTECHE.BBT_ID";
 .
 map:ItemURL a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
@@ -1440,7 +1469,7 @@ map:DedicationRole a d2rq:ClassMap;
 map:DedicationRoleClass a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:DedicationRole;
 	d2rq:property rdf:type;
-	d2rq:constantValue repim:RC8_DedicationRole;
+	d2rq:constantValue repim:RC8_Dedication_Role;
 .
 map:DedicationRoleLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:DedicationRole;
@@ -1487,10 +1516,15 @@ map:BookFormatLabel a d2rq:PropertyBridge;
 	d2rq:property rdfs:label;
 	d2rq:column "TADE.TADEDA1";
 .
+map:BookFormatClass a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookFormat;
+	d2rq:property rdf:type;
+	d2rq:constantValue repim:RC10_Document_Format;
+.
 
 map:BookType a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
-	d2rq:uriPattern "TYPE/BOOK_FORMAT/@@TADE.TADE_ID@@";
+	d2rq:uriPattern "TYPE/DOC_TYPE/@@TADE.TADE_ID@@";
 	d2rq:class crm:E55_Type;
 	d2rq:condition "TADE.TADETIP='DCT'" 
 .
@@ -1498,6 +1532,11 @@ map:BookTypeLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BookType;
 	d2rq:property rdfs:label;
 	d2rq:column "TADE.TADEDA1";
+.
+map:BookTypeClass a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookType;
+	d2rq:property rdf:type;
+	d2rq:constantValue repim:RC9_Document_Type;
 .
 
 map:BookEdition a d2rq:ClassMap;
@@ -1510,6 +1549,11 @@ map:BookEditionLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BookEdition;
 	d2rq:property rdfs:label;
 	d2rq:column "TADE.TADEDA1";
+.
+map:BookEditionClass a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookEdition;
+	d2rq:property rdf:type;
+	d2rq:constantValue repim:RC11_Edition_Type;
 .
 
 map:BookPresentation a d2rq:ClassMap;
