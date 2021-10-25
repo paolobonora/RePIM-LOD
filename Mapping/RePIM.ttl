@@ -41,10 +41,19 @@ map:Actor a d2rq:ClassMap;
 	d2rq:uriPattern "AUTH/@@RESPONS.COD_RESP@@";
 	d2rq:class crm:E39_Actor;
 .
-map:ActorLabel a d2rq:PropertyBridge;
+map:ActorLabel1 a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:Actor;
 	d2rq:property rdfs:label;
-	d2rq:column "RESPONS.ORDINA_R";
+	#d2rq:column "RESPONS.ORDINA_R";
+	d2rq:sqlExpression "RESPONS.COGNOME_R & ' '  &RESPONS.NOME_R & ' (' & IIF(Len(Mid(RESPONS.DATA_NAS_R,1,4))>0,Mid(RESPONS.DATA_NAS_R,1,4),'') & '-' & IIF(Len(Mid(RESPONS.DATA_MOR_R,1,4))>0,Mid(RESPONS.DATA_MOR_R,1,4),'') & ')'";
+	d2rq:condition "Len(Mid(RESPONS.DATA_NAS_R,1,4))>0 OR Len(Mid(RESPONS.DATA_MOR_R,1,4))>0";
+.
+map:ActorLabel2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Actor;
+	d2rq:property rdfs:label;
+	#d2rq:column "RESPONS.ORDINA_R";
+	d2rq:sqlExpression "RESPONS.COGNOME_R & ' '  &RESPONS.NOME_R";
+	d2rq:condition "Len(Mid(RESPONS.DATA_NAS_R,1,4))=0 AND Len(Mid(RESPONS.DATA_MOR_R,1,4))=0";
 .
 map:ActorAppellation a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
@@ -725,6 +734,12 @@ map:BookLabel a d2rq:PropertyBridge;
 	d2rq:join "LIBRI.LIB_ID = TITOLI.ENT_ID";
 	d2rq:condition "TITOLI.ENT_CLASSE = 'LIBRI' AND TITOLI.TIT_TIPO='TITBRE'";
 .
+map:BookDig a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Book;
+	d2rq:property repim:RD11_digital_reproduction_available;
+	d2rq:datatype xsd:boolean;
+	d2rq:column "LIBRI.LIB_RIPR";
+.
 map:BookFormatType a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:Book;
 	d2rq:property crm:P2_has_type;
@@ -1341,7 +1356,7 @@ map:BiblioBookReference a d2rq:ClassMap;
 map:BiblioBookReferenceLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BiblioBookReference;
 	d2rq:property rdfs:label;
-	d2rq:sqlExpression "SWT_LIBRI_BIBLIOGRAFIA.LBL_NPRO & IIF(Len(SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIO)>0,' - ' & SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIO ,'') & IIF(Len(SWT_LIBRI_BIBLIOGRAFIA.LBL_URL)>0,' - ' & SWT_LIBRI_BIBLIOGRAFIA.LBL_URL ,'')";
+	d2rq:sqlExpression "IIF(Len(SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIO)>0,SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIO ,'') & IIF(Len(SWT_LIBRI_BIBLIOGRAFIA.LBL_URL)>0 AND Len(SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIO)>0 ,'; ','') & IIF(Len(SWT_LIBRI_BIBLIOGRAFIA.LBL_URL)>0, SWT_LIBRI_BIBLIOGRAFIA.LBL_URL ,'')";
 	d2rq:join "LIBRI.LIB_ID = SWT_LIBRI_BIBLIOGRAFIA.LIB_ID";
 .
 map:BiblioBookReferenceValue1 a d2rq:PropertyBridge;
