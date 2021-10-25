@@ -561,6 +561,20 @@ map:WorkLinkTypeRel a d2rq:PropertyBridge;
 	d2rq:join "OPERE_LEGAMI.LLG_TIPO = TADE.TADE_ID";
 .
 
+#WORK LINK TO SOURCES (ATTRIBUTIONS)
+map:WorkAttr1 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:CompleteWork;
+	d2rq:property repim:RP3_has_literary_source;
+	d2rq:uriPattern "WORK/@@OPERE.OPR_PADRE_DT@@";
+	d2rq:condition "NOT (ISNULL(OPERE.OPR_PADRE_DT) OR LEN(OPERE.OPR_PADRE_DT)<5)";
+.
+map:WorkAttr2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PartWork;
+	d2rq:property repim:RP3_has_literary_source;
+	d2rq:uriPattern "WORK/@@OPERE.OPR_PADRE_DT@@";
+	d2rq:condition "NOT (ISNULL(OPERE.OPR_PADRE_DT) OR LEN(OPERE.OPR_PADRE_DT)<5)";
+.
+
 #TITLES (TITOLI)
 map:WorkTitle a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
@@ -649,6 +663,13 @@ map:ExpressionInSourcePage a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:ExpressionInSource;
 	d2rq:property repim:RD9_page_number;
 	d2rq:column "SWT_LIBRI_OPERE.LOR_PAGINA";
+.
+map:ExpressionInSourceCaption a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ExpressionInSource;
+	d2rq:property repim:RD10_caption;
+	d2rq:join "SWT_LIBRI_OPERE.LOR_ID = TITOLI.ENT_ID";
+	d2rq:column "TITOLI.TIT_NORM";
+	d2rq:condition "TITOLI.TIT_TIPO = 'TITDID'";
 .
 map:WorkExpressionInSourceRel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:ExpressionInSource;

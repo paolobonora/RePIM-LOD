@@ -72,6 +72,15 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
+    <!-- http://repim.unibo.it/sm/RD10_caption -->
+
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD10_caption">
+        <rdfs:label xml:lang="en">caption</rdfs:label>
+        <rdfs:label xml:lang="it">didascalia</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://repim.unibo.it/sm/RD1_has_first_verse -->
 
     <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD1_has_first_verse">
