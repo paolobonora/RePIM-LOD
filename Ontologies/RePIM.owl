@@ -90,6 +90,15 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
+    <!-- http://repim.unibo.it/sm/RD12_item_extent_description -->
+
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD12_item_extent_description">
+        <rdfs:comment xml:lang="it">descrizione della consistenza dell&apos;item</rdfs:comment>
+        <rdfs:comment xml:lang="en">item extent description</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://repim.unibo.it/sm/RD1_has_first_verse -->
 
     <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD1_has_first_verse">

@@ -1142,7 +1142,9 @@ map:Lib a d2rq:ClassMap;
 map:LibLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:Lib;
 	d2rq:property rdfs:label;
-	d2rq:sqlExpression "BIBLIOTECHE.BBT_ISTITUZIONE &', ' & BIBLIOTECHE.BBT_COMUNE &' (' & BIBLIOTECHE.BBT_STATO &')'";
+	d2rq:sqlExpression "BIBLIOTECHE.BBT_COMUNE &', ' & BIBLIOTECHE.BBT_ISTITUZIONE &' (' & BIBLIOTECHE_SIGLE.BSG_SIGLA &')'";
+	d2rq:join "BIBLIOTECHE.BBT_ID = BIBLIOTECHE_SIGLE.BBT_ID";
+	d2rq:condition "BIBLIOTECHE_SIGLE.BSG_ENTE = 'ENTRISM'";
 .
 
 #ITEM (SWT_LIBRI_BIBLIOTECHE)
@@ -1158,6 +1160,24 @@ map:ItemLabel a d2rq:PropertyBridge;
 	d2rq:join "BIBLIOTECHE.BBT_ID = BIBLIOTECHE_SIGLE.BBT_ID";
 	#d2rq:column "DOCUMENTI.DOC_SIGLA";
 	d2rq:sqlExpression "BIBLIOTECHE_SIGLE.BSG_SIGLA &' - ' & IIF((IsNULL(SWT_LIBRI_BIBLIOTECHE.LRM_COLLOCAZIONE) OR len(SWT_LIBRI_BIBLIOTECHE.LRM_COLLOCAZIONE)<1),'N/A', SWT_LIBRI_BIBLIOTECHE.LRM_COLLOCAZIONE)"
+.
+map:ItemColloc a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Item;
+	d2rq:property rdf:value;
+	d2rq:column "SWT_LIBRI_BIBLIOTECHE.LRM_COLLOCAZIONE";
+	d2rq:condition "NOT (IsNULL(SWT_LIBRI_BIBLIOTECHE.LRM_COLLOCAZIONE) OR len(SWT_LIBRI_BIBLIOTECHE.LRM_COLLOCAZIONE)<1)";
+.
+map:ItemExtent a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Item;
+	d2rq:property repim:RD12_item_extent_description;
+	d2rq:column "SWT_LIBRI_BIBLIOTECHE.LRM_CONSISTENZA";
+	d2rq:condition "NOT (IsNULL(SWT_LIBRI_BIBLIOTECHE.LRM_CONSISTENZA) OR len(SWT_LIBRI_BIBLIOTECHE.LRM_CONSISTENZA)<1)";
+.
+map:ItemNote a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Item;
+	d2rq:property crm:P3_has_note;
+	d2rq:column "SWT_LIBRI_BIBLIOTECHE.LRM_NOTE";
+	d2rq:condition "NOT (IsNULL(SWT_LIBRI_BIBLIOTECHE.LRM_NOTE) OR len(SWT_LIBRI_BIBLIOTECHE.LRM_NOTE)<1)";
 .
 map:ItemBookRel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:Item;
@@ -1180,7 +1200,7 @@ map:ItemURL a d2rq:ClassMap;
 map:ItemURLLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:ItemURL;
 	d2rq:property rdfs:label;
-	d2rq:sqlExpression "IIF(IsNULL(BIBLIOTECHE.BBT_RURL1),'',BIBLIOTECHE.BBT_RURL1) & SWT_LIBRI_BIBLIOTECHE.LRM_URL & IIF(IsNULL(BIBLIOTECHE.BBT_RURL1),'',BIBLIOTECHE.BBT_RURL2)";
+	d2rq:sqlExpression "IIF(IsNULL(BIBLIOTECHE.BBT_RURL1),'',BIBLIOTECHE.BBT_RURL1) & SWT_LIBRI_BIBLIOTECHE.LRM_URL & IIF(IsNULL(BIBLIOTECHE.BBT_RURL2),'',BIBLIOTECHE.BBT_RURL2)";
 	d2rq:join "SWT_LIBRI_BIBLIOTECHE.LIB_ID = LIBRI.LIB_ID";
 	d2rq:join "SWT_LIBRI_BIBLIOTECHE.BBT_ID = BIBLIOTECHE.BBT_ID";
 .
@@ -1194,6 +1214,31 @@ map:ItemURLRelType a d2rq:PropertyBridge;
 	d2rq:property crm:P2_has_type;
 	d2rq:refersToClassMap map:TipoDocURL;
 .
+map:ItemURI a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "ITEM/URI/@@SWT_LIBRI_BIBLIOTECHE.LRM_ID@@";
+	d2rq:condition "SWT_LIBRI_BIBLIOTECHE.LRM_URI <> ''";
+	d2rq:class crm:E42_Identifier;
+.
+map:ItemURILabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ItemURI;
+	d2rq:property rdfs:label;
+	d2rq:sqlExpression "IIF(IsNULL(BIBLIOTECHE.BBT_URL1),'',BIBLIOTECHE.BBT_URL1) & SWT_LIBRI_BIBLIOTECHE.LRM_URI & IIF(IsNULL(BIBLIOTECHE.BBT_URL2),'',BIBLIOTECHE.BBT_URL2)";
+	d2rq:join "SWT_LIBRI_BIBLIOTECHE.LIB_ID = LIBRI.LIB_ID";
+	d2rq:join "SWT_LIBRI_BIBLIOTECHE.BBT_ID = BIBLIOTECHE.BBT_ID";
+.
+map:ItemURIRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Item;
+	d2rq:property crm:P1_is_identified_by;
+	d2rq:refersToClassMap map:ItemURI;
+.
+map:ItemURIRelType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ItemURI;
+	d2rq:property crm:P2_has_type;
+	d2rq:refersToClassMap map:TipoDocURI;
+.
+
+
 
 #BIBLIOGRAPHY (BIBLIOGRAFIA)
 map:BibliographicRecord a d2rq:ClassMap;
@@ -1401,7 +1446,33 @@ map:BiblioActorRel a d2rq:PropertyBridge;
 	d2rq:join "SWT_RESPONS_BIB.ID_BIB = BIBLIOGRAFIA.BIB_ID";
 	d2rq:join "SWT_RESPONS_BIB.COD_RESP = RESPONS.COD_RESP";
 .
-
+map:BiblioBookReferenceURL a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "BOOK/@@LIBRI.LIB_ID|urlify@@/REF/@@SWT_LIBRI_BIBLIOGRAFIA.LBL_ID|urlify@@/URL";
+	d2rq:condition "SWT_LIBRI_BIBLIOGRAFIA.LBL_URL <> ''";
+	d2rq:class crm:E42_Identifier;
+	d2rq:join "SWT_LIBRI_BIBLIOGRAFIA.BIB_ID = BIBLIOGRAFIA.BIB_ID";
+	d2rq:join "SWT_LIBRI_BIBLIOGRAFIA.LIB_ID = LIBRI.LIB_ID";
+.
+map:BiblioBookReferenceURLLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BiblioBookReferenceURL;
+	d2rq:property rdfs:label;
+	d2rq:sqlExpression "IIF(IsNULL(BIBLIOGRAFIA.BIB_URL1 ),'',BIBLIOGRAFIA.BIB_URL1) & SWT_LIBRI_BIBLIOGRAFIA.LBL_URL & IIF(IsNULL(BIBLIOGRAFIA.BIB_URL2),'',BIBLIOGRAFIA.BIB_URL2)";
+	d2rq:join "SWT_LIBRI_BIBLIOGRAFIA.BIB_ID = BIBLIOGRAFIA.BIB_ID";
+	d2rq:join "SWT_LIBRI_BIBLIOGRAFIA.LIB_ID = LIBRI.LIB_ID";
+.
+map:BiblioBookReferenceURLRel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BiblioBookReference;
+	d2rq:property crm:P1_is_identified_by;
+	d2rq:refersToClassMap map:BiblioBookReferenceURL;
+	d2rq:join "SWT_LIBRI_BIBLIOGRAFIA.BIB_ID = BIBLIOGRAFIA.BIB_ID";
+	d2rq:join "SWT_LIBRI_BIBLIOGRAFIA.LIB_ID = LIBRI.LIB_ID";
+.
+map:BiblioBookReferenceURLType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BiblioBookReferenceURL;
+	d2rq:property crm:P2_has_type;
+	d2rq:refersToClassMap map:TipoDocURL;
+.
 
 
 #INCIPIT (INCIPIT)
@@ -1522,6 +1593,17 @@ map:TipoDocURLLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:TipoDocURL;
 	d2rq:property rdfs:label;
 	d2rq:constantValue ":URL";
+.
+
+map:TipoDocURI a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "TYPE/ID/URI";
+	d2rq:class crm:E55_Type;
+.
+map:TipoDocURILabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:TipoDocURL;
+	d2rq:property rdfs:label;
+	d2rq:constantValue ":URI";
 .
 
 map:WorkType a d2rq:ClassMap;
