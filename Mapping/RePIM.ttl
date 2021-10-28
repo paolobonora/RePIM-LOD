@@ -310,7 +310,7 @@ map:CompleteWork a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "WORK/@@OPERE.OPR_ID@@";
 	d2rq:class frbroo:F15_Complex_Work;
-	d2rq:condition "OPERE.OPR_TIPO_STRUTTURA='TBR1CO'";
+	d2rq:condition "OPERE.OPR_GENERE IN('GENANTICA')";
 .
 map:CompleteWorkLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:CompleteWork;
@@ -323,7 +323,7 @@ map:PartWork a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "WORK/@@OPERE.OPR_ID@@";
 	d2rq:class frbroo:F14_Individual_Work;
-	d2rq:condition "OPERE.OPR_TIPO_STRUTTURA='TBRPAR'";
+	d2rq:condition "OPERE.OPR_GENERE IN('GENPOESIA','GENPROSA')";
 .
 map:PartWorkLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:PartWork;
