@@ -769,6 +769,12 @@ map:BookPresentationRel a d2rq:PropertyBridge;
 	d2rq:refersToClassMap map:BookPresentation;
 	d2rq:join "LIBRI.LIB_PRESENTAZIONE = TADE.TADE_ID";
 .
+map:BookNote a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Book;
+	d2rq:property crm:P3_has_note;
+	d2rq:column "LIBRI.LIB_NOTE";
+	d2rq:condition "NOT (IsNULL(LIBRI.LIB_NOTE) OR Len(LIBRI.LIB_NOTE)<1)";
+.
 map:BookExpression a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "BOOK/EXPR/@@LIBRI.LIB_ID@@";
