@@ -997,9 +997,30 @@ map:BookPartStructureNoLabel a d2rq:PropertyBridge;
 map:BookPartStructureExpLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BookPartStructure;
 	d2rq:property rdfs:label;
-	d2rq:sqlExpression "LIBRI_PARTI_STRUTTURA.LPS_NPRO & ' - ' & LIBRI_PARTI_STRUTTURA.LPS_EXPLICIT";
+	d2rq:sqlExpression "LIBRI_PARTI_STRUTTURA.LPS_EXPLICIT";
 	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
 	d2rq:condition "LEN(LIBRI_PARTI_STRUTTURA.LPS_EXPLICIT)>1";
+.
+map:BookPartStructureExpExpl a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartStructure;
+	d2rq:property repim:RD13_dedication_explicit;
+	d2rq:sqlExpression "LIBRI_PARTI_STRUTTURA.LPS_EXPLICIT";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
+	d2rq:condition "LEN(LIBRI_PARTI_STRUTTURA.LPS_EXPLICIT)>1";
+.
+map:BookPartStructureExpHead a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartStructure;
+	d2rq:property repim:RD14_dedication_heading;
+	d2rq:sqlExpression "LIBRI_PARTI_STRUTTURA.LPS_INTESTAZIONE";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
+	d2rq:condition "LEN(LIBRI_PARTI_STRUTTURA.LPS_INTESTAZIONE)>1";
+.
+map:BookPartStructurePageNo a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookPartStructure;
+	d2rq:property repim:RD9_page_number;
+	d2rq:column "LIBRI_PARTI_STRUTTURA.LPS_PAGINA";
+	d2rq:join "LIBRI_PARTI.LIB_ID = LIBRI.LIB_ID";
+	d2rq:condition "LEN(LIBRI_PARTI_STRUTTURA.LPS_PAGINA)>0";
 .
 map:BookPartStructureTypeRel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BookPartStructure;

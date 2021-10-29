@@ -99,6 +99,24 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
+    <!-- http://repim.unibo.it/sm/RD13_dedication_explicit -->
+
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD13_dedication_explicit">
+        <rdfs:label xml:lang="en">dedication explicit</rdfs:label>
+        <rdfs:label xml:lang="it">explicit della dedica</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://repim.unibo.it/sm/RD14_dedication_head -->
+
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD14_dedication_head">
+        <rdfs:label xml:lang="en">heading</rdfs:label>
+        <rdfs:label xml:lang="it">intestazione</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://repim.unibo.it/sm/RD1_has_first_verse -->
 
     <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD1_has_first_verse">
