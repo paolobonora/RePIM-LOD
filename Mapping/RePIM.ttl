@@ -455,11 +455,21 @@ map:CompleteWork_Type a d2rq:PropertyBridge;
 	d2rq:refersToClassMap map:WorkType;
 	d2rq:join "OPERE.OPR_GENERE = TADE.TADE_ID";
 .
+map:CompleteWork_AncestorType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:CompleteWork;
+	d2rq:property rdf:type;
+	d2rq:constantValue frbroo:F1_Work;
+.
 map:PartWork_Type a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:PartWork;
 	d2rq:property crm:P2_has_type;
 	d2rq:refersToClassMap map:WorkType;
 	d2rq:join "OPERE.OPR_GENERE = TADE.TADE_ID";
+.
+map:PartWork_Type_AncestorType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PartWork;
+	d2rq:property rdf:type;
+	d2rq:constantValue frbroo:F1_Work;
 .
 map:CompleteWork_PType a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:CompleteWork;
@@ -490,7 +500,7 @@ map:PartWork_PType a d2rq:PropertyBridge;
 	d2rq:join "OPERE.OPR_ID = OPERE_DA.OPR_ID";
 .
 
-##Work text
+#Work text
 map:WorkText a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "WORK/@@OPERE.OPR_ID@@/TEXT/@@OPERE_DA.OPRDA_ID@@";
