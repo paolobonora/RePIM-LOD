@@ -108,9 +108,9 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
-    <!-- http://repim.unibo.it/sm/RD14_dedication_head -->
+    <!-- http://repim.unibo.it/sm/RD14_dedication_heading -->
 
-    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD14_dedication_head">
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD14_dedication_heading">
         <rdfs:label xml:lang="en">heading</rdfs:label>
         <rdfs:label xml:lang="it">intestazione</rdfs:label>
     </owl:DatatypeProperty>

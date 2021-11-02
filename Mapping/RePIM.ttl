@@ -611,6 +611,12 @@ map:WorkTitleLang a d2rq:PropertyBridge;
 	d2rq:join "TITOLI.TIT_LINGUA = TADE.TADE_ID";
 	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE'";
 .
+map:WorkTitleType a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkTitle;
+	d2rq:property crm:P2_has_type;
+	d2rq:refersToClassMap map:TitleType;
+	d2rq:join "TADE.TADE_ID = TITOLI.TIT_TIPO";
+.
 
 
 #EXPRESSIONS (OPERE)
@@ -1445,6 +1451,14 @@ map:BiblioBookReferenceValue2 a d2rq:PropertyBridge;
 	d2rq:join "LIBRI.LIB_ID = SWT_LIBRI_BIBLIOGRAFIA.LIB_ID";
 	d2rq:condition "LEN(SWT_LIBRI_BIBLIOGRAFIA.LBL_URL)>0";
 .
+map:BiblioBookReferenceNote a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BiblioBookReference;
+	d2rq:property crm:P3_has_note;
+	d2rq:column "SWT_LIBRI_BIBLIOGRAFIA.LBL_NOTE";
+	d2rq:join "LIBRI.LIB_ID = SWT_LIBRI_BIBLIOGRAFIA.LIB_ID";
+	d2rq:condition "LEN(SWT_LIBRI_BIBLIOGRAFIA.LBL_NOTE)>0";
+.
+
 map:BiblioBookRel1 a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BiblioBookReference;
 	d2rq:property biro:isReferencedBy;
@@ -1803,7 +1817,17 @@ map:WorkMusicalTypeClass a d2rq:PropertyBridge;
 	d2rq:constantValue repim:RC4_Musical_Form;
 .
 
-
+map:TitleType a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "TYPE/TITLE/@@TADE.TADE_ID@@";
+	d2rq:class crm:E55_Type;
+	d2rq:condition "TADE.TADETIP='TIT'" 
+.
+map:TitleTypeLabel a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:TitleType;
+	d2rq:property rdfs:label;
+	d2rq:column "TADE.TADEDA1";
+.
 
 
 
