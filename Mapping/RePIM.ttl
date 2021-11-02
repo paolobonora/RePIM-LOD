@@ -312,12 +312,15 @@ map:CompleteWork a d2rq:ClassMap;
 	d2rq:class frbroo:F15_Complex_Work;
 	d2rq:condition "OPERE.OPR_GENERE IN('GENANTICA')";
 .
+#Gestione titoli per etichette:
+# IndividualWork (testi poetici) sono identificati TITINC per LIV=1 e TITINCUSO LIV=2 -> rdfs:label
+# ComplexWork (opere musicali) per LIV1 usiamo TITINCOP per LIV2 TITINC -> rdfs:label
 map:CompleteWorkLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:CompleteWork;
 	d2rq:property rdfs:label;
 	d2rq:column "TITOLI.TIT_NORM";
 	d2rq:join "OPERE.OPR_ID = TITOLI.ENT_ID";
-	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE'";
+	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE' AND (TITOLI.TIT_TIPO='TITINC' OR TITOLI.TIT_TIPO='TITINCOP')";
 .
 map:PartWork a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
@@ -330,7 +333,7 @@ map:PartWorkLabel a d2rq:PropertyBridge;
 	d2rq:property rdfs:label;
 	d2rq:column "TITOLI.TIT_NORM";
 	d2rq:join "OPERE.OPR_ID = TITOLI.ENT_ID";
-	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE'";
+	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE' AND TITOLI.TIT_TIPO='TITINC'";
 .
 map:WorkRel a d2rq:PropertyBridge;
 	#d2rq:belongsToClassMap map:CompleteWork;
@@ -599,6 +602,13 @@ map:WorkTitleLabel a d2rq:PropertyBridge;
 .
 map:WorkTitleRel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:CompleteWork;
+	d2rq:property crm:P102_has_title;
+	d2rq:refersToClassMap map:WorkTitle;
+	d2rq:join "OPERE.OPR_ID = TITOLI.ENT_ID";
+	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE'";
+.
+map:WorkTitleRel2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PartWork;
 	d2rq:property crm:P102_has_title;
 	d2rq:refersToClassMap map:WorkTitle;
 	d2rq:join "OPERE.OPR_ID = TITOLI.ENT_ID";

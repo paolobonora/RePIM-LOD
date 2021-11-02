@@ -72,6 +72,15 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
+    <!-- http://repim.unibo.it/sm/RD0_indexed_by -->
+
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD0_indexed_by">
+        <rdfs:label xml:lang="en">full text indexing data</rdfs:label>
+        <rdfs:label xml:lang="it">testo indicizzato</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://repim.unibo.it/sm/RD10_caption -->
 
     <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD10_caption">
