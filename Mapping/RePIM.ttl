@@ -358,10 +358,24 @@ map:WorkPart1 a d2rq:PropertyBridge;
 	d2rq:property repim:RD7_part_number;
 	d2rq:column "OPERE.OPR_NPRO";
 .
-map:WorkPart1 a d2rq:PropertyBridge;
+map:CompleteWorkCaption a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:CompleteWork;
+	d2rq:property repim:RD10_caption;
+	d2rq:join "OPERE.OPR_ID = TITOLI.ENT_ID";
+	d2rq:column "TITOLI.TIT_NORM";
+	d2rq:condition "TITOLI.TIT_TIPO = 'TITDID'";
+.
+map:WorkPart2 a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:PartWork;
 	d2rq:property repim:RD7_part_number;
 	d2rq:column "OPERE.OPR_NPRO";
+.
+map:CompleteWorkCaption a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PartWork;
+	d2rq:property repim:RD10_caption;
+	d2rq:join "OPERE.OPR_ID = TITOLI.ENT_ID";
+	d2rq:column "TITOLI.TIT_NORM";
+	d2rq:condition "TITOLI.TIT_TIPO = 'TITDID'";
 .
 map:WorkConception a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
@@ -600,7 +614,7 @@ map:WorkAttr2 a d2rq:PropertyBridge;
 #TITLES (TITOLI)
 map:WorkTitle a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
-	d2rq:uriPattern "WORK/TITLE/@@OPERE.OPR_ID@@";
+	d2rq:uriPattern "WORK/TITLE/@@OPERE.OPR_ID@@/@@TITOLI.TIT_ID@@";
 	d2rq:class crm:E35_Title;
 	d2rq:join "OPERE.OPR_ID = TITOLI.ENT_ID";
 	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE'";
