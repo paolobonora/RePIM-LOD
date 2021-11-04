@@ -358,6 +358,12 @@ map:WorkPart1 a d2rq:PropertyBridge;
 	d2rq:property repim:RD7_part_number;
 	d2rq:column "OPERE.OPR_NPRO";
 .
+map:WorkNumOr1 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:CompleteWork;
+	d2rq:property repim:RD15_number_in_source;
+	d2rq:column "OPERE.OPR_NUMORIG";
+	d2rq:condition "Len(OPERE.OPR_NUMORIG)>0"
+.
 map:CompleteWorkCaption a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:CompleteWork;
 	d2rq:property repim:RD10_caption;
@@ -369,6 +375,12 @@ map:WorkPart2 a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:PartWork;
 	d2rq:property repim:RD7_part_number;
 	d2rq:column "OPERE.OPR_NPRO";
+.
+map:WorkNumOr2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:PartWork;
+	d2rq:property repim:RD15_number_in_source;
+	d2rq:column "OPERE.OPR_NUMORIG";
+	d2rq:condition "Len(OPERE.OPR_NUMORIG)>0"
 .
 map:CompleteWorkCaption a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:PartWork;
