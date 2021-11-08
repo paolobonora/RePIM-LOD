@@ -135,9 +135,9 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
-    <!-- http://repim.unibo.it/sm/RD16_voices -->
+    <!-- http://repim.unibo.it/sm/RD16_scoring -->
 
-    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD16_voices">
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD16_scoring">
         <rdfs:label xml:lang="it">organico sintetico</rdfs:label>
         <rdfs:label xml:lang="en">voices</rdfs:label>
     </owl:DatatypeProperty>
