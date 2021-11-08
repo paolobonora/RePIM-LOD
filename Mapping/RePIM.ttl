@@ -1666,7 +1666,7 @@ map:Lang a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "LANG/@@TADE.TADE_ID@@";
 	d2rq:class crm:E56_Language;
-	d2rq:condition "TADE.TADETIP='LNR'" 
+	d2rq:condition "TADE.TADETIP='LNR' AND TADE_ID <> 'LNR'" 
 .
 map:LangLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:Lang;
@@ -1734,7 +1734,7 @@ map:WorkType a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "TYPE/WORK/@@TADE.TADE_ID@@";
 	d2rq:class crm:E55_Type;
-	d2rq:condition "TADE.TADETIP='GEN'" 
+	d2rq:condition "TADE.TADETIP='GEN' AND TADE.TADE_ID <> 'GEN'" 
 .
 map:WorkTypeLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:WorkType;
@@ -1751,7 +1751,7 @@ map:BookFormat a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "TYPE/BOOK_FORMAT/@@TADE.TADE_ID@@";
 	d2rq:class crm:E55_Type;
-	d2rq:condition "TADE.TADETIP='FRL'" 
+	d2rq:condition "TADE.TADETIP='FRL' AND TADE.TADE_ID <> 'FRL'" 
 .
 map:BookFormatLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BookFormat;
@@ -1768,7 +1768,7 @@ map:BookType a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "TYPE/DOC_TYPE/@@TADE.TADE_ID@@";
 	d2rq:class crm:E55_Type;
-	d2rq:condition "TADE.TADETIP='DCT'" 
+	d2rq:condition "TADE.TADETIP='DCT' AND TADE.TADE_ID <> 'DCT'"
 .
 map:BookTypeLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BookType;
@@ -1785,7 +1785,7 @@ map:BookEdition a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "TYPE/BOOK_EDITION/@@TADE.TADE_ID@@";
 	d2rq:class crm:E55_Type;
-	d2rq:condition "TADE.TADETIP='EDZ'" 
+	d2rq:condition "TADE.TADETIP='EDZ' AND TADE.TADE_ID <> 'EDZ'" 
 .
 map:BookEditionLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BookEdition;
@@ -1802,7 +1802,7 @@ map:BookPresentation a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "TYPE/BOOK_PRS/@@TADE.TADE_ID@@";
 	d2rq:class crm:E55_Type;
-	d2rq:condition "TADE.TADETIP='PRS'" 
+	d2rq:condition "TADE.TADETIP='PRS' AND TADE.TADE_ID <> 'PRS'" 
 .
 map:BookPresentationLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BookPresentation;
@@ -1813,7 +1813,7 @@ map:BookPresentationLabel a d2rq:PropertyBridge;
 map:BookPartType a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "TYPE/BOOK_PART/@@TADE.TADE_ID@@";
-	d2rq:condition "TADE.TADETIP='TPR'" 
+	d2rq:condition "TADE.TADETIP='TPR' AND TADE.TADE_ID <> 'TPR'" 
 .
 map:BookPartTypeLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BookPartType;
@@ -1847,7 +1847,7 @@ map:BookLinkType a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "TYPE/BOOK_LNK/@@TADE.TADE_ID@@";
 	d2rq:class crm:E55_Type;
-	d2rq:condition "TADE.TADETIP='LLB'" 
+	d2rq:condition "TADE.TADETIP='LLB' AND TADE.TADE_ID <> 'LLB'" 
 .
 map:BookLinkTypeLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BookLinkType;
@@ -1859,7 +1859,7 @@ map:WorkLinkType a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "TYPE/WORK_LNK/@@TADE.TADE_ID@@";
 	d2rq:class crm:E55_Type;
-	d2rq:condition "TADE.TADETIP='LLO'" 
+	d2rq:condition "TADE.TADETIP='LLO' AND TADE.TADE_ID <> 'LLO'" 
 .
 map:WorkLinkTypeLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:WorkLinkType;
@@ -1871,7 +1871,7 @@ map:WorkPoeticType a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "TYPE/WORK_PTYPE/@@TADE.TADE_ID@@";
 	d2rq:class crm:E55_Type;
-	d2rq:condition "TADE.TADETIP='FPP'" 
+	d2rq:condition "TADE.TADETIP='FPP' AND TADE.TADE_ID <> 'FPP'" 
 .
 map:WorkPoeticTypeLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:WorkPoeticType;
@@ -1887,7 +1887,7 @@ map:WorkMusicalType a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "TYPE/WORK_MTYPE/@@TADE.TADE_ID@@";
 	d2rq:class crm:E55_Type;
-	d2rq:condition "TADE.TADETIP='FMM'" 
+	d2rq:condition "TADE.TADETIP='FMM' AND TADE.TADE_ID <> 'FMM'" 
 .
 map:WorkMusicalTypeLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:WorkMusicalType;
@@ -1904,7 +1904,7 @@ map:TitleType a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "TYPE/TITLE/@@TADE.TADE_ID@@";
 	d2rq:class crm:E55_Type;
-	d2rq:condition "TADE.TADETIP='TIT'" 
+	d2rq:condition "TADE.TADETIP='TIT' AND TADE.TADE_ID <> 'TIT'" 
 .
 map:TitleTypeLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:TitleType;
