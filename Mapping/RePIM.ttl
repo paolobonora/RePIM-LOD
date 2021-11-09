@@ -21,6 +21,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix deo: <http://purl.org/spar/deo/>.
 @prefix biro: <http://purl.org/spar/biro/>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
 
 # Realizzato da: Paolo Bonora
 # Versione del: 20/09/2021
@@ -407,6 +408,8 @@ map:WorkOrgSint1 a d2rq:PropertyBridge;
 	d2rq:join "OPERE.OPR_ID = OPERE_DA.OPR_ID";
 	d2rq:condition "LEN(OPERE_DA.OPRDA_ORGSIN)>1";
 .
+
+#RESPONS [SWT_OPERE_RESPONS]
 map:WorkConception a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "WORK/CON/@@SWT_OPERE_RESPONS.ORS_ID@@";
