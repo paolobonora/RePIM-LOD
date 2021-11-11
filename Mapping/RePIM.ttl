@@ -1647,7 +1647,7 @@ map:IncipitGroupRel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:Incipit;
 	d2rq:property repim:RP1_group_member_of;
 	d2rq:uriPattern "INCIPIT/@@INCIPIT.INC_IDGRUPPO@@";
-	d2rq:condition "INCIPIT.INC_IDGRUPPO <> '' AND INCIPIT.INC_IDGRUPPO <> INCIPIT.INC_ID";
+	d2rq:condition "INCIPIT.INC_IDGRUPPO <> ''";
 .
 map:IncipitArchetype a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:Incipit;
