@@ -347,12 +347,18 @@ map:PartWorkLabel a d2rq:PropertyBridge;
 	d2rq:join "OPERE.OPR_ID = TITOLI.ENT_ID";
 	d2rq:condition "TITOLI.ENT_CLASSE = 'OPERE' AND (TITOLI.TIT_TIPO='TITINC' OR TITOLI.TIT_TIPO='TITINCUSO')";
 .
-map:WorkRel a d2rq:PropertyBridge;
+map:WorkRel1 a d2rq:PropertyBridge;
 	#d2rq:belongsToClassMap map:CompleteWork;
 	d2rq:uriPattern "WORK/@@OPERE.OPR_IDCOMP@@";
 	d2rq:property crm:R10i_is_member_of;
 	d2rq:belongsToClassMap map:PartWork;
-	#d2rq:join "OPERE.OPR_IDCOMP = OPERE.OPR_ID";
+	d2rq:condition "OPERE.OPR_ID <> OPERE.OPR_IDCOMP";
+.
+map:WorkRel2 a d2rq:PropertyBridge;
+	#d2rq:belongsToClassMap map:CompleteWork;
+	d2rq:uriPattern "WORK/@@OPERE.OPR_IDCOMP@@";
+	d2rq:property crm:R10i_is_member_of;
+	d2rq:belongsToClassMap map:CompleteWork;
 	d2rq:condition "OPERE.OPR_ID <> OPERE.OPR_IDCOMP";
 .
 map:WorkLevel1 a d2rq:PropertyBridge;
@@ -1520,15 +1526,15 @@ map:BiblioBookReference a d2rq:ClassMap;
 map:BiblioBookReferenceLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BiblioBookReference;
 	d2rq:property rdfs:label;
-	d2rq:sqlExpression "IIF(Len(SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIO)>0,SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIO ,'') & IIF(Len(SWT_LIBRI_BIBLIOGRAFIA.LBL_URL)>0 AND Len(SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIO)>0 ,'; ','') & IIF(Len(SWT_LIBRI_BIBLIOGRAFIA.LBL_URL)>0, SWT_LIBRI_BIBLIOGRAFIA.LBL_URL ,'')";
+	d2rq:sqlExpression "IIF(Len(SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIOINSTAMPA)>0,SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIOINSTAMPA ,'') & IIF(Len(SWT_LIBRI_BIBLIOGRAFIA.LBL_URL)>0 AND Len(SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIOINSTAMPA)>0 ,'; ','') & IIF(Len(SWT_LIBRI_BIBLIOGRAFIA.LBL_URL)>0, SWT_LIBRI_BIBLIOGRAFIA.LBL_URL ,'')";
 	d2rq:join "LIBRI.LIB_ID = SWT_LIBRI_BIBLIOGRAFIA.LIB_ID";
 .
 map:BiblioBookReferenceValue1 a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BiblioBookReference;
 	d2rq:property rdf:value;
-	d2rq:column "SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIO";
+	d2rq:column "SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIOINSTAMPA";
 	d2rq:join "LIBRI.LIB_ID = SWT_LIBRI_BIBLIOGRAFIA.LIB_ID";
-	d2rq:condition "LEN(SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIO)>0";
+	d2rq:condition "LEN(SWT_LIBRI_BIBLIOGRAFIA.LBL_RINVIOINSTAMPA)>0";
 .
 map:BiblioBookReferenceValue2 a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BiblioBookReference;
