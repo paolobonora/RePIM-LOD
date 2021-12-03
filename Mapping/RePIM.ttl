@@ -421,6 +421,20 @@ map:WorkConception a d2rq:ClassMap;
 	d2rq:uriPattern "WORK/CON/@@SWT_OPERE_RESPONS.ORS_ID@@";
 	d2rq:class frbroo:F27_Work_Conception;
 .
+map:WorkConceptionIncerta a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkConception;
+	d2rq:property repim:RD17_is_attribution_uncertain;
+	d2rq:datatype xsd:boolean;
+	d2rq:column "SWT_OPERE_RESPONS.ORS_INCERTA";
+	d2rq:condition "SWT_OPERE_RESPONS.ORS_INCERTA <> 0";
+.
+map:WorkConceptionQuadre a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WorkConception;
+	d2rq:property repim:RD18_is_secondary_source_attribution;
+	d2rq:datatype xsd:boolean;
+	d2rq:column "SWT_OPERE_RESPONS.ORS_ATTRIBUITA";
+	d2rq:condition "SWT_OPERE_RESPONS.ORS_ATTRIBUITA <> 0";
+.
 map:WorkConceptionType a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:WorkConception;
 	d2rq:property crm:P2_has_type;
@@ -787,6 +801,20 @@ map:ExpressionInSourceConceptionLabel a d2rq:PropertyBridge;
 	d2rq:property rdfs:label;
 	d2rq:column "SWT_LIBRI_OPERE_RESPONS.LORS_NOME_ORIGINALE";
 .
+map:ExpressionInSourceConceptionIncerta a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ExpressionInSourceConception;
+	d2rq:property repim:RD17_is_attribution_uncertain;
+	d2rq:datatype xsd:boolean;
+	d2rq:column "SWT_LIBRI_OPERE_RESPONS.LORS_INCERTA";
+	d2rq:condition "SWT_LIBRI_OPERE_RESPONS.LORS_INCERTA <> 0";
+.
+map:ExpressionInSourceConceptionQuadre a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:ExpressionInSourceConception;
+	d2rq:property repim:RD18_is_secondary_source_attribution;
+	d2rq:datatype xsd:boolean;
+	d2rq:column "SWT_LIBRI_OPERE_RESPONS.LORS_ATTRIBUITA";
+	d2rq:condition "SWT_LIBRI_OPERE_RESPONS.LORS_ATTRIBUITA <> 0";
+.
 map:ExpressionInSourceConceptionType a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:ExpressionInSourceConception;
 	d2rq:property crm:P2_has_type;
@@ -899,6 +927,20 @@ map:BookExpressionConceptionLabel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BookExpressionConception;
 	d2rq:property rdfs:label;
 	d2rq:column "SWT_LIBRI_RESPONS.LRS_NOME_ORIGINALE";
+.
+map:BookExpressionConceptionIncerta a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookExpressionConception;
+	d2rq:property repim:RD17_is_attribution_uncertain;
+	d2rq:datatype xsd:boolean;
+	d2rq:column "SWT_LIBRI_RESPONS.LRS_INCERTA";
+	d2rq:condition "SWT_LIBRI_RESPONS.LRS_INCERTA <> 0";
+.
+map:BookExpressionConceptionQuadre a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BookExpressionConception;
+	d2rq:property repim:RD18_is_secondary_source_attribution;
+	d2rq:datatype xsd:boolean;
+	d2rq:column "SWT_LIBRI_RESPONS.LRS_ATTRIBUITA";
+	d2rq:condition "SWT_LIBRI_RESPONS.LRS_ATTRIBUITA <> 0";
 .
 map:BookExpressionConceptionType a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BookExpressionConception;
@@ -1401,6 +1443,22 @@ map:BiblioConception a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "BIBLIO/CON/@@BIBLIOGRAFIA.BIB_ID@@";
 	d2rq:class frbroo:F28_Expression_Creation;
+.
+map:BiblioConceptionIncerta a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BiblioConception;
+	d2rq:property repim:RD17_is_attribution_uncertain;
+	d2rq:datatype xsd:boolean;
+	d2rq:column "SWT_BIBLIOGRAFIA_RESPONS.BRS_INCERTA";
+	d2rq:condition "SWT_BIBLIOGRAFIA_RESPONS.BRS_INCERTA <> 0";
+	d2rq:join "SWT_BIBLIOGRAFIA_RESPONS.BIB_ID = BIBLIOGRAFIA.BIB_ID";
+.
+map:BiblioConceptionQuadre a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:BiblioConception;
+	d2rq:property repim:RD18_is_secondary_source_attribution;
+	d2rq:datatype xsd:boolean;
+	d2rq:column "SWT_BIBLIOGRAFIA_RESPONS.BRS_ATTRIBUITA";
+	d2rq:condition "SWT_BIBLIOGRAFIA_RESPONS.BRS_ATTRIBUITA <> 0";
+	d2rq:join "SWT_BIBLIOGRAFIA_RESPONS.BIB_ID = BIBLIOGRAFIA.BIB_ID";
 .
 map:BiblioConceptionRel a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:BiblioConception;
