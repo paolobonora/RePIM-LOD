@@ -144,6 +144,24 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
+    <!-- http://repim.unibo.it/sm/RD17_is_attribution_uncertain -->
+
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD17_is_attribution_uncertain">
+        <rdfs:label xml:lang="it">attribuzione incerta</rdfs:label>
+        <rdfs:label xml:lang="en">is uncertain attribution</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://repim.unibo.it/sm/RD18_is_secondary_source_attribution -->
+
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD18_is_secondary_source_attribution">
+        <rdfs:label xml:lang="it">responsabilità attribuita</rdfs:label>
+        <rdfs:label xml:lang="en">secondary source attribution</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://repim.unibo.it/sm/RD1_has_first_verse -->
 
     <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD1_has_first_verse">
