@@ -889,6 +889,18 @@ map:BookNote a d2rq:PropertyBridge;
 	d2rq:column "LIBRI.LIB_NOTE";
 	d2rq:condition "NOT (IsNULL(LIBRI.LIB_NOTE) OR Len(LIBRI.LIB_NOTE)<1)";
 .
+map:BookDescr a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Book;
+	d2rq:property repim:RD19_book_physical_description;
+	d2rq:column "LIBRI.LIB_DENVOLUMI";
+	d2rq:condition "NOT (IsNULL(LIBRI.LIB_DENVOLUMI) OR Len(LIBRI.LIB_DENVOLUMI)<1)";
+.
+map:BookCollation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:Book;
+	d2rq:property repim:RD20_book_collation;
+	d2rq:column "LIBRI.LIB_PAGINAZIONE";
+	d2rq:condition "NOT (IsNULL(LIBRI.LIB_PAGINAZIONE) OR Len(LIBRI.LIB_PAGINAZIONE)<1)";
+.
 map:BookExpression a d2rq:ClassMap;
 	d2rq:dataStorage map:database;
 	d2rq:uriPattern "BOOK/EXPR/@@LIBRI.LIB_ID@@";

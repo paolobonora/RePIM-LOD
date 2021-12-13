@@ -162,11 +162,31 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
+    <!-- http://repim.unibo.it/sm/RD19_book_physical_description -->
+
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD19_book_physical_description">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
+        <rdfs:label xml:lang="en">book physical description</rdfs:label>
+        <rdfs:label xml:lang="it">descrizione fisica del libro</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://repim.unibo.it/sm/RD1_has_first_verse -->
 
     <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD1_has_first_verse">
         <rdfs:label xml:lang="en">first verse</rdfs:label>
         <rdfs:label xml:lang="it">primo verso</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://repim.unibo.it/sm/RD20_book_collation -->
+
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD20_book_collation">
+        <rdfs:domain rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
+        <rdfs:label xml:lang="en">book collation</rdfs:label>
+        <rdfs:label xml:lang="en">fascicolazione del libro</rdfs:label>
     </owl:DatatypeProperty>
     
 
