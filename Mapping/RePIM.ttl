@@ -897,7 +897,7 @@ map:BookDescr a d2rq:PropertyBridge;
 .
 map:BookCollation a d2rq:PropertyBridge;
 	d2rq:belongsToClassMap map:Book;
-	d2rq:property repim:RD20_book_collation;
+	d2rq:property repim:RD20_partbooks;
 	d2rq:column "LIBRI.LIB_PAGINAZIONE";
 	d2rq:condition "NOT (IsNULL(LIBRI.LIB_PAGINAZIONE) OR Len(LIBRI.LIB_PAGINAZIONE)<1)";
 .

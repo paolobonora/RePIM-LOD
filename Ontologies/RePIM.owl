@@ -181,12 +181,12 @@ L&apos;ontologia è nativamente allineata al CIDOC CRM e a FRBRoo entrambe impie
     
 
 
-    <!-- http://repim.unibo.it/sm/RD20_book_collation -->
+    <!-- http://repim.unibo.it/sm/RD20_partbooks -->
 
-    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD20_book_collation">
+    <owl:DatatypeProperty rdf:about="http://repim.unibo.it/sm/RD20_partbooks">
         <rdfs:domain rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
-        <rdfs:label xml:lang="en">book collation</rdfs:label>
-        <rdfs:label xml:lang="en">fascicolazione del libro</rdfs:label>
+        <rdfs:label xml:lang="en">libri parte</rdfs:label>
+        <rdfs:label xml:lang="en">music partbooks</rdfs:label>
     </owl:DatatypeProperty>
     
 
