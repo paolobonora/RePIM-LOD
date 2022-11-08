@@ -9,7 +9,7 @@ of the recorded musical sources and literary books and full text transcriptions 
 available.
  
 In order to represent this structured knowledge, a set of formal ontologies was integrated within the [RePIM
-Semantic Model](./Ontologies/RePIM.owl) (RePIM SM). This introduces some domain specific concepts (such as the “incipit” as the key to identify
+Semantic Model](./Ontologies/RePIM.owl) (RePIM SM). This introduces some domain specific concepts (such as the “Incipit” class as the key to identify
 works) and several specializations of properties from those defined by the two reference ontologies where a more specific
 semantics was required. The RePIM SM is an extension of the CIDOC CRM and FRBRoo. It has been developed to better represent
 domain-specific concepts while maintaining full alignment with them.
