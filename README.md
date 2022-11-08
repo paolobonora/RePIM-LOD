@@ -14,7 +14,7 @@ works) and several specializations of properties from those defined by the two r
 semantics was required. The RePIM SM is an extension of the CIDOC CRM and FRBRoo. It has been developed to better represent
 domain-specific concepts while maintaining full alignment with them.
 
-The resulting KB’s conceptual model consists of 30 classes (12 from CIDOC CRM, 11 from FRBRoo and 4 from DoCO,
+The resulting conceptual model consists of 30 classes (12 from CIDOC CRM, 11 from FRBRoo and 4 from DoCO,
 2 from Repim SM and 1 from BiRO) and 49 properties (17 from CIDOC CRM, 5 from FRBRoo, 19 from Repim SM and
 others from DoCO, BiRO, DCTerms and RDFs).
 The RDF knowledge graph contains 778.699 class instances and 5.324.973 property assertions (more than 5.5 million triples in total).
