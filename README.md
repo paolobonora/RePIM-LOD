@@ -18,4 +18,4 @@ The resulting conceptual model consists of 30 classes (12 from CIDOC CRM, 11 fro
 2 from Repim SM and 1 from BiRO) and 49 properties (17 from CIDOC CRM, 5 from FRBRoo, 19 from Repim SM and
 others from DoCO, BiRO, DCTerms and RDFs).
 The RDF knowledge graph contains 778.699 class instances and 5.324.973 property assertions (more than 5.5 million triples in total).
-### Is is available on [Zenodo](https://doi.org/10.5281/zenodo.5692109)
+#### The RePIM dataset is available on [Zenodo](https://doi.org/10.5281/zenodo.5692109)
