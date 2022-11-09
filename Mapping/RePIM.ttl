@@ -34,6 +34,8 @@
 map:database a d2rq:Database;
 	d2rq:jdbcDriver "sun.jdbc.odbc.JdbcOdbcDriver";
 	d2rq:jdbcDSN "jdbc:odbc:REPIM32";
+	#jdbc:charSet "cp1252";
+	jdbc:charSet "ISO-8859-1";
 .
  
 #AUTHORS (RESPONS)
